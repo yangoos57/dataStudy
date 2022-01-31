@@ -4,6 +4,10 @@ import requests
 from bs4 import BeautifulSoup
 import re
 
+def test_sen(extraction) :
+    for num, sen in enumerate(extraction) :
+        print(f'{num}. {sen}')
+
 class eng_sentence_find :
 
     def __init__(self, word) :
@@ -14,15 +18,6 @@ class eng_sentence_find :
         response = requests.get(self.url,headers= self.headers )
         load_page = BeautifulSoup(response.text, 'html.parser')
         return load_page
-
-    def show_sen(self) :
-        if bool(self.refine_sound_included_sen_list()) == True :
-            extraction = self.refine_sound_included_sen_list()
-        else :
-            extraction = self.refine_all_sen_list()
-
-        for num, sen in enumerate(extraction) :
-            print(f'{num}. {sen}')
 
 
 
@@ -104,8 +99,18 @@ class selecting_sentence(eng_sentence_find) :
 
   def __init__(self, word) :
     super().__init__(word)
-    self.longman = 0
-    self.cambridge = 1
+    self.long_on() # longman dictionary is default.
+
+  def long_on(self) :
+      self.long = 1
+      self.cam = 0
+      return self.long, self.cam
+
+  def long_off(self) :
+      self.long = 0
+      self.cam = 1
+      return self.long, self.cam
+
 
   def wave_bar(self, num) : 
     if '~' in num :
@@ -134,29 +139,42 @@ class selecting_sentence(eng_sentence_find) :
     e = [int(a)-1 for a in e] 
 
     return list(set(e))
-            
-  
+
   def selecting_sen(self,num) :
-    if self.longman == True :
+    if self.long == True :
       sentence_list = longman_sentence(self.word).merge_all_sen_and_sound_sen()
 
-    elif self.cambridge == True :
+    elif self.cam == True :
       sentence_list = cambridge_sentence(self.word).refine_all_sen_list()
-    
+
+    self.show_sen(sentence_list)
     select_sen = self.sorting_sen(num)
     
     extract_select_sen = [sentence_list[num] for num in select_sen]
     return extract_select_sen
 
-    
+  def show_sen(self, extraction) :
+    for num, sen in enumerate(extraction) :
+        print(f'{num}. {sen}')
 
 
 
 if __name__ == '__main__' :
-  a = selecting_sentence('computer')
-  b = a.selecting_sen('1~4,7, 10~13')
-  c = cambridge_sentence('computer')
-  d = c.refine_all_sen_list()
-  print(b)
-  print('')
-  print(d)
+    a = selecting_sentence('pizza')
+    a.long_on()
+    b = a.selecting_sen('1')
+
+    #   c = cambridge_sentence('computer')
+    #   d = c.refine_all_sen_list()
+    print(a)
+    print(b)
+    print('')
+    #   print(d)
+# %%
+k = 'pasta'
+a = longman_sentence(k)
+a_1 = a.merge_all_sen_and_sound_sen()
+b = cambridge_sentence(k)
+b_1 = b.refine_all_sen_list()
+test_sen(a_1)
+test_sen(b_1)
