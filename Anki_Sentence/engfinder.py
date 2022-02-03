@@ -4,6 +4,7 @@ import requests
 from bs4 import BeautifulSoup
 import re
 
+<<<<<<< HEAD
 # list 결과 출력용도
 def test_sen(extraction) :
     for num, sen in enumerate(extraction) :
@@ -11,6 +12,8 @@ def test_sen(extraction) :
 
 
 # 영단어 검색 및 추출 Class
+=======
+>>>>>>> main
 class eng_sentence_find :
     '''
     해당 클래스는 
@@ -33,6 +36,7 @@ class eng_sentence_find :
         load_page = BeautifulSoup(response.text, 'html.parser')
         return load_page
 
+<<<<<<< HEAD
     
     # Papago sound 작업 중 
     def papago_sound_extract(self, sen_list):
@@ -41,6 +45,17 @@ class eng_sentence_find :
             sentence = 'https://papago.naver.com/?sk=en&tk=ko&hn=1&st='+ sen
             print(sentence)
         # return 
+=======
+    def show_sen(self) :
+        if bool(self.refine_sound_included_sen_list()) == True :
+            extraction = self.refine_sound_included_sen_list()
+        else :
+            extraction = self.refine_all_sen_list()
+
+        for num, sen in enumerate(extraction) :
+            print(f'{num}. {sen}')
+
+>>>>>>> main
 
 
 # Longman 문장 및 음원 추출과 관련된 Class입니다.
@@ -137,6 +152,7 @@ class cambridge_sentence(eng_sentence_find) :
 # 원하는 문장을 고르고 출력 기능을 담당하는 class입니다.
 class selecting_sentence(eng_sentence_find) :
 
+<<<<<<< HEAD
     def __init__(self, word) :
         super().__init__(word)
         self.long_on() # longman dictionary is default.
@@ -213,10 +229,60 @@ class selecting_sentence(eng_sentence_find) :
     def show_sen(self, extraction) :
         for num, sen in enumerate(extraction) :
             print(f'{num}. {sen}')
+=======
+  def __init__(self, word) :
+    super().__init__(word)
+    self.longman = 0
+    self.cambridge = 1
+
+  def wave_bar(self, num) : 
+    if '~' in num :
+        b = num.split('~')
+    
+    elif '-' in num :
+        b = num.split('-')
+    
+    else :
+        print('~ or - 만 가능')
+
+    b = list(range(int(b[0]),int(b[-1])+1))  
+    return b
+
+  def sorting_sen(self, num) :
+    a = num.replace(' ','')
+    b = a.split(',')
+    c = []
+
+    for n, i in enumerate(b) :
+        if '~' in i or '-' in  i :
+            d = self.wave_bar(b.pop(n))
+            c += d
+
+    e = c + b
+    e = [int(a)-1 for a in e] 
+
+    return list(set(e))
+            
+  
+  def selecting_sen(self,num) :
+    if self.longman == True :
+      sentence_list = longman_sentence(self.word).merge_all_sen_and_sound_sen()
+
+    elif self.cambridge == True :
+      sentence_list = cambridge_sentence(self.word).refine_all_sen_list()
+    
+    select_sen = self.sorting_sen(num)
+    
+    extract_select_sen = [sentence_list[num] for num in select_sen]
+    return extract_select_sen
+
+    
+>>>>>>> main
 
 
 
 if __name__ == '__main__' :
+<<<<<<< HEAD
     # # 단어 검색
     # a = selecting_sentence('song')
     # # # 원하는 단어 추출 
@@ -244,3 +310,12 @@ test_sen(b_1)
 #%%
 k = input()
 print(type(k))
+=======
+  a = selecting_sentence('computer')
+  b = a.selecting_sen('1~4,7, 10~13')
+  c = cambridge_sentence('computer')
+  d = c.refine_all_sen_list()
+  print(b)
+  print('')
+  print(d)
+>>>>>>> main
