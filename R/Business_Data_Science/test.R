@@ -1,1 +1,1 @@
-B <- 1000
+IRkernel::installspec()
