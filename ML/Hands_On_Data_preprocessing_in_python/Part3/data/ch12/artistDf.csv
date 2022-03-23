@@ -1,0 +1,1036 @@
+X,Artist,Followers,Genres,NumAlbums,YearFirstAlbum,Gender,Group.Solo
+0,Ed Sheeran,52698756,"pop,uk pop",8,2011,M,Solo
+1,Justin Bieber,30711450,"canadian pop,dance pop,pop,post-teen pop",10,2009,M,Solo
+2,Jonas Brothers,3069527,"boy band,dance pop,pop,post-teen pop",10,2006,M,Group
+3,Drake,41420478,"canadian hip hop,canadian pop,hip hop,pop rap,rap,toronto rap",11,2010,M,Solo
+4,Chris Brown,9676862,"dance pop,pop,pop rap,r&b,rap",6,2005,M,Solo
+5,Taylor Swift,23709128,"dance pop,pop,post-teen pop",10,2006,F,Solo
+6,Blake Shelton,4511508,"contemporary country,country,country road",12,2001,M,Solo
+7,Nicki Minaj,16331335,"dance pop,hip pop,pop,pop rap,post-teen pop,rap",10,2010,F,Solo
+8,Panic! At The Disco,8129075,"baroque pop,emo,modern rock,pop punk",8,2005,M,Group
+9,Lee Brice,1094596,"contemporary country,country,country road,modern country rock",4,2010,M,Solo
+10,Katy Perry,14004245,"dance pop,pop,post-teen pop",7,2008,F,Solo
+11,Young Thug,4471452,"atl hip hop,atl trap,gangster rap,melodic rap,pop,pop rap,rap,trap music",17,2011,M,Solo
+12,J. Cole,9417086,"conscious hip hop,hip hop,nc hip hop,pop rap,rap",9,2009,M,Solo
+13,Daddy Yankee,14076638,"latin,latin hip hop,pop,reggaeton,tropical",9,2002,M,Solo
+14,Migos,9473441,"atl hip hop,pop,pop rap,rap,southern hip hop,trap music",13,2011,M,Group
+15,Meek Mill,3591329,"hip hop,philly rap,pop,pop rap,rap,southern hip hop,trap music",32,2011,M,Solo
+16,Lady Gaga,9370435,"dance pop,pop",9,2008,F,Solo
+17,Tyler The Creator,3384070,"hip hop,pop rap,rap",6,2011,M,Solo
+18,YG,1916093,"cali rap,hip hop,pop,pop rap,rap,southern hip hop,trap music",11,2011,M,Solo
+19,DJ Khaled,4249473,"hip hop,miami hip hop,pop,pop rap,rap,southern hip hop,trap music",10,2007,M,Solo
+20,Luke Bryan,4556839,"contemporary country,country,country road",10,2007,M,Solo
+21,P!nk,7214210,"dance pop,pop,post-teen pop",8,2000,F,Solo
+22,Bruno Mars,22677758,"dance pop,pop,post-teen pop",3,2010,M,Solo
+23,Eric Church,2226809,"contemporary country,country,country road,modern country rock",13,2006,M,Solo
+24,Jason Aldean,3363492,"contemporary country,country,country road",8,2005,M,Solo
+25,Gucci Mane,2904919,"atl hip hop,dirty south rap,hip hop,pop,pop rap,rap,southern hip hop,trap music",132,2005,M,Solo
+26,Beyonce,20494887,"dance pop,pop,r&b",12,2003,F,Solo
+27,Chris Young,1605863,"contemporary country,country,country road,modern country rock",8,2006,M,Solo
+28,Eli Young Band,523571,"contemporary country,country,country road,heartland rock,modern country rock,outlaw country,red dirt,texas country",7,2005,M,Group
+29,Pedro Capo,685042,"latin pop,puerto rican pop",4,2007,M,Solo
+30,Justin Moore,1025450,"arkansas country,contemporary country,country,country road,modern country rock,redneck",6,2009,M,Solo
+31,Nicky Jam,10051233,"latin,latin hip hop,pop,reggaeton,tropical",8,2001,M,Solo
+32,Nipsey Hussle,1114710,"conscious hip hop,gangster rap,hip hop,pop rap,rap,southern hip hop,trap music",19,2009,M,Solo
+33,Yo Gotti,2583062,"dirty south rap,gangster rap,hip hop,memphis hip hop,pop,pop rap,rap,southern hip hop,trap music",28,2006,M,Solo
+34,Cody Johnson,235754,"contemporary country,country road,modern country rock,outlaw country,red dirt,texas country",6,2009,M,Solo
+35,Miley Cyrus,10054490,"dance pop,pop,post-teen pop",9,2007,F,Solo
+36,Maroon 5,20445189,pop,11,2002,M,Group
+37,Lady Antebellum,2654356,"contemporary country,country,country dawn,country pop,country road,neo mellow",9,2008,,Group
+38,2 Chainz,4943181,"atl hip hop,gangster rap,hip hop,pop,pop rap,rap,southern hip hop,trap music",17,2010,M,Solo
+39,Ellie Goulding,7039401,"dance pop,edm,electropop,metropopolis,pop,post-teen pop,tropical house,uk pop",5,2010,F,Solo
+40,Diplo,2096548,"bmore,edm,moombahton,ninja,pop",8,2004,M,Solo
+41,ScHoolboy Q,2774150,"hip hop,pop,pop rap,rap,southern hip hop,trap music,underground hip hop",7,2011,M,Solo
+42,French Montana,3080724,"hip hop,pop,pop rap,rap,southern hip hop,trap music",16,2007,M,Solo
+43,Scotty McCreery,508501,"contemporary country,country,country road,modern country rock",6,2011,M,Solo
+44,Five Finger Death Punch,3528566,"alternative metal,groove metal,nu metal,post-grunge",14,2007,M,Group
+45,Aventura,3155939,"bachata,latin,latin hip hop,latin pop,tropical",9,1999,M,Group
+46,Jake Owen,1241447,"contemporary country,country,country road,modern country rock",6,2006,M,Solo
+47,Carrie Underwood,3564883,"contemporary country,country,country dawn,dance pop,pop,post-teen pop",6,2005,F,Solo
+48,Mark Ronson,691165,"dance pop,pop",5,2003,M,Solo
+49,John Mayer,4128148,"neo mellow,pop,pop rock,singer-songwriter",15,1999,M,Solo
+50,Gesaffelstein,283857,destroy techno,3,2011,M,Solo
+51,Lil Wayne,8360644,"hip hop,new orleans rap,pop,pop rap,rap,trap music",25,1999,M,Solo
+52,Dierks Bentley,1962590,"contemporary country,country,country road,modern country rock",11,2003,M,Solo
+53,Hikaru Utada,1176108,"anime,j-pop,japanese singer-songwriter",8,1999,F,Solo
+54,Eminem,30220119,"detroit hip hop,g funk,hip hop,rap",12,1999,M,Solo
+55,Mariah Carey,4851294,"dance pop,pop,r&b,urban contemporary",16,1990,F,Solo
+56,Bobby Helms,10470,,21,1957,M,Solo
+57,Brenda Lee,135670,"adult standards,brill building pop,easy listening,lounge,nashville sound,rockabilly,vocal jazz",30,1959,F,Solo
+58,Burl Ives,30827,"adult standards,american folk revival",55,1949,M,Solo
+59,Nat King Cole,1126685,"adult standards,vocal jazz",67,1954,M,Solo
+60,Andy Williams,225919,"adult standards,brill building pop,easy listening,lounge,mellow gold,operatic pop,vocal jazz",48,1961,M,Solo
+61,Wham!,944180,"dance pop,dance rock,disco,europop,motown,new romantic,new wave,new wave pop,soft rock",3,1983,M,Group
+62,The Ronettes,118326,"brill building pop,classic girl group,motown,rock-and-roll",4,1962,F,Group
+63,Gene Autry,23974,"adult standards,cowboy western,nashville sound,traditional country,yodeling",23,1929,M,Solo
+64,Jose Feliciano,150572,"latin pop,puerto rican pop",74,1965,M,Solo
+65,Perry Como,193290,"adult standards,brill building pop,easy listening,lounge,vocal jazz",37,1958,M,Solo
+66,Bing Crosby,250331,"adult standards,easy listening,lounge,vocal jazz",66,1932,M,Solo
+67,Elvis Presley,3487016,"rock-and-roll,rockabilly",75,1956,M,Solo
+68,Darlene Love,26421,brill building pop,7,1963,F,Solo
+69,Kelly Clarkson,5629156,"dance pop,neo mellow,pop,pop rock,post-teen pop,talent show",8,2003,F,Solo
+70,Chuck Berry,971678,"blues rock,classic rock,rock,rock-and-roll,rockabilly,soul",29,1957,M,Solo
+71,Frank Sinatra,3285549,"adult standards,easy listening,lounge",58,1946,M,Solo
+72,Paul McCartney,2497755,"album rock,art rock,classic rock,folk rock,mellow gold,rock,soft rock",43,1967,M,Solo
+73,Kanye West,10455779,"chicago rap,hip hop,pop rap,rap",13,2004,M,Solo
+74,Queen,20501475,"glam rock,rock",28,1973,M,Group
+75,Tiesto,4660334,"big room,brostep,dance pop,edm,electro house,house,pop,trance,tropical house",56,1997,M,Solo
+76,Calvin Harris,18493843,"dance pop,edm,electro house,house,pop,progressive house,uk dance",5,2007,M,Solo
+77,Michael Jackson,12232437,"pop,r&b,soul",16,1972,M,Solo
+78,Steve Aoki,3263313,"big room,dance pop,edm,electro house,pop,tropical house",11,2007,M,Solo
+79,Weezer,1808162,"alternative rock,modern rock,permanent wave,pop punk,pop rock,post-grunge,rock",17,1994,M,Group
+80,twenty one pilots,14842963,"indie pop,pop punk,rock",5,2009,M,Group
+81,Avril Lavigne,5051153,"canadian pop,candy pop,dance pop,pop,post-teen pop",3,2002,F,Solo
+82,Mac Miller,3567365,"hip hop,pittsburgh rap,pop rap,rap",8,2011,M,Solo
+83,Wiz Khalifa,8515882,"hip hop,pittsburgh rap,pop,pop rap,rap,southern hip hop,trap music",23,2006,M,Solo
+84,Childish Gambino,5537876,"atl hip hop,hip hop,pop,pop rap,rap",6,2011,M,Solo
+85,Kenny Chesney,2669350,"contemporary country,country,country road",20,1994,M,Solo
+86,Ciara,4009542,"dance pop,hip pop,pop,pop rap,post-teen pop,r&b,urban contemporary",9,2004,F,Solo
+87,Backstreet Boys,2658991,"boy band,dance pop",10,1996,M,Solo
+88,Janet,1704008,"dance pop,hip pop,neo soul,new jack swing,pop,r&b,urban contemporary",12,1982,F,Solo
+89,Li,1249783,"art pop,chamber pop,electropop,folk-pop,indie pop,indietronica,pop,swedish electropop,swedish indie pop,swedish pop",5,2008,,
+90,Jason Mraz,4811172,"acoustic pop,neo mellow,pop,pop rock",10,2002,M,Solo
+91,Keith Urban,3353002,"australian country,contemporary country,country,country road",13,1997,M,Solo
+92,Demi Lovato,15274062,"dance pop,pop,post-teen pop",9,2008,F,Solo
+93,Foster The People,2692816,"indie pop,modern rock,pop,rock",3,2011,M,Group
+94,David Lee Murphy,130041,"contemporary country,country,country road,country rock,modern country rock",4,1994,M,Solo
+95,Reik,3279005,"latin,latin arena pop,latin pop,mexican pop,pop,reggaeton",8,2005,M,Group
+96,Juicy J,1917581,"crunk,dirty south rap,gangster rap,hip hop,memphis hip hop,pop rap,rap,southern hip hop,trap music",10,2002,M,Solo
+97,Kendrick Lamar,13325462,"conscious hip hop,hip hop,pop rap,rap,west coast rap",7,2010,M,Solo
+98,Pitbull,7293018,"dance pop,latin,miami hip hop,pop,pop rap",15,2004,M,Solo
+99,El Chombo,39494,"latin,latin hip hop,panamanian pop,reggaeton,tropical",3,1998,M,Solo
+100,Sugarland,1037915,"contemporary country,country,country dawn,country road,modern country rock,pop rock",7,2004,,Group
+101,Gorillaz,4812524,"alternative hip hop,art pop,rock",9,2001,M,Group
+102,Pusha T,1447211,"gangster rap,hip hop,pop rap,rap,southern hip hop,trap music,underground hip hop",7,2011,M,Solo
+103,Jay Rock,687325,"conscious hip hop,gangster rap,hip hop,pop rap,rap,southern hip hop,trap music,underground hip hop",4,2010,M,Solo
+104,James Blake,903418,"indie r&b,indietronica,pop,uk alternative pop",4,2011,M,Solo
+105,Jennifer Lopez,7079556,"dance pop,pop,pop rap,post-teen pop,urban contemporary",8,1999,F,Solo
+106,Darius Rucker,1361255,"contemporary country,country,country road,modern country rock",7,2002,M,Solo
+107,Kevin Gates,2668994,"baton rouge rap,hip hop,pop rap,rap,southern hip hop,trap music",13,2009,M,Solo
+108,Pharrell Williams,2900721,"pop,pop rap",4,2006,M,Solo
+109,Tank,446775,"deep pop r&b,r&b,rap,urban contemporary",8,2001,M,Solo
+110,Justin Timberlake,8365398,"dance pop,pop,pop rap",6,2002,M,Solo
+111,Portugal. The Man,996901,"indie pop,indie rock,modern rock",9,2006,,Group
+112,High Valley,80711,"alberta country,canadian contemporary country,canadian country,contemporary country,country,country road,modern country rock",5,2010,M,Group
+113,Rihanna,34436700,"barbadian pop,dance pop,pop,post-teen pop,r&b,urban contemporary",16,2005,F,Solo
+114,Luis Fonsi,7253765,"dance pop,latin,latin pop,pop,puerto rican pop,reggaeton,tropical",17,1998,M,Solo
+115,Miguel,2472516,"dance pop,pop,pop rap,r&b,rap,urban contemporary",4,2010,M,Solo
+116,Janelle Monae,759853,"alternative r&b,atl hip hop,dance pop,electropop,escape room,neo soul,pop,r&b",3,2008,F,Solo
+117,Plies,959477,"dance pop,dirty south rap,gangster rap,hip hop,miami hip hop,pop rap,rap,southern hip hop,trap music",20,2005,M,Solo
+118,Easton Corbin,571545,"contemporary country,country,country road,modern country rock",3,2010,M,Solo
+119,Enrique Iglesias,8796153,"dance pop,latin,latin pop,mexican pop,pop,tropical",14,1995,M,Solo
+120,Big Sean,6653562,"detroit hip hop,hip hop,pop,pop rap,rap,southern hip hop,trap music",7,2011,M,Solo
+121,Shakira,17399459,"colombian pop,dance pop,latin,latin pop,mexican pop,pop",11,1995,F,Solo
+122,Tim McGraw,2860176,"contemporary country,country,country road",19,1993,M,Solo
+123,Faith Hill,945298,"contemporary country,country,country dawn,country road,pop rock",10,1993,F,Solo
+124,Coldplay,22458057,"permanent wave,pop",10,2000,M,Group
+125,Wisin,4955084,"dance pop,latin,latin hip hop,latin pop,pop,reggaeton,reggaeton flow,tropical",4,2004,M,Solo
+126,Billy Currington,1508682,"contemporary country,country,country road,modern country rock",6,2003,M,Solo
+127,The Revivalists,215392,"modern alternative rock,modern rock",4,2010,M,Group
+128,David Guetta,20121007,"dance pop,edm,pop",15,2002,M,Solo
+129,Major Lazer,5726943,"dance pop,edm,electro house,moombahton,pop",10,2009,M,Solo
+130,Jason Derulo,7121242,"dance pop,pop,pop rap,post-teen pop,urban contemporary",9,2010,M,Solo
+131,Linkin Park,13781152,"alternative metal,nu metal,post-grunge,rap metal",16,2000,M,Group
+132,Rascal Flatts,2067756,"contemporary country,country,country road",13,2000,M,Group
+133,Zac Brown Band,1781499,"contemporary country,country,country road,modern country rock",7,2008,M,Group
+134,Trey Songz,4510865,"dance pop,pop,pop rap,r&b,southern hip hop,trap music,urban contemporary",14,2005,M,Solo
+135,Josh Turner,1481309,"contemporary country,country,country road,modern country rock",8,2003,M,Solo
+136,Brantley Gilbert,1695231,"contemporary country,country,country road,modern country rock",7,2009,M,Solo
+137,Flo Rida,7304785,"dance pop,edm,miami hip hop,pop,pop rap",6,2008,M,Solo
+138,Lana Del Rey,9179252,pop,7,2011,F,Solo
+139,Paramore,4702645,"candy pop,emo,pixie,pop emo,pop punk",7,2005,,Group
+140,Train,2991383,"neo mellow,pop,pop rock",10,1998,,Group
+141,Lauren Alaina,303159,"contemporary country,country,country dawn,country pop,country road,modern country rock",3,2011,F,Solo
+142,Adele,17965158,"british soul,pop,uk pop",3,2008,F,Solo
+143,Miranda Lambert,2039592,"contemporary country,country,country dawn,country road",6,2005,F,Solo
+144,Rick Ross,3490077,"dirty south rap,gangster rap,hip hop,pop rap,rap,southern hip hop,trap music",10,2006,M,Solo
+145,Little Big Town,1553147,"contemporary country,country,country dawn,country road,modern country rock",8,2002,,Group
+146,Brad Paisley,1590352,"contemporary country,country,country road,modern country rock",13,1999,M,Solo
+147,John Legend,4709602,"neo mellow,neo soul,pop,r&b,urban contemporary",7,2003,M,Solo
+148,Sia,14117938,"australian dance,australian pop,dance pop,pop",12,2003,F,Solo
+149,Fitz And The Tantrums,493761,"indie pop,indie poptimism,la indie,modern rock",5,2010,,Group
+150,Missy Elliott,1167959,"dance pop,hip hop,hip pop,pop,pop rap,r&b,urban contemporary",7,1997,M,Solo
+151,Granger Smith,220737,"contemporary country,country,country road,modern country rock,outlaw country,red dirt,redneck,texas country",10,1999,M,Solo
+152,Andy Grammer,684444,"neo mellow,pop,pop rock,post-teen pop",5,2011,M,Solo
+153,Wale,2213618,"gangster rap,hip hop,pop,pop rap,rap,southern hip hop,trap music,urban contemporary",14,2008,M,Solo
+154,George Michael,1994410,"dance rock,europop,new wave pop,soft rock",6,1987,M,Solo
+155,Britney Spears,6578314,"dance pop,pop,pop rap,post-teen pop",9,1999,F,Solo
+156,Leonard Cohen,1561382,"canadian folk,canadian singer-songwriter,folk,folk rock,folk-pop,melancholia,permanent wave,singer-songwriter,traditional folk",26,1967,M,Solo
+157,A Tribe Called Quest,1059791,"alternative hip hop,conscious hip hop,east coast hip hop,gangster rap,hardcore hip hop,hip hop,jazz rap,pop rap,rap",5,1990,M,Group
+158,DJ Drama,708319,"dirty south rap,gangster rap,hip hop,philly rap,pop rap,rap,southern hip hop,trap music",20,2006,M,Solo
+159,Usher,7186671,"atl hip hop,dance pop,pop,pop rap,r&b,urban contemporary",8,1994,M,Solo
+160,The Game,2223790,"gangster rap,hip hop,pop rap,rap,southern hip hop,trap music",42,2003,M,Solo
+161,Grace,3232153,"alternative metal,canadian metal,canadian rock,nu metal,pop punk,post-grunge",6,2003,,
+162,OneRepublic,8660053,"dance pop,neo mellow,piano rock,pop,pop rock",7,2007,M,Group
+163,Now,1610852,"canadian hip hop,melodic rap,pop,pop rap,rap,southern hip hop,toronto rap,trap music",4,2010,,Solo
+164,Solange,871081,"alternative r&b,electropop,escape room,hip pop,indie soul,neo soul,pop,r&b,urban contemporary",5,2003,F,Solo
+165,Mike Posner,911203,"dance pop,pop,pop rap",9,2009,M,Solo
+166,Fat Joe,676803,"dance pop,east coast hip hop,gangster rap,hardcore hip hop,hip hop,hip pop,pop,pop rap,rap,trap music",13,1993,M,Solo
+167,Remy Ma,397099,"hip pop,r&b,trap queen",5,2006,F,Solo
+168,Ben Rector,208118,"acoustic pop,folk-pop,indiecoustica,lds youth,neo mellow,piano rock,pop rock",7,2010,M,Solo
+169,David Nail,259190,"contemporary country,country,country road,modern country rock",6,2009,M,Solo
+170,Blink,5386066,"pop punk,punk,socal pop punk",12,1994,M,Group
+171,Carlos Vives,3346513,"champeta,colombian pop,dance pop,latin,latin pop,tropical,vallenato",15,1993,M,Solo
+172,Jeremih,3744923,"chicago rap,dance pop,hip hop,pop,pop rap,r&b,rap,southern hip hop,trap music,urban contemporary",5,2009,M,Solo
+173,Disturbed,3363357,"alternative metal,nu metal,post-grunge,rap metal",10,2000,M,Group
+174,Red Hot Chili Peppers,11748722,"alternative rock,funk metal,funk rock,permanent wave,post-grunge,rock",11,1984,M,Group
+175,Alisan Porter,11167,deep talent show,4,2009,F,Solo
+176,Prince And The Revolution,3862560,"funk,funk rock,minneapolis sound",49,1978,M,Group
+177,Prince,4791836,"bachata,latin,latin pop,pop,reggaeton,tropical",8,2010,M,Solo
+178,Rachel Platten,775942,"pop,post-teen pop,viral pop",3,2011,F,Solo
+179,Gwen Stefani,3369602,"dance pop,europop,hip pop,pop,pop rock,post-teen pop",5,2004,F,Solo
+180,Randy Houser,594143,"contemporary country,country,country road,modern country rock,redneck",5,2008,M,Solo
+181,Empire Of The Sun,849439,"alternative dance,australian dance,australian electropop,dance-punk,electropop,indie pop,indietronica,modern rock,neo-synthpop,new rave,pop",3,2008,,Group
+182,Fall Out Boy,7178290,"emo,modern rock,pop punk",12,2003,M,Group
+183,Nelly,1351011,"dance pop,hip hop,pop,pop rap,rap,southern hip hop",9,2000,M,Solo
+184,Curren$Y,617001,"alternative hip hop,dirty south rap,gangster rap,hip hop,new orleans rap,pop rap,rap,southern hip hop,underground hip hop",28,2009,M,Solo
+185,David Bowie,4607537,"album rock,art rock,classic rock,dance rock,glam rock,new wave,permanent wave,protopunk,rock",26,1967,M,Solo
+186,PSY,1057996,"dance pop,k-hop,k-pop",4,2005,M,Solo
+187,Adam Lambert,941291,"australian pop,dance pop,idol,pop,post-teen pop",5,2009,M,Solo
+188,Omarion,1508251,"dance pop,deep pop r&b,hip pop,pop,pop rap,r&b,rap,southern hip hop,urban contemporary",5,2005,M,Solo
+189,T-Pain,2235240,"dance pop,hip hop,pop,pop rap,r&b,rap,southern hip hop,trap music,urban contemporary",8,2005,,
+190,Prince Royce,4791836,"bachata,latin,latin pop,pop,reggaeton,tropical",8,2010,M,Solo
+191,Carly Rae Jepsen,3685271,"canadian pop,dance pop,electropop,indie poptimism,pop,post-teen pop",6,2008,F,Solo
+192,Tech N9Ne,1401111,"hip hop,pop rap,rap,southern hip hop",21,1999,M,Solo
+193,NEEDTOBREATHE,523290,"acoustic pop,ccm,christian alternative rock,christian indie,christian music,indiecoustica,neo mellow,pop rock,worship",9,2006,M,Group
+194,Jessie J,6648319,"australian pop,dance pop,pop,pop rap,post-teen pop,uk pop,viral pop",4,2010,F,Solo
+195,Shaggy,1215671,"dance pop,reggae fusion",17,1993,M,Solo
+196,Hilary Duff,1414473,"dance pop,pop,post-teen pop",8,2002,F,Solo
+197,Mumford and Sons,5370453,"folk-pop,modern rock,neo mellow,stomp and holler,uk americana",10,2009,M,Group
+198,Ne-Yo,4824205,"dance pop,pop,pop rap,r&b,urban contemporary",9,2006,M,Solo
+199,Jamie Foxx,571390,"dance pop,hip hop,hip pop,neo soul,pop rap,r&b,southern hip hop,urban contemporary",4,2005,M,Solo
+200,Ludacris,1693928,"atl hip hop,dance pop,dirty south rap,hip hop,pop rap,rap,southern hip hop,trap music",8,2000,M,Solo
+201,Breaking Benjamin,2595105,"alternative metal,nu metal,pop punk,post-grunge,rap rock",8,2002,M,Group
+202,Action Bronson,495238,"alternative hip hop,east coast hip hop,hip hop,nyc rap,pop rap,rap,southern hip hop,underground hip hop",5,2011,M,Solo
+203,James Newton Howard,192275,"scorecore,soundtrack",27,1993,M,Solo
+204,B.o.B,1631934,"atl hip hop,dance pop,hip hop,pop,pop rap,rap,southern hip hop",20,2009,M,Solo
+205,Common,548359,"alternative hip hop,chicago rap,conscious hip hop,gangster rap,hip hop,neo soul,pop rap,rap,southern hip hop",13,1992,M,Solo
+206,Kid Rock,1019710,"alternative metal,nu metal,post-grunge,rock",10,1990,M,Solo
+207,Florence + The Machine,4848406,"art pop,baroque pop,chamber pop,folk-pop,pop,uk alternative pop",9,2009,,Group
+208,Annie Lennox,654381,"folk,folk-pop,lilith,mellow gold,new wave pop,pop rock,soft rock",8,1992,F,Solo
+209,Colbie Caillat,1657657,"dance pop,folk-pop,neo mellow,pop,pop rock,post-teen pop,viral pop",13,2007,F,Solo
+210,Nico,125360,"art pop,art rock,experimental,experimental rock,melancholia,post-punk,psychedelic rock",10,1967,,
+211,T.I.,3011841,"atl hip hop,dance pop,dirty south rap,gangster rap,hip hop,pop rap,rap,southern hip hop,trap music",22,2001,M,Solo
+212,Damien Rice,777312,"acoustic pop,folk-pop,indie folk,irish rock,irish singer-songwriter,neo mellow,singer-songwriter",6,2003,M,Solo
+213,The White Buffalo,275112,new americana,6,2006,M,Solo
+214,Big,6653562,"detroit hip hop,hip hop,pop,pop rap,rap,southern hip hop,trap music",7,2011,,
+215,The Script,5470964,"celtic rock,dance pop,neo mellow,pop,pop rock,post-teen pop,viral pop",5,2008,M,Group
+216,OK Go,360235,"alternative rock,chicago indie,comic,dance-punk,garage rock,indie pop,indie rock,modern rock,permanent wave,pop rock",7,2002,,
+217,Glen Campbell,187959,"adult standards,arkansas country,brill building pop,country rock,folk,folk rock,lounge,mellow gold,nashville sound,soft rock,traditional country",56,1962,M,Solo
+218,Lil Jon,879548,"atl hip hop,crunk,dance pop,dirty south rap,pop rap,southern hip hop",3,1999,M,Solo
+219,Jeezy,1380700,"atl hip hop,crunk,dirty south rap,gangster rap,hip hop,pop rap,rap,southern hip hop,trap music",29,2005,M,Solo
+220,Joe Nichols,441395,"arkansas country,contemporary country,country,country road,modern country rock",11,2002,M,Solo
+221,Chris Lake,126175,"bass house,big room,edm,electro house,house,melbourne bounce,progressive house",3,2009,M,Solo
+222,KONGOS,216822,"modern alternative rock,modern blues rock,modern rock,south african rock",6,2007,,Group
+223,Ingrid Michaelson,611578,"acoustic pop,ectofolk,folk-pop,indie pop,indiecoustica,lilith,neo mellow,pop,pop rock",8,2007,F,Solo
+224,Jack,2581399,neo mellow,11,2001,,
+225,"""Weird Al"" Yankovic",428071,"antiviral pop,comedy rock,comic",14,1983,M,Solo
+226,Idina Menzel,209158,"broadway,hollywood,show tunes",10,1998,F,Solo
+227,George Strait,1539350,"contemporary country,country,country road,traditional country",43,1981,M,Solo
+228,The Band Perry,1018054,"contemporary country,country,country dawn,country road,modern country rock",3,2010,,Group
+229,Busta Rhymes,1273360,"east coast hip hop,hardcore hip hop,hip hop,hip pop,pop rap,rap",20,1996,M,Solo
+230,Craig Campbell,205230,"contemporary country,country,country pop,country road,modern country rock,redneck",3,2011,M,Solo
+231,Afrojack,3102111,"big room,dance pop,deep big room,disco house,dutch house,edm,electro house,pop,progressive electro house,progressive house,tropical house",6,2010,M,Solo
+232,Robin Thicke,1469727,"dance pop,hip pop,neo soul,pop,r&b,urban contemporary",11,2002,M,Solo
+233,Christina Perri,2168781,"dance pop,neo mellow,pop,pop rock,post-teen pop,viral pop",3,2011,F,Solo
+234,Neon Trees,785980,"indie pop,modern rock,neo mellow,pop,pop punk,pop rock,post-teen pop",5,2010,,Group
+235,Sara Bareilles,1274576,"acoustic pop,dance pop,folk-pop,lilith,neo mellow,pop,pop rock",9,2004,F,Solo
+236,Passenger,2335182,"indie folk,neo mellow,pop",14,2007,M,Solo
+237,Jerrod Niemann,348876,"contemporary country,country,country road,modern country rock,redneck",5,2010,M,Solo
+238,The Black Keys,2998088,"blues rock,garage rock,modern blues rock,modern rock,punk blues,rock",11,2002,M,Group
+239,Craig Morgan,544011,"contemporary country,country,country road,modern country rock,redneck",8,2000,M,Solo
+240,Aloe Blacc,550613,r&b,6,2005,M,Solo
+241,Hunter Hayes,894155,"contemporary country,country,country road,modern country rock,neo mellow,pop,post-teen pop",5,2011,M,Solo
+242,Christina Aguilera,4588776,"dance pop,pop,post-teen pop,r&b",9,1999,F,Solo
+243,Arctic Monkeys,8499414,"garage rock,modern rock,permanent wave,rock,sheffield indie",6,2006,M,Group
+244,Sara Evans,657438,"contemporary country,country,country dawn,country gospel,country road",10,1997,F,Solo
+245,Cash Cash,3514553,"arkansas country,outlaw country,traditional country",91,1957,M,Solo
+246,Thompson Square,302330,"contemporary country,country,country dawn,country pop,country road,modern country rock",4,2007,,Group
+247,AWOLNATION,1527216,"indie pop,la indie,modern alternative rock,modern rock,rock,stomp pop",6,2011,M,Group
+248,U2,5714273,"irish rock,permanent wave,rock",17,1980,M,Group
+249,Daughtry,1232777,"alternative metal,neo mellow,nu metal,pop rock,post-grunge",5,2006,M,Solo
+250,The Fray,2657905,"neo mellow,piano rock,pop,pop rock",5,2005,M,Group
+251,Lupe Fiasco,1244825,"chicago rap,conscious hip hop,gangster rap,hip hop,pop rap,rap,southern hip hop",8,2006,M,Solo
+252,Dave Days,18685,viral pop,4,2009,M,Solo
+253,Tessanne Chin,16619,reggae fusion,3,2010,F,Solo
+254,R. Kelly,1966122,,18,1992,M,Solo
+255,Tamar Braxton,583774,"dance pop,deep pop r&b,hip pop,neo soul,pop,r&b,urban contemporary",5,2000,F,Solo
+256,Enya,1142088,"celtic,middle earth",11,1987,F,Solo
+257,Bon Jovi,6660085,"glam metal,rock",21,1984,M,Solo
+258,Daft Punk,5664441,"electro,filter house",14,1997,,Group
+259,Tegan And Sara,461147,"canadian indie,dance pop,folk-pop,indie pop,indie poptimism,indie rock,indietronica,lilith,metropopolis,permanent wave,pop rock",12,1999,F,Group
+260,Gavin DeGraw,930874,"acoustic pop,neo mellow,pop,pop rock",9,2003,M,Solo
+261,Pearl Jam,5087965,"alternative rock,grunge,permanent wave,post-grunge,rock",13,1991,M,Group
+262,Glee Cast,1148517,"glee club,hollywood,pop,post-teen pop",26,2009,,Group
+263,Armin van Buuren,3109176,"edm,progressive house,progressive trance,trance",25,1999,M,Solo
+264,Sheryl Crow,545943,"folk,folk-pop,lilith,mellow gold,neo mellow,new wave pop,permanent wave,pop rock,rock",16,1993,F,Solo
+265,MIKA,911509,"dance pop,europop,pop",12,2006,M,Solo
+266,Arcade Fire,1596031,"alternative dance,alternative rock,baroque pop,canadian indie,chamber pop,dance-punk,garage rock,indie folk,indie pop,indie rock,indietronica,modern rock,new rave,permanent wave,quebec indie,rock",6,2004,,Group
+267,Marc Anthony,3325131,"latin,latin pop,modern salsa,salsa,tropical",21,1991,M,Solo
+268,Avenged Sevenfold,3517274,"alternative metal,nu metal,post-grunge",8,2002,M,Group
+269,Rocko,288358,"atl hip hop,atl trap,deep southern trap,dirty south rap,gangster rap,pop rap,rap,southern hip hop,trap music",13,2006,M,Solo
+270,Sean Kingston,1530744,"dance pop,miami hip hop,pop,pop rap,post-teen pop,urban contemporary",3,2007,M,Solo
+271,The Wanted,1880577,"boy band,dance pop,pop,post-teen pop,viral pop",3,2010,M,Group
+272,Fantasia,997557,"dance pop,deep pop r&b,hip pop,neo soul,quiet storm,r&b,urban contemporary",8,2004,F,Solo
+273,Ace Hood,1083616,"dirty south rap,gangster rap,hip hop,miami hip hop,pop rap,rap,southern hip hop,trap music",26,2008,M,Solo
+274,Jack Johnson,2581399,neo mellow,11,2001,M,Solo
+275,Fabolous,1320533,"dance pop,gangster rap,hardcore hip hop,hip hop,hip pop,pop,pop rap,r&b,rap,trap music,urban contemporary",15,2001,M,Solo
+276,Gloriana,199508,"contemporary country,country,country dawn,country road,modern country rock",3,2009,,Group
+277,Olly Murs,2555520,"dance pop,europop,neo mellow,pop,post-teen pop,talent show,uk pop",7,2010,M,Solo
+278,Kelly Rowland,1992715,"atl hip hop,dance pop,deep pop r&b,hip pop,neo soul,pop,pop rap,post-teen pop,r&b,urban contemporary",7,2002,F,Solo
+279,Q-Tip,2774150,"hip hop,pop,pop rap,rap,southern hip hop,trap music,underground hip hop",7,2011,M,Solo
+280,will.i.am,2735395,"dance pop,pop,pop rap,post-teen pop",3,2001,M,Solo
+281,Guy Sebastian,200198,"australian pop,australian talent show",10,2003,M,Solo
+282,Ray J,705065,"r&b,urban contemporary",9,1997,M,Solo
+283,Of Monsters And Men,2724060,"folk-pop,indie folk,indie pop,metropopolis,modern rock,stomp and holler",4,2011,,Group
+284,WE the Kings,936759,"neo mellow,neon pop punk,piano rock,pop punk,pop rock,post-teen pop",10,2007,M,Group
+285,Muse,5302069,"modern rock,permanent wave,piano rock,post-grunge,rock",10,1999,M,Group
+286,Alicia Keys,6678108,"hip pop,neo soul,pop,r&b,urban contemporary",6,2001,F,Solo
+287,Britt Nicole,286115,"ccm,cedm,christian alternative rock,christian music,christian pop,worship",4,2007,F,Solo
+288,Michael Buble,3362672,"adult standards,canadian pop,lounge,neo mellow",12,2003,M,Solo
+289,Gotye,2165817,australian pop,4,2003,,Group
+290,Gary Allan,587415,"contemporary country,country,country road,modern country rock",10,1996,M,Solo
+291,Joe Budden,271779,"battle rap,hardcore hip hop,hip hop,new jersey rap,pop rap,rap,trap music",18,2003,M,Solo
+292,Chris Cagle,499416,"contemporary country,country,country road,modern country rock",5,2000,M,Solo
+293,The Lonely Island,831855,comic,6,2009,M,Group
+294,Passion Pit,1018230,"alternative dance,indie pop,indie poptimism,indie rock,indietronica,modern rock,shimmer pop,stomp and holler",5,2008,M,Group
+295,Alex Clare,629079,modern alternative rock,4,2011,M,Solo
+296,Game,2223790,"gangster rap,hip hop,pop rap,rap,southern hip hop,trap music",42,2003,M,Solo
+297,Lifehouse,1279264,"alternative metal,neo mellow,pop rock,post-grunge",8,2000,M,Group
+298,Kid Cudi,3293763,"hip hop,pop rap,rap",9,2009,M,Solo
+299,50 Cent,5568346,"east coast hip hop,gangster rap,hip hop,pop rap,rap",14,2003,M,Solo
+300,Owl City,1799638,"pop,pop rock,post-teen pop",7,2007,,Group
+301,The Nocturnals,111894,"folk-pop,modern blues rock",5,2005,,Group
+302,Brandy,1414001,"dance pop,deep pop r&b,hip hop,hip pop,neo soul,pop,r&b,urban contemporary",10,1994,F,Solo
+303,matchbox twenty,1368819,"neo mellow,pop rock,post-grunge",4,1996,M,Group
+304,Love And Theft,266167,"contemporary country,country,country pop,country road,modern country rock",3,2009,M,Group
+305,Keyshia Cole,1777529,"dance pop,deep pop r&b,hip pop,neo soul,pop,pop rap,r&b,urban contemporary",11,2005,F,Solo
+306,Green Day,9639087,"permanent wave,pop punk,punk,rock",18,1991,M,Group
+307,Grouplove,787405,"indie pop,indie rock,indietronica,la indie,modern alternative rock,modern rock,rock,stomp and holler",4,2011,,Group
+308,No Doubt,1358637,"alternative rock,dance pop,permanent wave,pop rock,post-grunge",6,1992,,Group
+309,NERO,724391,"brostep,drum and bass,edm,electro house",3,2011,,Group
+310,Gym Class Heroes,1022311,"dance pop,pop,pop punk,pop rap",4,2005,M,Group
+311,Slaughterhouse,218458,"hardcore hip hop,hip hop,pop rap,rap,southern hip hop",3,2009,M,Group
+312,Toby Keith,1136997,"contemporary country,country,country road",20,1995,M,Solo
+313,The Killers,4891453,"indie rock,modern rock,permanent wave,rock",8,2004,M,Group
+314,M83.,1600929,"french shoegaze,indie pop,indietronica,metropopolis,neo-synthpop",10,2001,,Group
+315,Dave Matthews Band,1157084,"jam band,neo mellow,pop rock",48,1993,M,Group
+316,Kirko Bangz,479682,"deep pop r&b,pop rap,rap,southern hip hop,trap music",8,2010,M,Solo
+317,Travis Porter,592423,"atl hip hop,dirty south rap,pop rap,rap,southern hip hop,trap music",5,2011,M,Solo
+318,Big Time Rush,1595651,"boy band,dance pop,pop,post-teen pop",4,2010,M,Group
+319,Michel Telo,2047920,"sertanejo,sertanejo pop,sertanejo universitario",13,2009,M,Solo
+320,LMFAO,3243712,"dance pop,pop,pop rap",5,2009,M,Group
+321,Waka Flocka Flame,1694515,"atl hip hop,dirty south rap,gangster rap,hip hop,pop rap,rap,southern hip hop,trap music",45,2010,M,Solo
+322,Jay Sean,971337,"australian pop,dance pop,pop,pop rap,post-teen pop,r&b,urban contemporary",7,2004,M,Solo
+323,Snoop Dogg,5168620,"g funk,gangster rap,hip hop,pop rap,rap,west coast rap",34,1993,M,Solo
+324,Tony Lucca,10035,"acoustic pop,neo mellow",7,2006,M,Solo
+325,Jennifer Hudson,954416,"dance pop,hip pop,neo soul,r&b,urban contemporary",3,2008,F,Solo
+326,Montgomery Gentry,764059,"contemporary country,country,country road,country rock,modern country rock,redneck",11,1999,M,Group
+327,Shinedown,2154640,"alternative metal,nu metal,post-grunge,rap rock",8,2003,M,Group
+328,Sean Paul,2696435,"dance pop,dancehall,pop",10,2000,M,Solo
+329,Madonna,3435500,"dance pop,pop",25,1983,F,Solo
+330,Mary J. Blige,2012472,"dance pop,hip hop,hip pop,neo soul,pop,r&b,urban contemporary",21,1992,F,Solo
+331,Breathe Carolina,277409,"big room,dance pop,edm,electro house,electropowerpop,neon pop punk,pop punk,screamo,trancecore",5,2008,M,Group
+332,The Scene,4541479,"dance pop,pop,post-teen pop,viral pop",4,2009,,Group
+333,Young The Giant,1062603,"indie pop,indie rock,indietronica,modern alternative rock,modern rock,rock,stomp and holler",5,2010,M,Group
+334,Estelle,169598,r&b,4,1980,F,Solo
+335,Whitney Houston,4649150,"dance pop,pop,r&b",11,1985,F,Solo
+336,Martina McBride,674770,"contemporary country,country,country dawn,country road",15,1992,F,Solo
+337,deadmau5,2322739,"big room,canadian electronic,edm,electro house,progressive house",21,2006,M,Solo
+338,Van Halen,2721827,"album rock,classic rock,hard rock,metal,rock",8,1978,M,Group
+339,Snow Patrol,1812145,"irish rock,modern rock,neo mellow,permanent wave,pop rock,rock",11,1998,M,Group
+340,Nickelback,3907440,"alternative metal,canadian rock,nu metal,post-grunge",10,1996,M,Group
+341,3OH!3,565935,"dance pop,electropowerpop,pop punk,pop rap,post-teen pop",6,2007,M,Group
+342,V.I.C.,92078,"atl hip hop,pop rap,southern hip hop",4,2008,M,Solo
+343,Roscoe Dash,146346,"atl hip hop,pop rap,southern hip hop,trap music",8,2010,M,Solo
+344,Alexandra Stan,274203,"dance pop,romanian pop",11,2005,F,Solo
+345,Mana,4632868,"latin,latin arena pop,latin pop,latin rock,mexican pop,mexican rock,rock en espanol",18,1990,M,Group
+346,Matt Nathanson,265636,"acoustic pop,folk-pop,indiecoustica,neo mellow,pop rock",11,1993,M,Solo
+347,Rodney Atkins,1019318,"contemporary country,country,country road,modern country rock,redneck",5,2003,M,Solo
+348,New Boyz,272718,"dance pop,pop rap,southern hip hop",4,2009,M,Group
+349,Mindless Behavior,177301,deep pop r&b,3,2011,M,Group
+350,Bow Wow,665020,"dance pop,hip hop,hip pop,pop,pop rap,r&b,rap,southern hip hop,urban contemporary",10,2000,M,Solo
+351,Kaskade,730953,"big room,chicago house,dance pop,disco house,edm,electro house,electropop,house,pop,progressive house,tropical house,vocal house",25,2003,M,Solo
+352,Lloyd,1204119,"dance pop,deep pop r&b,hip hop,hip pop,pop,pop rap,r&b,rap,southern hip hop,trap music,urban contemporary",7,2004,M,Solo
+353,Trace Adkins,1254116,"contemporary country,country,country road,country rock,modern country rock,redneck",14,1996,M,Solo
+354,Evanescence,2402988,"alternative metal,post-grunge",7,2003,,Group
+355,Taio Cruz,1614352,"dance pop,edm,pop,pop rap,post-teen pop",4,2008,M,Solo
+356,Steve Holy,21109,"contemporary country,country,country road,modern country rock",3,2000,M,Solo
+357,Foo Fighters,6862942,"alternative metal,alternative rock,modern rock,permanent wave,post-grunge,rock",9,1995,M,Group
+358,Birdman,574133,"dirty south rap,gangster rap,hip hop,pop rap,rap,southern hip hop",10,2004,M,Solo
+359,The Black Eyed Peas,3758344,"dance pop,pop,pop rap",9,1998,,Group
+360,Hugh Laurie,166565,comic,4,1988,M,Solo
+361,Tony Bennett,460034,"adult standards,easy listening,lounge,vocal jazz",68,1952,M,Solo
+362,Amy Winehouse,5933500,"british soul,neo soul",6,2003,F,Solo
+363,Pistol Annies,383327,"contemporary country,country,country dawn,country road,modern country rock",3,2011,F,Group
+364,Tinie Tempah,652803,"dance pop,grime,pop,pop rap,rap,tropical house",4,2010,M,Solo
+365,Martin Solveig,1071961,"big room,dance pop,disco house,edm,electro house,filter house,house,pop,pop rap,tropical house,vocal house",16,2000,M,Solo
+366,Dragonette,67440,"alternative dance,canadian electropop,canadian pop,dance pop,electropop,indie poptimism,indietronica,metropopolis,neo-synthpop,new rave",9,2007,,Group
+367,Mat Kearney,380903,"acoustic pop,folk-pop,indie folk,indie poptimism,indiecoustica,modern rock,neo mellow,pop rock",5,2006,M,Solo
+368,Kirk Franklin,624031,"gospel,gospel r&b",14,1993,M,Solo
+369,Marsha Ambrosius,303270,"british soul,deep pop r&b,hip pop,neo soul,quiet storm,r&b,urban contemporary",3,2011,F,Solo
+370,Seether,1752485,"alternative metal,nu metal,post-grunge,rap rock,rock,south african rock",11,2002,M,Group
+371,Don Omar,3643062,"latin,latin hip hop,puerto rican pop,reggaeton,tropical",9,2003,M,Solo
+372,Jill Scott,951139,"funk,hip hop,hip pop,neo soul,r&b,soul,urban contemporary",25,2000,F,Solo
+373,Shania Twain,1670822,"canadian country,canadian pop,contemporary country,country,country dawn,dance pop",7,1993,F,Solo
+374,My Chemical Romance,4286046,"emo,pop punk",7,2002,M,Group
+375,Jordin Sparks,1268023,"dance pop,neo mellow,pop,pop rap,pop rock,post-teen pop,r&b,urban contemporary",3,2007,F,Solo
+376,Diddy,862323,"dance pop,east coast hip hop,hip hop,hip pop,pop,pop rap,r&b,rap",7,1997,M,Solo
+377,Thirty Seconds To Mars,2418168,"modern rock,pop punk,post-grunge,rock",6,2002,M,Group
+378,Akon,2069023,"dance pop,pop,pop rap",7,2004,M,Solo
+379,Keri Hilson,1111223,"dance pop,deep pop r&b,hip pop,pop,pop rap,post-teen pop,r&b,urban contemporary",3,2009,F,Solo
+380,Edward Maya,131839,romanian pop,7,2009,M,Solo
+381,Far*East Movement,883832,"dance pop,edm,pop,pop rap",5,2009,M,Group
+382,Josh Kelley,25294,"acoustic pop,neo mellow",10,2003,M,Solo
+383,Mary Mary,2012472,"dance pop,hip hop,hip pop,neo soul,pop,r&b,urban contemporary",21,1992,F,Group
+384,Amiee Mann,130217,"folk,folk-pop,lilith,new wave pop,permanent wave,pop rock",11,1993,F,Solo
+385,Sunny Sweeney,42237,"contemporary country,country,country dawn,modern country rock,outlaw country,red dirt,roots americana,texas country",4,2006,F,Solo
+386,Cage The Elephant,1714357,"garage rock,indie pop,indie rock,modern rock,punk blues,rock",7,2008,M,Group
+387,Gorilla Zoe,444563,"atl hip hop,crunk,dirty south rap,gangster rap,pop rap,rap,southern hip hop,trap music",40,2007,M,Solo
+388,Sick Puppies,523633,"alternative metal,christian rock,nu metal,pop punk,post-grunge,rap rock",6,2001,,Group
+389,Aaron Lewis,333529,"alternative metal,contemporary country,country,country road,modern country rock,post-grunge,redneck",4,2011,M,Solo
+390,Twista,524181,"chicago rap,dance pop,dirty south rap,gangster rap,hip hop,pop rap,rap,trap music",18,1997,M,Solo
+391,Plain White T's,722765,"neo mellow,pop punk,pop rock",7,2005,M,Group
+392,3 Doors Down,2393833,"alternative metal,nu metal,pop punk,pop rock,post-grunge",8,2000,M,Group
+393,Yolanda Be Cool,26668,"australian dance,australian house,bass house",8,2010,M,Group
+394,Dcup,6787,,6,2010,M,Solo
+395,Rise Against,1974130,"alternative metal,chicago hardcore,chicago punk,hardcore punk,nu metal,pop punk,post-grunge,punk,rap rock",11,2004,M,Group
+396,James Blunt,2011011,"neo mellow,pop,pop rock",8,2004,M,Solo
+397,Yellowcard,921183,"bow pop,emo,modern rock,pop punk,pop rock,post-grunge,socal pop punk",12,1999,M,Group
+398,Reba McEntire,974392,"contemporary country,country,country dawn",40,1977,F,Solo
+399,The Ready Set,222484,"alternative pop rock,neon pop punk,pixie,pop emo,pop punk",5,2009,M,Solo
+400,Jesse McCartney,616736,"dance pop,neo mellow,pop,pop rock,post-teen pop,urban contemporary,viral pop",7,2004,M,Solo
+401,Natasha Bedingfield,873824,"australian pop,dance pop,europop,neo mellow,pop,pop rock,post-teen pop",11,2004,F,Solo
+402,Jazmine Sullivan,896433,"alternative r&b,dance pop,deep pop r&b,hip pop,indie r&b,neo soul,pop,r&b,urban contemporary",3,2008,F,Solo
+403,Monica,1256667,"dance pop,deep pop r&b,hip hop,hip pop,neo soul,new jack swing,pop,pop rap,quiet storm,r&b,urban contemporary",9,1995,F,Solo
+404,Kings Of Leon,4008239,"modern rock,rock",5,2003,M,Group
+405,Hannah Montana,2308157,"dance pop,pop,post-teen pop",8,2006,F,Solo
+406,Josh Thompson,107026,"contemporary country,country,country pop,country road,modern country rock,redneck",3,2010,M,Solo
+407,Cali Swag District,70364,,4,2011,M,Group
+408,A Rocket To The Moon,285356,"alternative pop rock,neo mellow,neon pop punk,pixie,pop emo,pop punk",3,2006,M,Group
+409,Soulja Boy,892290,"atl hip hop,dance pop,dirty south rap,pop,pop rap,rap,southern hip hop,trap music",29,2007,M,Solo
+410,Uncle Kracker,313271,"contemporary country,country,country road,pop rock,post-grunge",8,2000,M,Solo
+411,Gyptian,326136,"conscious hip hop,dancehall,lovers rock,reggae fusion",7,2006,M,Solo
+412,Chris Willis,11466,,7,2006,M,Solo
+413,La Roux,458184,"alternative dance,dance pop,electropop,indietronica,neo-synthpop,new rave",3,2009,,Group
+414,Shontelle,350934,"barbadian pop,post-teen pop",4,2008,F,Solo
+415,Rob Thomas,459102,"neo mellow,pop rock,post-grunge",6,2005,M,Solo
+416,Soundgarden,2144874,"alternative metal,alternative rock,grunge,hard rock,modern rock,nu metal,post-grunge,rock",11,1989,M,Group
+417,Asher Roth,192867,"indie pop rap,pop rap,rap",4,2009,M,Solo
+418,Clay Walker,535653,"contemporary country,country,country gospel,country road,country rock,modern country rock,outlaw country,texas country,traditional country",11,1993,M,Solo
+419,Timbaland,1468103,"dance pop,hip hop,hip pop,pop,pop rap,rap,urban contemporary",5,2007,M,Solo
+420,V V Brown,21295,"british soul,metropopolis",4,2009,F,Solo
+421,Jaheim,758391,"dance pop,hip pop,neo soul,new jack swing,quiet storm,r&b,urban contemporary",8,2001,M,Solo
+422,Lloyd Banks,627070,"gangster rap,hardcore hip hop,hip hop,pop rap,rap,trap music",10,2003,M,Solo
+423,Lee DeWyze,43452,"idol,neo mellow",6,2007,M,Solo
+424,Crystal Bowersox,13693,idol,4,2010,F,Solo
+425,Will Young,186988,"australian pop,dance pop,europop,neo mellow,neo soul,new wave pop",11,2002,M,Solo
+426,Charice,92854,"post-teen pop,viral pop",4,2010,M,Solo
+427,Erykah Badu,1600823,"funk,hip hop,neo soul,r&b,soul,urban contemporary",9,1997,F,Solo
+428,Kris Allen,116442,"acoustic pop,idol,indiecoustica,neo mellow,pop rock",6,2009,M,Solo
+429,Spose,52071,"comic,indie pop rap,pop rap",9,2008,M,Solo
+430,Maxwell,890286,"dance pop,funk,hip pop,neo soul,new jack swing,quiet storm,r&b,soul,urban contemporary",7,1996,M,Solo
+431,Theory Of A Deadman,1122435,"alternative metal,canadian metal,canadian rock,nu metal,post-grunge,rap rock,wrestling",6,2002,M,Group
+432,Alpha Rev,6787,rebel blues,4,2008,M,Group
+433,Orianthi,47558,candy pop,3,2009,F,Solo
+434,Matisyahu,515370,reggae fusion,13,2004,M,Solo
+435,Melanie Fiona,468231,"canadian pop,dance pop,deep pop r&b,hip pop,neo soul,r&b,urban contemporary",4,2009,F,Solo
+436,Sade,1695591,"british soul,neo soul",8,1984,F,Solo
+437,Phoenix,1515476,"alternative dance,dance-punk,indie pop,indie rock,indietronica,modern rock,new rave",7,2000,,Group
+438,Boys Like Girls,770554,"emo,neo mellow,neon pop punk,pop punk,pop rock,post-teen pop",3,2006,M,Group
+439,Mario,1577454,"dance pop,deep pop r&b,hip pop,pop,pop rap,r&b,rap,urban contemporary",5,2002,M,Solo
+440,Danny Gokey,171123,"anthem worship,ccm,christian pop,idol",6,2010,M,Solo
+441,Creed,1599460,"alternative metal,nu metal,pop rock,post-grunge,rap rock,rock",4,1997,M,Group
+442,Kellie Pickler,498990,"contemporary country,country,country dawn,country road",4,2006,F,Solo
+443,k.d. lang,173719,"canadian country,canadian pop,canadian singer-songwriter,folk,folk-pop,lilith,mellow gold,new wave pop,permanent wave,singer-songwriter",12,1987,F,Solo
+444,Cascada,317591,"bubblegum dance,dance pop,eurodance,europop,german techno,melbourne bounce international",22,2006,F,Solo
+445,Andrea Bocelli,1211617,"adult standards,classical tenor,operatic pop",54,1994,M,Solo
+446,Shiny Toy Guns,88857,"dance-punk,electronic rock,electropop,indietronica",4,2006,,Group
+447,Jason Michael Carroll,182350,"contemporary country,country,country road,modern country rock,redneck",4,2007,M,Solo
+448,Three Days Grace,3232153,"alternative metal,canadian metal,canadian rock,nu metal,pop punk,post-grunge",6,2003,M,Group
+449,Cobra Starship,362869,"dance pop,neon pop punk,pop,pop punk,post-teen pop",4,2006,,Group
+450,Michael Franti,124482,reggae fusion,11,1994,M,Solo
+451,Spearhead,124482,reggae fusion,11,1994,M,Solo
+452,Leona Lewis,1961101,"australian pop,british soul,dance pop,europop,pop,post-teen pop,talent show,uk pop",7,2007,F,Solo
+453,Susan Boyle,138687,operatic pop,8,2009,F,Solo
+454,Francesca Battistelli,360472,"anthem worship,ccm,christian alternative rock,christian music,worship",6,2008,F,Solo
+455,Anya Marina,37479,"acoustic pop,ann arbor indie,folk-pop",5,2005,F,Solo
+456,Pleasure P,691872,"dance pop,deep pop r&b,hip pop,pop rap,r&b,southern hip hop,urban contemporary",3,2009,M,Solo
+457,Chamillionaire,437580,"dirty south rap,gangster rap,hip hop,pop rap,rap,southern hip hop,trap music",21,2004,M,Solo
+458,Wonder Girls,241600,"dance pop,k-pop,k-pop girl group",4,2010,F,Group
+459,Five For Fighting,471825,"acoustic pop,neo mellow,piano rock,pop rock,post-grunge",9,1997,M,Solo
+460,Dorrough,34628,"dfw rap,dirty south rap,pop rap,southern hip hop,trap music",7,2009,M,Solo
+461,Darryl Worley,132355,"contemporary country,country,country road,modern country rock",8,2000,M,Solo
+462,Alice In Chains,2315685,"alternative metal,alternative rock,grunge,hard rock,nu metal,post-grunge,rock",8,1990,M,Group
+463,The All,1599821,"modern rock,neo mellow,pop,pop punk,pop rock,post-grunge",6,2002,,
+464,David Cook,183202,"idol,neo mellow,pop rock,talent show",3,2008,M,Solo
+465,Ginuwine,1368331,"dance pop,hip hop,hip pop,neo soul,new jack swing,pop,pop rap,r&b,rap,southern hip hop,urban contemporary",10,1996,M,Solo
+466,Jack Ingram,26475,"country road,outlaw country,red dirt,texas country",16,1993,M,Solo
+467,Parachute,456779,"acoustic pop,charlottesville indie,indiecoustica,neo mellow,pop,pop rock,post-teen pop,viral pop",5,2009,,Group
+468,Three 6 Mafia,589492,"crunk,dirty south rap,gangster rap,hip hop,memphis hip hop,pop rap,rap,southern hip hop,trap music",20,1995,,Group
+469,Skillet,2659558,"alternative metal,christian alternative rock,christian music,christian rock,post-grunge",14,1996,,Group
+470,Jessie James Decker,106747,"contemporary country,country pop",4,2009,F,Solo
+471,Matt And Kim,322417,"brooklyn indie,indie folk,indie pop,indie rock,indietronica,modern rock,shimmer pop,stomp and holler",5,2009,,Group
+472,The Ting Tings,287071,"alternative dance,dance pop,dance-punk,electropop,folk-pop,new rave,pop rock",7,2007,,Group
+473,Kristinia DeBarge,54930,post-teen pop,3,2009,F,Solo
+474,Michelle Branch,348500,"candy pop,dance pop,folk-pop,lilith,neo mellow,pop rock",6,2000,F,Solo
+475,Beastie Boys,1408731,"alternative rock,east coast hip hop,hip hop,old school hip hop,rap,rock",9,1986,M,Group
+476,Maino,126400,"dirty south rap,pop rap,rap,trap music",14,2008,M,Solo
+477,Alan Jackson,1076921,"contemporary country,country,country road",31,1989,M,Solo
+478,Soulja Boy Tell 'em,892290,"atl hip hop,dance pop,dirty south rap,pop,pop rap,rap,southern hip hop,trap music",29,2007,M,Solo
+479,The Veronicas,566245,"australian pop,candy pop,dance pop,electropop,girl group,pop,post-teen pop",8,2005,F,Group
+480,Madcon,295616,"dance pop,norwegian hip hop,norwegian pop,pop rap",10,2004,M,Group
+481,Musiq Soulchild,685302,"dance pop,hip hop,hip pop,neo soul,r&b,urban contemporary",11,2000,M,Solo
+482,Yung L.A.,44057,"atl hip hop,dirty south rap,pop rap,rap,southern hip hop,trap music",10,2009,M,Solo
+483,Paula Abdul,455477,"dance pop,europop,new wave pop,pop rock",4,1988,F,Solo
+484,Chrisette Michele,321914,"deep pop r&b,hip pop,neo soul,quiet storm,r&b,urban contemporary",6,2007,F,Solo
+485,Mike Jones,213342,"dirty south rap,gangster rap,hip hop,pop rap,rap,southern hip hop,trap music",8,2005,M,Solo
+486,Charlie Wilson,525674,"neo soul,new jack swing,quiet storm,r&b,urban contemporary",7,1992,M,Solo
+487,Lily Allen,1375457,"dance pop,europop,folk-pop,pop,pop rock",4,2006,F,Solo
+488,Billy Ray Cyrus,135710,"contemporary country,country",18,1992,M,Solo
+489,Stellar Kart,33152,"ccm,christian alternative rock,christian music,christian punk,christian rock",6,2005,M,Group
+490,Silversun Pickups,414758,"alternative metal,alternative rock,dance-punk,garage rock,indie pop,indie rock,indietronica,la indie,modern rock,post-grunge,rock",6,2005,,Group
+491,Ashley Tisdale,708045,"dance pop,pop,post-teen pop,viral pop",3,2007,F,Solo
+492,MGMT,1588180,"alternative dance,garage rock,indie pop,indie rock,indietronica,modern rock,rock",5,2007,M,Group
+493,Papa Roach,2884037,"alternative metal,nu metal,pop punk,post-grunge,rap metal,rap rock",11,2000,M,Group
+494,Brooks & Dunn,1216614,"contemporary country,country,country road,country rock,red dirt",14,1991,M,Group
+495,Bobby V,481244,"dance pop,hip pop,new jack swing,pop rap,r&b,southern hip hop,urban contemporary",8,2005,M,Solo
+496,Lee Ann Womack,352850,"contemporary country,country,country dawn,country road",10,1997,F,Solo
+497,Framing Hanley,134327,"alternative metal,christian rock,nu metal,post-grunge,screamo",6,2007,M,Group
+498,Brooke White,6206,idol,6,2006,F,Solo
+499,Jim Jones,304490,"gangster rap,hardcore hip hop,hip hop,pop rap,rap,trap music",26,2004,M,Solo
+500,Ron Browz,4070,nyc rap,14,2010,M,Solo
+501,The Offspring,3169093,"alternative metal,permanent wave,pop punk,post-grunge,punk,rock,skate punk,socal pop punk",10,1989,M,Group
+502,Bruce Springsteen,2576304,"heartland rock,mellow gold,permanent wave,rock,singer-songwriter",29,1973,M,Solo
+503,Saving Abel,445889,"alternative metal,nu metal,post-grunge,rap rock",4,2008,M,Group
+504,Pat Green,77434,"outlaw country,red dirt,texas country",12,1995,M,Solo
+505,Apocalyptica,545305,"alternative metal,bow pop,cello,power metal,progressive metal",13,1996,,Group
+506,David Archuleta,295902,"dance pop,idol,lds youth,neo mellow,post-teen pop,viral pop",9,2008,M,Solo
+507,O.A.R.,231714,"acoustic pop,neo mellow,pop rock",15,1997,M,Group
+508,Metro Station,199011,"electropowerpop,neon pop punk,pixie,pop punk",3,2007,M,Group
+509,Hinder,984864,"alternative metal,nu metal,pop rock,post-grunge,rap rock",6,2005,M,Group
+510,Avant,748447,"dance pop,deep pop r&b,hip pop,neo soul,new jack swing,pop rap,r&b,southern hip hop,urban contemporary",8,2000,M,Solo
+511,Secondhand Serenade,735441,"neo mellow,piano rock,pixie,pop punk,pop rock",5,2007,,Group
+512,M.I.A.,834534,"art pop,dance pop,escape room,new rave,pop",7,2005,F,Solo
+513,Guns N' Roses,14174998,"glam metal,hard rock,rock",6,1987,M,Group
+514,Jimmy Wayne,35621,"contemporary country,country,country road",6,2003,M,Solo
+515,Bucky Covington,76829,"contemporary country,country,country road,modern country rock",3,2007,M,Solo
+516,Kardinal Offishall,29367,"pop rap,toronto rap",5,2001,M,Solo
+517,Buckcherry,372831,"alternative metal,glam metal,hard rock,nu metal,post-grunge,rock,sleaze rock",12,1999,M,Group
+518,Metallica,12040848,"hard rock,metal,old school thrash,rock,speed metal,thrash metal",17,1983,M,Group
+519,September,95948,"electropop,eurodance,europop,swedish electropop,swedish pop",8,2004,F,Solo
+520,Ray LaMontagne,697167,"acoustic pop,folk-pop,indie folk,neo mellow,new americana,pop rock,stomp and holler",8,2004,M,Solo
+521,Oasis,4494787,"britpop,madchester,permanent wave,rock",13,1994,M,Group
+522,LL Cool J,780351,"east coast hip hop,hardcore hip hop,hip hop,hip pop,old school hip hop,pop,pop rap,r&b,rap,southern hip hop,urban contemporary",14,1985,M,Solo
+523,David Banner,374128,"conscious hip hop,crunk,dirty south rap,gangster rap,hip hop,pop rap,rap,southern hip hop,trap music",8,2003,M,Solo
+524,Joshua Radin,299526,"acoustic pop,folk-pop,indie folk,indiecoustica,neo mellow,pop rock,viral pop",12,2006,M,Solo
+525,Shwayze,131757,"indie pop rap,pop rap",7,2008,M,Solo
+526,Marvin Sapp,303109,gospel,13,1995,M,Solo
+527,Staind,1354622,"alternative metal,nu metal,post-grunge,rap rock,rock",10,1999,M,Group
+528,Flobots,126551,"comic,conscious hip hop",5,2008,M,Group
+529,Goo Goo Dolls,1410378,"neo mellow,permanent wave,pop rock,post-grunge",16,1987,M,Group
+530,Danity Kane,336702,"dance pop,deep pop r&b,girl group,hip pop,post-teen pop,r&b,urban contemporary",3,2006,F,Group
+531,New Kids On The Block,386725,"boy band,dance pop",9,1986,M,Group
+532,Jessica Simpson,665813,"dance pop,post-teen pop",8,1999,F,Solo
+533,Flex,104438,"latin,latin hip hop,panamanian pop,reggaeton,tropical",5,2007,M,Solo
+534,Josh Gracin,139473,"contemporary country,country,country pop,country road,modern country rock",4,2004,M,Solo
+535,Flyleaf,656918,"alternative metal,christian alternative rock,christian rock,nu metal,pop emo,post-grunge,rap rock",6,2005,,Group
+536,Julianne Hough,16132,"contemporary country,country,country dawn,hollywood",3,2008,F,Solo
+537,James Otto,58387,"contemporary country,country,country road,modern country rock",3,2004,M,Solo
+538,Ashanti,1612524,"dance pop,hip hop,hip pop,pop,pop rap,r&b,southern hip hop,urban contemporary",12,2002,F,Solo
+539,2 Pistols,18436,"dirty south rap,pop rap,southern hip hop,trap music",3,2008,M,Solo
+540,Death Cab For Cutie,1069398,"folk-pop,indie folk,indie pop,indie rock,modern rock,pop rock,stomp and holler,washington indie",11,1998,M,Group
+541,Phil Vassar,178766,"contemporary country,country,country road,modern country rock",12,2000,M,Solo
+542,Yael Naim,101038,,5,2007,F,Solo
+543,Raheem DeVaughn,283038,"dance pop,hip hop,hip pop,neo soul,new jack swing,quiet storm,r&b,urban contemporary",10,2005,M,Solo
+544,Puddle Of Mudd,996122,"alternative metal,alternative rock,nu metal,pop punk,post-grunge,rap rock,rock",10,2001,M,Group
+545,Finger Eleven,373940,"alternative metal,canadian rock,funk metal,nu metal,post-grunge,rap rock,wrestling",6,1998,M,Group
+546,Kate Voegele,92291,neo mellow,6,2007,F,Solo
+547,Jewel,372572,"alaska indie,folk-pop,lilith,permanent wave,pop rock,singer-songwriter",12,1995,F,Solo
+548,Shawty Lo,198329,"atl hip hop,dirty south rap,gangster rap,pop rap,rap,southern hip hop,trap music",4,2010,M,Solo
+549,Augustana,159403,"acoustic pop,neo mellow,piano rock,pop rock",4,2005,M,Group
+550,Ashlee Simpson,482823,"dance pop,pop rock,post-teen pop",4,2004,F,Solo
+551,J. Holiday,852059,"bassline,dance pop,deep pop r&b,hip pop,neo soul,new jack swing,pop rap,r&b,urban contemporary",3,2007,M,Solo
+552,Radiohead,4596887,"alternative rock,art rock,melancholia,modern rock,oxford indie,permanent wave,rock",13,1993,M,Group
+553,R.E.M.,2076000,"alternative rock,permanent wave,pop rock,rock",20,1983,M,Group
+554,Wyclef Jean,200889,"pop,rap kreyol",14,1997,M,Solo
+555,Aly & AJ,317553,"dance pop,electropop,girl group,indie poptimism,neo mellow,pop,post-teen pop",5,2005,F,Group
+556,Santana,1255107,"blues rock,classic rock,rock",34,1969,M,Solo
+557,Baby Bash,449588,"chicano rap,dance pop,dirty south rap,gangster rap,hip hop,hip pop,latin hip hop,pop rap,rap,southern hip hop,urban contemporary",22,2002,M,Solo
+558,Celine Dion,2903347,"canadian pop,dance pop",30,1987,F,Solo
+559,Josh Groban,478265,operatic pop,10,2001,M,Solo
+560,Lenny Kravitz,1679889,"permanent wave,pop rock,rock",12,1989,M,Solo
+561,DragonForce,524582,"metal,power metal,progressive metal,speed metal",14,2003,M,Group
+562,Alvin And The Chipmunks,75738,children's music,22,1959,,Group
+563,Feist,534848,"art pop,canadian indie,canadian pop,chamber pop,folk-pop,freak folk,indie folk,indie pop,indie rock,indietronica,slow core",6,2004,F,Solo
+564,Chingy,442940,"crunk,dance pop,dirty south rap,gangster rap,hip hop,hip pop,pop rap,rap,southern hip hop,urban contemporary",11,2003,M,Solo
+565,Juanes,2507501,"colombian pop,cumbia,dance pop,latin,latin pop,mexican pop,pop,rock en espanol,tropical",14,2000,M,Solo
+566,Yandel,3772783,"latin,latin hip hop,latin pop,pop,reggaeton,reggaeton flow,tropical",6,2003,M,Solo
+567,Hurricane Chris,156848,"deep southern trap,dirty south rap,pop rap,rap,southern hip hop,trap music",4,2007,M,Solo
+568,Elliott Yamin,73177,,6,2007,M,Solo
+569,Serj Tankian,511819,"alternative metal,nu metal,post-grunge",5,2007,M,Solo
+570,Kat DeLuna,419525,"dance pop,electropop,post-teen pop",3,2007,F,Solo
+571,Cupid,20638,kids dance party,9,2002,M,Solo
+572,Down A.K.A. Kilo,775,,5,1998,M,Solo
+573,Nelly Furtado,1681939,"canadian latin,canadian pop,dance pop,pop,pop rock",9,2000,F,Solo
+574,Yung Joc,377517,"atl hip hop,crunk,dirty south rap,gangster rap,pop rap,rap,southern hip hop,trap music",6,2006,M,Solo
+575,Eve,578827,"dance pop,hip hop,hip pop,philly rap,pop,pop rap,r&b,rap,southern hip hop,urban contemporary",4,1999,F,Solo
+576,Tracy Lawrence,467395,"arkansas country,contemporary country,country,country gospel,country road,country rock,outlaw country,traditional country",17,1991,M,Solo
+577,The White Stripes,1905477,"alternative rock,blues rock,garage rock,indie rock,modern blues rock,modern rock,permanent wave,punk blues,rock",7,1999,,Group
+578,Emerson Drive,146243,"alberta country,canadian contemporary country,canadian country,contemporary country,country,country road,modern country rock",8,2002,M,Group
+579,Huey Lewis and the News,661582,"album rock,classic rock,dance rock,folk rock,mellow gold,new wave pop,pop rock,rock,soft rock",11,1980,,Group
+580,Bone Thugs-N-Harmony,1259967,"gangster rap,hardcore hip hop,hip hop,pop rap,rap,southern hip hop",25,1994,M,Group
+581,Bobby Valentino,481244,"dance pop,hip pop,new jack swing,pop rap,r&b,southern hip hop,urban contemporary",8,2005,M,Solo
+582,Unk,105466,"atl hip hop,dirty south rap,gangster rap,pop rap,rap,southern hip hop,trap music",3,2006,M,Solo
+583,Crime Mob,193892,"atl hip hop,crunk,dirty south rap,gangster rap,hip pop,pop rap,rap,southern hip hop,trap music",4,2004,,Group
+584,Dashboard Confessional,374428,"emo,modern rock,neo mellow,pop punk,pop rock",15,2000,M,Group
+585,The Smashing Pumpkins,2374286,"alternative metal,alternative rock,grunge,modern rock,permanent wave,pop rock,post-grunge,rock",9,1991,M,Group
+586,Ozzy Osbourne,2382209,"album rock,birmingham metal,classic rock,hard rock,metal,rock",11,1980,M,Solo
+587,Blake Lewis,10226,idol,4,2007,M,Solo
+588,The Red Jumpsuit Apparatus,775544,"emo,pop punk,pop rock,post-grunge,screamo",6,2006,M,Group
+589,India.Arie,519953,"neo soul,r&b,urban contemporary",9,2001,F,Solo
+590,Katharine McPhee,102946,"idol,post-teen pop",7,2006,F,Solo
+591,Paul Wall,397930,"crunk,dirty south rap,gangster rap,hip hop,houston rap,pop rap,rap,southern hip hop,trap music",27,2004,M,Solo
+592,Lumidee,43357,hip pop,4,2003,F,Solo
+593,Incubus,2000219,"alternative metal,alternative rock,funk metal,funk rock,modern rock,nu metal,pop rock,post-grunge,rap rock,rock",13,1997,M,Group
+594,Joe,676803,"dance pop,east coast hip hop,gangster rap,hardcore hip hop,hip hop,hip pop,pop,pop rap,rap,trap music",13,1993,M,Solo
+595,Pretty Ricky,825641,"dance pop,deep pop r&b,hip hop,hip pop,miami hip hop,pop rap,r&b,rap,southern hip hop,trap music,urban contemporary",7,2005,M,Group
+596,Rich Boy,144768,"alabama rap,dirty south rap,gangster rap,pop rap,rap,southern hip hop,trap music",3,2007,M,Solo
+597,Blue October,243611,"alternative metal,neo mellow,pop rock,post-grunge,san marcos tx indie",14,1998,M,Group
+598,Young Buck,521562,"crunk,dirty south rap,gangster rap,hardcore hip hop,hip hop,pop rap,rap,southern hip hop,trap music",57,2004,M,Solo
+599,Brandi Carlile,354380,"acoustic pop,folk,folk-pop,indie folk,lilith,neo mellow,new americana,pop rock",10,2005,F,Solo
+600,Bjork,996762,"alternative dance,art pop,chamber pop,electronica,electropop,experimental pop,icelandic experimental,icelandic pop,metropopolis,permanent wave,pop rock,trip hop",43,1990,F,Solo
+601,Good Charlotte,1520483,"alternative metal,modern rock,pop punk,pop rock,post-grunge",10,2001,M,Group
+602,Modest Mouse,964761,"alternative rock,garage rock,indie folk,indie pop,indie rock,modern rock,pop rock,stomp and holler,washington indie",9,1992,M,Group
+603,Marques Houston,453869,"dance pop,deep pop r&b,hip pop,new jack swing,pop rap,r&b,urban contemporary",7,2003,M,Solo
+604,Hellogoodbye,149345,"indie pop,modern rock,neon pop punk,pop emo,pop punk",12,2006,,Group
+605,Joss Stone,756519,"british soul,neo soul",8,2003,F,Solo
+606,Regina Spektor,1007043,"chamber pop,folk-pop,indie folk,indie pop,lilith,piano rock,pop rock",8,2004,F,Solo
+607,The Fratellis,523315,"alternative rock,dance-punk,garage rock,indie rock,modern rock,pop rock,rock,scottish rock",7,2006,M,Group
+608,Nine Inch Nails,1308727,"alternative metal,alternative rock,cyberpunk,electronic rock,industrial,industrial metal,industrial rock,modern rock,nu metal,post-grunge,rock",22,1989,M,Group
+609,Dixie Chicks,823592,"contemporary country,country,country dawn",8,1998,F,Group
+610,Korn,3317932,"alternative metal,funk metal,nu metal,post-grunge,rap metal,rap rock,rock",14,1994,M,Group
+611,KT Tunstall,244211,"folk-pop,lilith,neo mellow,pop rock,scottish singer-songwriter",9,2005,F,Solo
+612,Corinne Bailey Rae,480821,"british soul,neo mellow,neo soul,soul",4,2006,F,Solo
+613,Norah Jones,1981134,"adult standards,neo mellow",15,2002,F,Solo
+614,Stone Sour,1630318,"alternative metal,groove metal,nu metal,post-grunge,rap rock,rock",7,2002,M,Group
+615,Lil Scrappy,382437,"atl hip hop,crunk,dirty south rap,gangster rap,pop rap,rap,southern hip hop,trap music,wrestling",14,2006,M,Solo
+616,The Shins,883556,"albuquerque indie,alternative rock,chamber pop,folk-pop,garage rock,indie folk,indie pop,indie rock,indietronica,modern rock,pop rock,portland indie,stomp and holler",6,2001,M,Group
+617,The Wreckers,54751,"candy pop,contemporary country,country,country dawn",3,2006,F,Group
+618,Petey Pablo,241536,"crunk,dirty south rap,gangster rap,hip pop,nc hip hop,pop rap,southern hip hop",4,2001,M,Solo
+619,Flogging Molly,443438,"bow pop,celtic punk,celtic rock,comic,punk,skate punk",9,2000,,Group
+620,Cartel,4711139,"latin hip hop,mexican hip hop",9,2002,M,Group
+621,Ca$his,37226,,8,2011,M,Solo
+622,AFI,540195,"alternative metal,emo,pop punk,punk,screamo,skate punk",13,1995,M,Group
+623,Lady Sovereign,35769,,4,2005,F,Solo
+624,Sarah McLachlan,462695,"canadian pop,canadian singer-songwriter,ectofolk,folk,folk-pop,lilith,neo mellow,new wave pop,permanent wave,pop rock",21,1989,F,Solo
+625,Lonestar,689321,"contemporary country,country,country road",11,1995,M,Group
+626,Brooke Hogan,52597,post-teen pop,3,2006,F,Solo
+627,Ying Yang Twins,516777,"atl hip hop,crunk,dance pop,dirty south rap,gangster rap,hip hop,hip pop,pop rap,rap,southern hip hop,trap music",13,2000,M,Group
+628,Lyfe Jennings,612968,"deep pop r&b,hip pop,neo soul,new jack swing,r&b,southern hip hop,urban contemporary",7,2004,M,Solo
+629,Lionel Richie,1408943,"adult standards,disco,mellow gold,motown,quiet storm,soft rock",18,1982,M,Solo
+630,Chris Cornell,1057677,"alternative metal,alternative rock,grunge,post-grunge,rock",8,1999,M,Solo
+631,Bowling For Soup,658472,"comic,pop punk,pop rock,post-grunge,texas pop punk",26,1996,M,Group
+632,Alejandro Sanz,3546356,"cantautor,latin,latin arena pop,latin pop,mexican pop,rock en espanol,spanish pop,tropical",30,1993,M,Solo
+633,Ruben Studdard,73296,"gospel r&b,neo soul,new jack swing,r&b,urban contemporary",7,2003,M,Solo
+634,Toby Love,315202,"bachata,latin,latin hip hop,reggaeton,tropical",7,2006,M,Solo
+635,John Mellencamp,659050,"album rock,classic rock,folk rock,heartland rock,mellow gold,pop rock,rock,singer-songwriter,soft rock",29,1976,M,Solo
+636,Young Dro,460673,"atl hip hop,crunk,dirty south rap,gangster rap,pop rap,rap,southern hip hop,trap music",28,2006,M,Solo
+637,Nick Lachey,104032,,3,2003,M,Solo
+638,The Raconteurs,561273,"alternative rock,garage rock,indie rock,modern blues rock,modern rock,rock",3,2006,M,Group
+639,Cham,59016,"dancehall,old school dancehall,reggae fusion,riddim,soca",4,2006,M,Solo
+640,Brown Boy,54960,"chicano rap,latin hip hop",8,2003,M,Solo
+641,Paulina Rubio,1388348,"dance pop,latin,latin arena pop,latin pop,mexican pop,pop",30,1992,F,Solo
+642,Kelis,294731,"dance pop,electropop,hip pop,neo soul,r&b,urban contemporary",8,1999,F,Solo
+643,Daniel Powter,163583,"canadian pop,neo mellow,pop rock",8,2005,M,Solo
+644,The Pack,16322,hyphy,5,2006,M,Group
+645,Keane,1662997,"neo mellow,piano rock,pop rock,rock",8,2004,M,Group
+646,The Cheetah Girls,408142,"dance pop,disney,girl group,pop,post-teen pop",9,2004,F,Group
+647,Field Mob,116173,"atl hip hop,dirty south rap,gangster rap,pop rap,southern hip hop,trap music",5,2000,M,Group
+648,OutKast,1197589,"atl hip hop,dirty south rap,hip hop,pop rap,rap,southern hip hop",7,1994,M,Solo
+649,Anna Nalick,98076,"acoustic pop,folk-pop,lilith,neo mellow",3,2005,F,Solo
+650,Taking Back Sunday,619431,"emo,modern rock,pop punk",13,2002,M,Group
+651,Pharrell,2900721,"pop,pop rap",4,2006,M,Solo
+652,Jeannie Ortega,1442,hip pop,3,2006,F,Solo
+653,Taylor Hicks,6677,idol,5,2006,M,Solo
+654,Audioslave,2385709,"alternative metal,alternative rock,nu metal,permanent wave,post-grunge,rock",3,2002,M,Group
+655,Lustra,17329,pop punk,4,2001,M,Group
+656,Angels,387528,"emo,pop rock,socal pop punk",9,2006,M,Solo
+657,Airwaves,387528,"emo,pop rock,socal pop punk",9,2006,F,Solo
+658,Ken,356361,"latin,latin hip hop,reggaeton,reggaeton flow,tropical",3,2006,M,Solo
+659,Anthony Hamilton,863265,"neo soul,new jack swing,quiet storm,r&b,soul,urban contemporary",9,2003,M,Solo
+660,LeAnn Rimes,616286,"contemporary country,country,country dawn,dance pop,pop rock",18,1996,F,Solo
+661,Tom Petty,1011430,"album rock,classic rock,folk rock,heartland rock,mellow gold,pop rock,rock,roots rock,singer-songwriter,soft rock",4,1989,M,Solo
+662,Dem Franchize Boyz,196136,"atl hip hop,crunk,dirty south rap,gangster rap,pop rap,rap,southern hip hop,trap music",4,2004,M,Group
+663,Kenny Rogers,923636,"adult standards,country,mellow gold,nashville sound,soft rock,traditional country",59,1970,M,Solo
+664,Saving Jane,12113,candy pop,7,2005,,Group
+665,Christina Milian,703000,"dance pop,europop,hip pop,r&b,urban contemporary",3,2001,F,Solo
+666,Bo Bice,9944,idol,3,2005,M,Solo
+667,Teddy Geiger,28862,"acoustic pop,la pop,neo mellow,pop rock,transpop",5,1980,F,Solo
+668,Ice Cube,3163810,"conscious hip hop,g funk,gangster rap,hardcore hip hop,hip hop,rap,west coast rap",11,1990,M,Solo
+669,Jagged Edge,1044712,"atl hip hop,dance pop,hip hop,hip pop,neo soul,new jack swing,pop rap,quiet storm,r&b,rap,southern hip hop,urban contemporary",11,1997,M,Group
+670,Ghostface Killah,450049,"alternative hip hop,east coast hip hop,gangster rap,hardcore hip hop,hip hop,rap,southern hip hop",30,1996,M,Solo
+671,Heather Headley,37903,"neo soul,r&b",6,2002,F,Solo
+672,The Afters,166400,"anthem worship,ccm,christian alternative rock,christian music,christian pop,christian rock,indiecoustica,world worship,worship",7,2005,M,Group
+673,Godsmack,1524237,"alternative metal,groove metal,nu metal,post-grunge,rap metal,rap rock,rock",11,1998,M,Group
+674,Sting,1486436,"permanent wave,soft rock",25,1985,M,Solo
+675,Yeah Yeah Yeahs,828638,"alternative dance,alternative rock,art pop,dance-punk,folk-pop,garage rock,indie pop,indie rock,indietronica,modern rock,new rave,pop rock,rock",5,2003,,Group
+676,Juvenile,546762,"bounce,crunk,dirty south rap,gangster rap,hip hop,new orleans rap,pop rap,rap,southern hip hop,trap music",19,1994,M,Solo
+677,Juelz Santana,391265,"gangster rap,hardcore hip hop,hip hop,nyc rap,pop rap,rap,trap music",3,2003,M,Solo
+678,Lil Rob,202653,"chicano rap,g funk,gangster rap,latin hip hop,san diego rap",16,1997,M,Solo
+679,10 Years,347803,"alternative metal,christian rock,nu metal,post-grunge,rap rock",8,2005,M,Group
+680,The Notorious B.I.G.,4409816,"east coast hip hop,gangster rap,hardcore hip hop,hip hop,pop rap,rap",3,1994,M,Solo
+681,Relient K,262409,"canadian ccm,christian alternative rock,christian music,christian punk,christian rock,indiecoustica,neo mellow,pop punk,pop rock",10,2000,,Group
+682,Willie Nelson,945285,"country,nashville sound,outlaw country,singer-songwriter,texas country,traditional country",112,1962,M,Solo
+683,High School Musical Cast,1026890,"dance pop,hollywood,pop,post-teen pop",5,2006,,Group
+684,P.O.D.,1065466,"alternative metal,funk metal,nu metal,post-grunge,rap metal,rap rock",12,1994,M,Group
+685,Trina,472433,"deep pop r&b,hip pop,miami hip hop,pop,pop rap,r&b,rap,rap latina,southern hip hop,trap music,trap queen",14,2000,F,Solo
+686,System Of A Down,5507141,"alternative metal,nu metal,post-grunge,rap metal,rock",7,1998,M,Group
+687,YoungBloodZ,259758,"atl hip hop,crunk,dirty south rap,gangster rap,pop rap,rap,southern hip hop",5,1990,M,Group
+688,Frankie J,295122,"dance pop,r&b,urban contemporary",10,2003,M,Solo
+689,INXS,1157358,"australian rock,dance rock,funk rock,mellow gold,new romantic,new wave,new wave pop,pop rock,rock,soft rock",19,1980,,Group
+690,Cristian Castro,1218312,"latin,latin arena pop,latin pop,rock en espanol,tropical",37,1997,M,Solo
+691,Lil' Kim,786227,"dance pop,east coast hip hop,escape room,hip hop,hip pop,pop,pop rap,r&b,rap,southern hip hop,trap queen,urban contemporary",5,1996,F,Solo
+692,Cheap Trick,658140,"album rock,art rock,classic rock,dance rock,glam metal,glam rock,hard rock,heartland rock,mellow gold,new wave pop,pop rock,power pop,rock,soft rock",24,1977,M,Group
+693,The Click Five,135116,"boy band,neo mellow,neon pop punk,pixie,pop emo,pop punk,pop rock",5,2005,M,Group
+694,Neal McCoy,202913,"contemporary country,country,country road,country rock,modern country rock",15,1990,M,Solo
+695,Jamie O'Neal,62694,"contemporary country,country,country dawn,country road",3,2000,F,Solo
+696,Switchfoot,478291,"ccm,christian alternative rock,christian music,christian rock,neo mellow,pop rock,post-grunge,worship",16,1997,M,Group
+697,Depeche Mode,2559255,"dance rock,new romantic,new wave,permanent wave,synthpop",24,1981,M,Group
+698,Ryan Cabrera,47787,"neo mellow,pop rock",5,2004,M,Solo
+699,Franz Ferdinand,1610675,"alternative rock,dance-punk,garage rock,indie pop,indie rock,modern rock,new rave,rock,scottish rock",10,2004,M,Group
+700,Gretchen Wilson,444587,"contemporary country,country,country dawn,country road",10,2004,F,Solo
+701,The Strokes,2883049,"alternative rock,garage rock,indie pop,indie rock,modern rock,permanent wave,rock",5,2001,M,Group
+702,"Damian ""Jr. Gong"" Marley",990741,"reggae,reggae fusion",6,1996,M,Solo
+703,Trisha Yearwood,563642,"contemporary country,country,country dawn,country road",16,1991,F,Solo
+704,Tony Yayo,148081,southern hip hop,3,2005,M,Solo
+705,Teairra Mari,151159,"deep pop r&b,hip pop,r&b,urban contemporary",3,2005,F,Solo
+706,Crazy Frog,145948,eurodance,6,2005,,
+707,Van Zant,22558,"country rock,southern rock",6,1985,M,Solo
+708,Jermaine Dupri,186717,"atl hip hop,dirty south rap,hip hop,hip pop,pop rap,rap,southern hip hop",4,1998,M,Solo
+709,Howie Day,213232,"acoustic pop,neo mellow,pop rock",5,2003,M,Solo
+710,Webbie,553047,"baton rouge rap,crunk,deep southern trap,dirty south rap,gangster rap,hip hop,pop rap,rap,southern hip hop,trap music",12,2005,M,Solo
+711,Will Smith,587137,hip hop,4,1997,M,Solo
+712,Boyz N Da Hood,254273,"atl hip hop,dirty south rap,gangster rap,pop rap,rap,southern hip hop,trap music",3,2005,M,Group
+713,SHeDAISY,172832,"contemporary country,country,country dawn,country road",6,1999,F,Group
+714,Kem,409636,"funk,neo soul,new jack swing,quiet storm,r&b,soul,urban contemporary",6,2003,,
+715,Beck,985805,"alternative rock,anti-folk,garage rock,indie rock,modern rock,permanent wave,pop rock,rock",13,1994,M,Solo
+716,Reba McEntire,974392,"contemporary country,country,country dawn",40,1977,F,Solo
+717,Cassidy,301766,"battle rap,hip hop,hip pop,philly rap,pop rap,rap,southern hip hop,trap music",14,2004,M,Solo
+718,Trick Daddy,479747,"crunk,dirty south rap,gangster rap,hip hop,hip pop,miami hip hop,pop rap,rap,southern hip hop,trap music",15,1997,M,Solo
+719,The Bravery,156463,"dance-punk,garage rock,indie pop,indie rock,modern rock,new rave",5,2005,,Group
+720,Jo Dee Messina,342231,"contemporary country,country,country dawn,country road",9,1996,F,Solo
+721,Amerie,455826,"alternative r&b,dance pop,deep pop r&b,hip hop,hip pop,neo soul,r&b,urban contemporary",6,2002,F,Solo
+722,Faith Evans,687598,"dance pop,hip hop,hip pop,neo soul,new jack swing,quiet storm,r&b,urban contemporary",10,1995,F,Solo
+723,Trillville,141368,"atl hip hop,crunk,dirty south rap,gangster rap,pop rap,rap,southern hip hop,trap music",3,2008,M,Group
+724,Jet,368025,"garage rock,modern rock,post-grunge,rock",7,2003,M,Group
+725,Andy Griggs,48901,"contemporary country,country,country road,modern country rock",4,1999,M,Solo
+726,Mudvayne,850117,"alternative metal,groove metal,industrial metal,industrial rock,melodic metalcore,nu metal,post-grunge,rap metal,rap rock",8,1997,M,Group
+727,Nivea,358769,"atl hip hop,deep pop r&b,hip pop,r&b,urban contemporary",3,2001,F,Solo
+728,Caesars,47469,"swedish alternative rock,swedish indie rock",7,1998,M,Group
+729,Queens Of The Stone Age,2008411,"alternative metal,alternative rock,blues rock,garage rock,modern rock,nu metal,palm desert scene,post-grunge,rock,stoner metal,stoner rock",9,1998,M,Group
+730,Billy Dean,62986,"country,country road",16,1990,M,Solo
+731,Stevie Wonder,3808641,"motown,quiet storm,soul",30,1962,M,Solo
+732,Ben Folds,193518,"folk-pop,indie pop,modern rock,permanent wave,piano rock,pop rock",14,1998,M,Solo
+733,Garbage,627272,"alternative dance,alternative rock,dance pop,electronic rock,lilith,permanent wave,pop rock,post-grunge,rock",8,1995,,Group
+734,The Mars Volta,350852,"alternative metal,alternative rock,el paso indie,garage rock,modern rock,rock",6,2003,M,Group
+735,The East Side Boyz,343440,"atl hip hop,crunk,dirty south rap,gangster rap,pop rap,rap,southern hip hop,trap music",5,2001,M,Group
+736,Simple Plan,2214166,"canadian pop punk,canadian punk,canadian rock,pop punk,pop rock,post-grunge",7,2004,M,Solo
+737,Ja Rule,899730,"dance pop,east coast hip hop,gangster rap,hip hop,hip pop,pop rap,rap,urban contemporary",8,1999,M,Solo
+738,Cam'Ron,334395,"battle rap,east coast hip hop,gangster rap,hardcore hip hop,hip hop,hip pop,pop rap,rap,southern hip hop,trap music",11,1998,M,Solo
+739,Jimmy Eat World,890876,"modern rock,neo mellow,pop punk,pop rock,post-grunge",8,1996,M,Group
+740,Jadakiss,536704,"battle rap,east coast hip hop,gangster rap,hardcore hip hop,hip hop,hip pop,pop rap,rap,trap music",11,2001,M,Solo
+741,Chevelle,962017,"alternative metal,alternative rock,christian rock,nu metal,post-grunge,rap rock,rock",10,1999,M,Group
+742,Monchy,373093,"bachata,latin,tropical",14,2004,M,Solo
+743,Patti LaBelle,445160,"disco,funk,motown,neo soul,new jack swing,philly soul,post-disco,quiet storm,r&b,soul,urban contemporary",31,1971,F,Solo
+744,Guerilla Black,9506,west coast rap,3,2004,M,Solo
+745,Daryl Hall John Oates,965517,"album rock,classic rock,mellow gold,rock,soft rock,yacht rock",25,1972,M,Group
+746,2Pac,7077072,"g funk,gangster rap,hip hop,rap,west coast rap",20,1991,M,Solo
+747,The Alchemist,124214,"alternative hip hop,boom bap,hardcore hip hop,hip hop,southern hip hop,underground hip hop,west coast rap",15,2004,M,Solo
+748,N.O.R.E.,176102,"gangster rap,hardcore hip hop,hip hop,hip pop,pop rap,rap,southern hip hop",13,1998,M,Solo
+749,Teena Marie,286819,"classic soul,disco,funk,motown,neo soul,new jack swing,post-disco,quiet storm,r&b,soul,urban contemporary",16,1979,F,Solo
+750,Mannie Fresh,105744,"bounce,dirty south rap,gangster rap,pop rap,rap,southern hip hop,trap music",3,2004,M,Solo
+751,Crossfade,451287,"alternative metal,nu metal,post-grunge,rap rock",3,2004,M,Group
+752,Anita Baker,554709,"funk,motown,neo soul,new jack swing,quiet storm,r&b,smooth jazz,soul,urban contemporary",5,1986,F,Solo
+753,Xzibit,835748,"detroit hip hop,g funk,gangster rap,hardcore hip hop,hip hop,pop rap,rap,southern hip hop,west coast rap",9,1996,M,Solo
+754,Mase,361303,"gangster rap,hardcore hip hop,hip hop,hip pop,pop rap,r&b,rap,southern hip hop,urban contemporary",5,1997,M,Solo
+755,Los Lonely Boys,46830,,11,2004,M,Group
+756,Hoobastank,1267652,"alternative metal,funk metal,nu metal,pop punk,pop rock,post-grunge,rap rock",7,2001,M,Group
+757,Duran Duran,1324964,"dance rock,new romantic,new wave,new wave pop,rock,soft rock,synthpop",15,1981,M,Group
+758,Lil' Flip,272570,group,48,2000,M,Solo
+759,Beenie Man,254754,"dancehall,reggae fusion,soca",38,1992,M,Solo
+760,Vanessa Carlton,347073,"dance pop,folk-pop,lilith,neo mellow,piano rock,pop rock",8,2002,F,Solo
+761,New Edition,758686,"boy band,dance pop,funk,hip pop,neo soul,new jack swing,quiet storm,r&b,urban contemporary",7,1983,M,Group
+762,Nitty,64342,"bluegrass,country,country gospel,country rock,folk,folk rock,mellow gold,nashville sound,outlaw country,soft rock,traditional country,traditional folk",33,1967,M,Solo
+763,Kevin Lyttle,52989,soca,4,2004,M,Solo
+764,Counting Crows,921423,"alternative rock,neo mellow,pop rock,post-grunge,rock",17,1993,M,Group
+765,Terri Clark,251596,"alberta country,canadian contemporary country,canadian country,contemporary country,country,country dawn,country road",14,1995,F,Solo
+766,Julie Roberts,82800,"contemporary country,country,country dawn",5,2004,F,Solo
+767,311,536265,"alternative metal,alternative rock,funk metal,funk rock,nu metal,pop rock,post-grunge,reggae fusion,rock",15,1993,M,Group
+768,Slum Village,151412,"alternative hip hop,detroit hip hop,hardcore hip hop,hip hop,indie soul,neo soul,southern hip hop",21,1999,M,Group
+769,Play,22458057,"permanent wave,pop",3,2003,F,Group
+770,Mobb Deep,893379,"east coast hip hop,gangster rap,hardcore hip hop,hip hop,pop rap,rap",9,1993,M,Group
+771,Jimmy Buffett,287321,"folk rock,mellow gold,soft rock",47,1970,M,Solo
+772,Clint Black,421028,"contemporary country,country,country gospel,country road,country rock,outlaw country,traditional country",16,1989,M,Solo
+773,Elephant Man,179825,"dancehall,old school dancehall,reggae fusion,riddim,soca",10,2000,M,Solo
+774,Diana DeGarmo,4011,idol,3,2004,F,Solo
+775,J,9417086,"conscious hip hop,hip hop,nc hip hop,pop rap,rap",9,2009,,
+776,Alanis Morissette,1381563,"alternative rock,canadian pop,canadian singer-songwriter,folk-pop,pop rock,singer-songwriter",12,1995,F,Solo
+777,Kimberley Locke,4093,idol,3,2004,F,Solo
+778,John Michael Montgomery,476250,"contemporary country,country,country road,country rock",11,1994,M,Solo
+779,Musiq,685302,"dance pop,hip hop,hip pop,neo soul,r&b,urban contemporary",11,2000,M,Solo
+780,Seal,908494,"british soul,soft rock",16,1991,M,Solo
+781,Maria Mena,156664,"candy pop,folk-pop,neo mellow,norwegian pop",8,2002,F,Solo
+782,Dido,840097,"dance pop,new wave pop,pop rock",6,1999,F,Solo
+783,Dilated Peoples,135956,"alternative hip hop,hardcore hip hop,hip hop,turntablism,west coast rap",6,2000,M,Solo
+784,Buddy Jewell,30470,"contemporary country,country,country road",9,2001,M,Solo
+785,Sugababes,322871,"australian pop,bubblegum dance,dance pop,europop,girl group,neo soul,pop,pop rock,post-teen pop",9,2000,F,Group
+786,A Perfect Circle,971813,"alternative metal,alternative rock,modern rock,nu metal,post-grunge,rap rock,rock",9,2000,M,Group
+787,Janet Jackson,1704008,"dance pop,hip pop,neo soul,new jack swing,pop,r&b,urban contemporary",12,1982,F,Solo
+788,Lostprophets,119047,,6,2001,M,Group
+789,Clay Aiken,31616,idol,7,2003,M,Solo
+790,Carolyn Dawn Johnson,26499,"alberta country,canadian country,contemporary country,country,country dawn",4,2000,F,Solo
+791,Limp Bizkit,2821672,"alternative metal,funk metal,nu metal,post-grunge,rap metal,rap rock,wrestling",9,1997,M,Group
+792,Fuel,401975,"alternative metal,alternative rock,nu metal,pop rock,post-grunge,rap rock",5,1997,M,Group
+793,Sarah Connor,302977,"europop,german pop",13,2001,F,Solo
+794,Young Gunz,97397,philly rap,4,1997,M,Group
+795,MercyMe,862851,"ccm,christian alternative rock,christian indie,christian music,worship",15,2001,M,Group
+796,Westside Connection,569294,"g funk,gangster rap,hardcore hip hop,hip hop,pop rap,rap,southern hip hop,west coast rap",3,1996,M,Group
+797,Nick Cannon,75366,pop rap,7,2003,M,Solo
+798,Lasgo,59069,"belgian dance,belgian pop,eurodance,europop",6,2003,F,Solo
+799,Mr. Vegas,198407,"azonto,dancehall,panamanian pop,reggae fusion,soca",14,1998,M,Solo
+800,Trapt,640528,"alternative metal,nu metal,post-grunge,rap rock",10,2002,M,Group
+801,Tracy Byrd,356958,"contemporary country,country,country road,country rock,outlaw country,redneck,traditional country",10,1993,F,Solo
+802,Kylie Minogue,880207,"australian dance,australian pop,dance pop,disco house,electropop,eurodance,europop,new wave pop,pop,pop rock",25,1988,F,Solo
+803,Murphy Lee,130041,"contemporary country,country,country road,country rock,modern country rock",4,1994,M,Solo
+804,Big Tymers,300201,"crunk,dirty south rap,gangster rap,hip hop,new orleans rap,pop rap,rap,southern hip hop,trap music",6,1998,M,Group
+805,Mya,661113,"dance pop,deep pop r&b,hip pop,neo soul,pop,r&b,rap,urban contemporary",11,1998,F,Solo
+806,B2K,384220,"boy band,dance pop,hip pop,pop rap,r&b,southern hip hop,urban contemporary",3,2000,M,Group
+807,Liz Phair,77360,"alternative pop,alternative rock,candy pop,folk,folk-pop,indie rock,lilith,new wave pop,permanent wave,pop rock",7,1993,F,Solo
+808,Stacie Orrico,151601,"candy pop,dance pop,europop",3,2000,F,Solo
+809,Fountains Of Wayne,90123,"pop rock,power pop",5,1996,M,Group
+810,Barenaked Ladies,387505,"canadian indie,canadian pop,canadian rock,comic,pop rock,post-grunge",62,1992,M,Group
+811,Live,1611685,"ccm,russian ccm,world worship,worship",12,1991,M,Group
+812,Fefe Dobson,63653,"canadian pop,candy pop,post-teen pop",3,2003,F,Solo
+813,Smokie Norful,153440,"gospel,gospel r&b",15,2002,M,Solo
+814,Dwele,163876,"neo soul,r&b,urban contemporary",5,2003,M,Solo
+815,Tamia,702479,"canadian pop,dance pop,deep pop r&b,hip pop,neo soul,new jack swing,quiet storm,r&b,urban contemporary",8,1998,F,Solo
+816,The Ataris,143500,"emo,pop punk,punk,skate punk",9,1997,M,Group
+817,Obie Trice,410479,"detroit hip hop,gangster rap,hardcore hip hop,hip hop,pop rap,rap,southern hip hop",6,2003,M,Solo
+818,Luther Vandross,1115947,"funk,motown,neo soul,new jack swing,quiet storm,r&b,soul,urban contemporary",17,1981,M,Solo
+819,Tyrese,1230147,"dance pop,hip hop,hip pop,neo soul,new jack swing,pop rap,quiet storm,r&b,rap,southern hip hop,urban contemporary",6,1998,M,Solo
+820,Patty Loveless,191026,"contemporary country,country,country dawn,country gospel,country rock,nashville sound,traditional country",15,1988,F,Solo
+821,Thalia,2219894,"dance pop,latin,latin pop,mexican pop,pop,tropical",19,1995,F,Solo
+822,DMX,1635505,"east coast hip hop,gangster rap,hardcore hip hop,hip hop,pop rap,rap,southern hip hop",15,1998,M,Solo
+823,Saliva,472088,"alternative metal,nu metal,post-grunge,rap metal,rap rock,wrestling",9,1997,M,Group
+824,The Rolling Stones,7538612,"album rock,british invasion,classic rock,protopunk,rock",63,1964,M,Group
+825,BT,63537,"progressive house,progressive trance,trance,uplifting trance",24,1995,M,Solo
+826,Nappy Roots,98720,"dirty south rap,gangster rap,pop rap,southern hip hop",9,2002,M,Group
+827,112,590341,"atl hip hop,boy band,dance pop,gangster rap,hip hop,hip pop,new jack swing,pop,pop rap,r&b,rap,southern hip hop,urban contemporary",6,1996,M,Group
+828,Cold,22458057,"permanent wave,pop",10,2006,,
+829,Wynonna Judd,198561,"contemporary country,country,country dawn",12,1992,F,Solo
+830,Randy Travis,684809,"contemporary country,country,country gospel,country road,country rock,nashville sound,outlaw country,traditional country",26,1986,M,Solo
+831,Wayne Wonder,84687,"dancehall,lovers rock,old school dancehall,reggae fusion,roots reggae,soca",17,1992,M,Solo
+832,Floetry,376753,"british soul,hip pop,neo soul,new jack swing,quiet storm,r&b,urban contemporary",3,2002,F,Group
+833,Jeff Bates,30895,"contemporary country,country,country road,modern country rock",7,2003,M,Solo
+834,Diamond Rio,415386,"contemporary country,country,country gospel,country road,country rock",13,1991,M,Group
+835,Dru Hill,725158,"dance pop,hip hop,hip pop,neo soul,new jack swing,quiet storm,r&b,southern hip hop,urban contemporary",5,1996,M,Group
+836,Ricky Martin,4946259,"dance pop,latin,latin pop,mexican pop,puerto rican pop,tropical",13,1991,M,Solo
+837,Panjabi MC,62563,"bhangra,desi hip hop,desi pop,punjabi",14,2000,M,Solo
+838,Loon,16452,hip pop,5,2003,M,Solo
+839,Vivian Green,237829,"hip pop,neo soul,new jack swing,quiet storm,r&b,urban contemporary",8,2002,F,Solo
+840,Freeway,135232,"battle rap,gangster rap,hardcore hip hop,hip hop,philly rap,rap,southern hip hop",29,2003,M,Solo
+841,Amanda Perez,245043,"deep pop r&b,hip pop,r&b,urban contemporary",4,2002,F,Solo
+842,Phil Collins,2291850,"mellow gold,soft rock",14,1981,M,Solo
+843,Fleetwood Mac,3761184,"album rock,classic rock,mellow gold,rock,soft rock,yacht rock",23,1968,,Group
+844,Talib Kweli,345525,"alternative hip hop,conscious hip hop,east coast hip hop,hardcore hip hop,hip hop,southern hip hop",19,2002,M,Solo
+845,t.A.T.u.,354913,"dance pop,girl group",6,2002,F,Group
+846,Reina,16730,"banda,regional mexican pop",4,2011,F,Solo
+847,Sixpence None The Richer,228692,"neo mellow,pop rock",10,1994,,Group
+848,TLC,1807741,"atl hip hop,dance pop,girl group,hip hop,hip pop,new jack swing,pop,r&b,urban contemporary",5,1992,F,Group
+849,Aaron Lines,8930,"alberta country,canadian country,country road",3,2003,M,Solo
+850,Killer Mike,161607,"alternative hip hop,atl hip hop,conscious hip hop,escape room,southern hip hop",7,2005,M,Solo
+851,Mark Wills,165959,"contemporary country,country,country road",8,1996,M,Solo
+852,Clipse,176795,"alternative hip hop,dirty south rap,gangster rap,hardcore hip hop,hip hop,pop rap,rap,southern hip hop",4,2002,M,Group
+853,The Roots,796842,"alternative hip hop,conscious hip hop,east coast hip hop,hardcore hip hop,hip hop,neo soul,philly rap,southern hip hop",14,1995,M,Group
+854,Nirvana,9609725,"alternative rock,grunge,permanent wave,post-grunge,rock",11,1991,M,Group
+855,Telepopmusik,136625,"downtempo,electronica,nu jazz,trip hop",4,2001,,Group
+856,Benzino,4593,,4,2001,M,Solo
+857,Toni Braxton,1821585,"dance pop,hip pop,neo soul,new jack swing,pop,quiet storm,r&b,urban contemporary",10,1993,F,Solo
+858,Erick Sermon,90629,"alternative hip hop,gangster rap,hardcore hip hop,hip hop,hip pop,rap,turntablism",14,1993,M,Solo
+859,Our Lady Peace,205586,"alternative metal,alternative rock,canadian rock,nu metal,pop rock,post-grunge,wrestling",11,1994,M,Group
+860,WC,184880,"gangster rap,hip hop,hyphy,rap,west coast rap,west coast trap",5,1998,M,Solo
+861,Oakenfold,124743,"big beat,progressive trance,trance",90,2001,M,Solo
+862,DJ Sammy,43862,"eurodance,europop",6,2002,M,Solo
+863,TRUSTcompany,65013,"alabama metal,alternative metal,nu metal,post-grunge,rap rock",3,2002,M,Group
+864,Pastor Troy,251664,"atl hip hop,crunk,dirty south rap,gangster rap,pop rap,rap,southern hip hop,trap music",34,1998,M,Solo
+865,Mark Chesnutt,300429,"contemporary country,country,country gospel,country road,country rock,nashville sound,outlaw country,texas country,traditional country",15,1990,M,Solo
+866,New Found Glory,510155,"easycore,emo,pop punk,pop rock,post-grunge,skate punk",19,1999,M,Group
+867,Craig David,505548,"british soul,dance pop,pop,r&b,tropical house,urban contemporary",9,2001,M,Solo
+868,Tweet,302279,"hip pop,neo soul,r&b,urban contemporary",3,2002,F,Solo
+869,BBMak,42353,"boy band,dance pop",3,2000,M,Group
+870,The Hives,466445,"alternative rock,dance-punk,garage rock,indie rock,modern rock,new rave,rock,swedish hard rock,swedish indie rock",7,1997,M,Group
+871,Donell Jones,610904,"dance pop,hip hop,hip pop,neo soul,new jack swing,quiet storm,r&b,urban contemporary",7,1996,M,Solo
+872,Dirty Vegas,28332,"big beat,disco house",11,2002,,Group
+873,Ruff Endz,147449,"neo soul,new jack swing,r&b,urban contemporary",4,2000,M,Group
+874,Default,130899,"alternative metal,canadian rock,nu metal,pop rock,post-grunge",5,2001,M,Group
+875,Filter,238621,"alternative metal,alternative rock,grunge,industrial metal,industrial rock,nu metal,pop rock,post-grunge,rap rock,rock",10,1995,M,Group
+876,Steve Azar,9723,"contemporary country,country,country road",6,1996,M,Solo
+877,Pilar Montenegro,69929,"grupera,latin,latin arena pop,latin pop",5,1996,F,Solo
+878,Tanto Metro,26400,"dancehall,old school dancehall,soca",5,1999,M,Solo
+879,Angie Stone,350556,"neo soul,r&b,soul,urban contemporary",9,1999,F,Solo
+880,Scarface,428897,"conscious hip hop,dirty south rap,gangster rap,hardcore hip hop,hip hop,pop rap,rap,southern hip hop,trap music",28,1991,M,Solo
+881,Beanie Sigel,299271,"battle rap,east coast hip hop,gangster rap,hardcore hip hop,hip hop,hip pop,philly rap,pop rap,rap,southern hip hop,trap music",9,1999,M,Solo
+882,Travis Tritt,615676,"contemporary country,country,country road,country rock,traditional country",16,1990,M,Solo
+883,iio,18344,"disco house,vocal house",8,2002,,Group
+884,KeKe Wyatt,360638,"deep pop r&b,hip pop,neo soul,new jack swing,r&b,urban contemporary",5,2001,F,Solo
+885,Cher,1270389,"dance pop,hollywood,new wave pop,pop",24,1965,F,Solo
+886,Mr. Cheeks,12929,hip pop,5,2001,M,Solo
+887,Raphael Saadiq,330003,"funk,hip hop,neo soul,r&b,soul,urban contemporary",8,2002,M,Solo
+888,Toya,2425,hip pop,9,2001,F,Solo
+889,Natalie Imbruglia,466615,"australian pop,dance pop,europop,folk-pop,lilith,new wave pop,pop rock",4,1997,F,Solo
+890,Darren Hayes,50475,australian pop,4,2002,M,Solo
+891,Joe Diffie,294001,"contemporary country,country,country gospel,country road,country rock,outlaw country,redneck,traditional country",15,1990,M,Solo
+892,David Ball,41480,"country,country road,country rock,nashville sound,outlaw country,traditional country",10,1994,M,Solo
+893,Method Man,982422,"east coast hip hop,gangster rap,hardcore hip hop,hip hop,pop rap,rap,southern hip hop",11,1994,M,Solo
+894,Redman,534070,"east coast hip hop,gangster rap,hardcore hip hop,hip hop,new jersey rap,pop rap,rap,southern hip hop",10,1992,M,Solo
+895,Master P,492214,"deep southern trap,dirty south rap,gangster rap,hip hop,new orleans rap,pop rap,rap,southern hip hop,trap music",18,1996,M,Solo
+896,Aaron Tippin,280579,"contemporary country,country,country road,country rock,outlaw country,redneck,traditional country",13,1991,M,Solo
+897,Keith Murray,101321,"alternative hip hop,gangster rap,hardcore hip hop,hip hop",10,1994,M,Solo
+898,George Harrison,1254202,"album rock,classic rock,folk rock,mellow gold,psychedelic rock,rock,roots rock,soft rock",10,1968,M,Solo
+899,Brian McKnight,743435,"dance pop,neo soul,new jack swing,quiet storm,r&b,urban contemporary",19,1992,M,Solo
+900,Lee Greenwood,24702,"country,nashville sound,traditional country",38,1983,M,Solo
+901,Bubba Sparxxx,178778,"atl hip hop,country rap,dirty south rap,pop rap,redneck,southern hip hop",10,2001,M,Solo
+902,Alien Ant Farm,472611,"alternative metal,alternative rock,funk metal,nu metal,pop punk,pop rock,post-grunge,rap rock",5,2001,M,Group
+903,Babyface,580710,"dance pop,neo soul,new jack swing,quiet storm,r&b,urban contemporary",12,1986,M,Solo
+904,LFO,23274,boy band,3,1999,M,Group
+905,Sum 41,2245606,"alternative metal,canadian pop punk,canadian punk,nu metal,pop punk,post-grunge,punk",14,2000,M,Group
+906,Tammy Cochran,11232,"contemporary country,country,country dawn,deep contemporary country",4,1994,F,Solo
+907,Trick Pony,88558,"contemporary country,country,country dawn,country road",3,2001,,Group
+908,Smash Mouth,509132,"alternative rock,pop punk,pop rock,post-grunge",7,1997,M,Group
+909,Gigi D'Agostino,354225,"eurodance,europop,italo dance",8,2004,M,Solo
+910,Tool,968266,"alternative metal,alternative rock,art rock,nu metal,post-grunge,post-metal,progressive metal,progressive rock,rock",5,1993,M,Group
+911,American Hi-Fi,117936,"pop punk,pop rock",8,2001,M,Group
+912,Sugar Ray,488495,"alternative metal,alternative rock,funk metal,neo mellow,pop punk,pop rock,post-grunge",7,1995,M,Group
+913,Eve 6,216986,"alternative metal,alternative rock,nu metal,pop punk,pop rock,post-grunge",4,1998,M,Group
+914,Afroman,230594,"gangster rap,hip hop,rap",12,2001,M,Solo
+915,Black Rob,84210,"hardcore hip hop,hip pop",6,2000,M,Solo
+916,Lil' Wayne,8360644,"hip hop,new orleans rap,pop,pop rap,rap,trap music",25,1999,M,Solo
+917,Coo Coo Cal,2477,milwaukee hip hop,4,2002,M,Solo
+918,Dream,681849,"dance pop,hip hop,hip pop,pop,pop rap,r&b,rap,southern hip hop,trap music,urban contemporary",8,2007,F,Group
+919,Darude,98483,"eurodance,europop,finnish edm",9,2000,M,Solo
+920,Azul Azul,63213,"deep norteno,duranguense,musica potosina,norteno,norteno-sax",28,2002,M,Group
+921,Sunshine Anderson,79300,"hip pop,neo soul,r&b,urban contemporary",3,2001,F,Solo
+922,S Club 7,310162,"australian pop,bubblegum dance,dance pop,europop,post-teen pop",4,1999,,Group
+923,3LW,293561,"girl group,hip pop,r&b,urban contemporary",3,2000,F,Group
+924,Moby,1066154,"downtempo,electronica",51,1991,M,Solo
+925,Case,421213,"dance pop,hip hop,hip pop,neo soul,new jack swing,quiet storm,r&b,rap,southern hip hop,urban contemporary",7,1996,M,Solo
+926,Amanda,23027,"alternative country,folk,new americana,roots rock",4,2011,,
+927,Vertical Horizon,237467,"neo mellow,pop rock,post-grunge",8,1992,M,Group
+928,Crazy Town,226209,"alternative metal,funk metal,nu metal,post-grunge,rap rock",3,1999,M,Group
+929,Aerosmith,7359118,"album rock,classic rock,hard rock,rock",19,1973,M,Group
+930,Jessica Andrews,42451,"contemporary country,country,country dawn",4,1999,F,Solo
+931,The Corrs,539689,"australian pop,bow pop,celtic rock,dance pop,europop,new wave pop,pop rock",12,1995,,Group
+932,Project Pat,324035,"crunk,dirty south rap,gangster rap,memphis hip hop,pop rap,rap,southern hip hop,trap music",24,1999,M,Solo
+933,Jon B,590156,"dance pop,hip hop,hip pop,neo soul,new jack swing,quiet storm,r&b,southern hip hop,urban contemporary",8,1995,M,Solo
+934,Aaron Carter,162763,"dance pop,post-teen pop",5,2000,M,Solo
+935,Mystikal,317319,"crunk,dirty south rap,gangster rap,new orleans rap",5,1995,M,Solo
+936,Bilal,151360,"neo r&b,neo soul",4,2001,M,Solo
+937,Dave Hollister,242814,"hip pop,neo soul,new jack swing,quiet storm,r&b,urban contemporary",10,1999,M,Solo
+938,Carl Thomas,335717,"dance pop,hip pop,neo soul,new jack swing,quiet storm,r&b,urban contemporary",3,2000,M,Solo
+939,David Gray,382793,"acoustic pop,folk-pop,neo mellow,permanent wave,pop rock",13,1993,M,Solo
+940,Mos Def,744962,"alternative hip hop,conscious hip hop,east coast hip hop,gangster rap,hardcore hip hop,hip hop,pop rap,rap,southern hip hop",6,1999,M,Solo
+941,Pharoahe Monch,119669,"alternative hip hop,conscious hip hop,east coast hip hop,hardcore hip hop,hip hop,turntablism",4,2006,M,Solo
+942,Kelly Price,489080,"deep pop r&b,hip pop,neo soul,new jack swing,quiet storm,r&b,urban contemporary",6,1998,F,Solo
+943,Billy Gilman,16145,country,7,2000,M,Solo
+944,Profyle,32190,"new jack swing,r&b",3,1999,M,Group
+945,Vitamin C,42978,"dance pop,europop",3,1999,F,Solo
+946,Vince Gill,277834,"contemporary country,country,country gospel,country rock,nashville sound,traditional country",26,1985,M,Solo
+947,Boyz II Men,1559967,"boy band,new jack swing,pop,quiet storm,r&b,urban contemporary",15,1991,M,Group
+948,A*Teens,92492,"bubblegum dance,dance pop,europop",3,1999,,Group
+949,NewSong,87688,"ccm,christian alternative rock,christian music,christian pop,worship",18,1988,M,Group
+950,Yolanda Adams,262409,"gospel,gospel r&b",16,1980,F,Solo
+951,Sunday,619431,"emo,modern rock,pop punk",13,2002,,
+952,Nine Days,50215,"neo mellow,pop rock,post-grunge",5,1996,M,Group
+953,Chante Moore,228772,"hip pop,neo soul,new jack swing,quiet storm,r&b,urban contemporary",10,1992,F,Solo
+954,Shyne,145645,"gangster rap,hardcore hip hop,hip hop,hip pop,pop rap,rap,southern hip hop",5,2000,M,Solo
+955,Changing Faces,263922,"girl group,hip pop,neo soul,new jack swing,quiet storm,r&b,urban contemporary",3,1994,F,Group
+956,Baha Men,20306,bahamian pop,10,1992,M,Group
+957,The Wallflowers,366837,"alternative rock,mellow gold,neo mellow,pop rock,post-grunge,rock",7,1992,M,Group
+958,Everclear,467277,"alternative metal,alternative rock,permanent wave,pop punk,pop rock,post-grunge,rock",12,1995,M,Group
+959,Sister Hazel,179428,"acoustic pop,neo mellow,pop rock,post-grunge",15,1994,M,Group
+960,Third Eye Blind,829511,"alternative rock,neo mellow,pop punk,pop rock,post-grunge,rock",11,1997,M,Group
+961,Don Henley,632608,"album rock,art rock,classic rock,folk,folk rock,heartland rock,mellow gold,new wave pop,pop rock,rock,roots rock,singer-songwriter,soft rock,yacht rock",7,1982,M,Solo
+962,Fragma,26086,"bubble trance,eurodance,german techno",4,2001,F,Solo
+963,Next,1988537,"hip hop,pop,pop rap,rap,toronto rap,trap music,urban contemporary",3,1997,M,Group
+964,Da Brat,212745,"chicago rap,gangster rap,hip hop,hip pop,new jack swing,pop rap,r&b,rap,urban contemporary",5,1994,F,Solo
+965,Ideal,4543,,4,1999,,
+966,Mandy Moore,408075,"dance pop,hollywood,movie tunes,neo mellow,post-teen pop",5,1999,F,Solo
+967,Son By Four,48316,"deep latin christian,latin,latin pop,puerto rican pop,tropical",9,2000,M,Group
+968,Lara Fabian,275631,"french pop,operatic pop",19,1991,F,Solo
+969,Stone Temple Pilots,1785293,"alternative metal,alternative rock,grunge,hard rock,modern rock,nu metal,pop rock,post-grunge,rock",8,1992,M,Group
+970,Lil' Mo,110058,"hip pop,r&b,urban contemporary",9,2001,F,Solo
+971,Gerald Levert,439649,"funk,neo soul,new jack swing,quiet storm,r&b,soul,urban contemporary",11,1991,M,Solo
+972,Eric Heatherly,1093,country,3,2000,M,Solo
+973,Zombie Nation,20829,german techno,5,1999,M,Solo
+974,Macy Gray,400945,"neo soul,soul",14,1999,F,Solo
+975,Chad Brock,18746,"country,country road",3,1998,M,Solo
+976,Westlife,1250172,"boy band,dance pop,europop",10,1999,M,Group
+977,Deborah Cox,343908,"canadian pop,hip pop,neo soul,new jack swing,quiet storm,r&b,urban contemporary,vocal house",14,1995,F,Solo
+978,Collin Raye,208616,"arkansas country,contemporary country,country,country gospel,country road,country rock",20,1991,M,Solo
+979,M2M,191590,"candy pop,dance pop,europop,girl group,norwegian pop,pop rock",3,2000,F,Group
+980,Elton John,3788573,"glam rock,mellow gold,piano rock,rock",39,1969,M,Solo
+981,Big Punisher,553396,"east coast hip hop,gangster rap,hardcore hip hop,hip hop,hip pop,pop rap,rap,southern hip hop",4,1998,M,Solo
+982,Alison Krauss,190200,"bluegrass,folk,lilith,progressive bluegrass",9,1987,F,Solo
+983,En Vogue,601006,"dance pop,girl group,hip pop,neo soul,new jack swing,quiet storm,r&b,urban contemporary",6,1990,F,Group
+984,Sonique,24629,,4,2000,F,Solo
+985,Steve Wariner,71001,"country,country gospel,country rock,nashville sound,traditional country",14,1991,M,Solo
+986,Anastacia,183146,"australian pop,dance pop,europop",13,1999,F,Solo
+987,Gloria Estefan,338035,"dance pop,disco,latin pop,new wave pop,soft rock",18,1987,F,Solo
+988,Sammie,265520,"deep pop r&b,hip pop,pop rap,r&b,urban contemporary",4,2000,M,Solo
+989,Bloodhound Gang,492474,"alternative metal,comic,funk metal,funk rock,nu metal,pop punk,punk",6,1995,M,Group
+990,Montell Jordan,401793,"hip hop,hip pop,new jack swing,pop rap,r&b,urban contemporary",7,1995,M,Solo
+991,Ty Herndon,65289,"contemporary country,country,country road",10,1995,M,Solo
+992,Hot Boys,51417,"deep southern trap,dirty south rap,new orleans rap",4,1997,M,Group
+993,Drama,708319,"dirty south rap,gangster rap,hip hop,philly rap,pop rap,rap,southern hip hop,trap music",20,2006,,Group
+994,Chely Wright,64759,"contemporary country,country,country dawn",10,1994,F,Solo
+995,Eiffel 65,173149,"bubblegum dance,eurodance,europop,italian pop,italo dance",4,2001,M,Group
+996,R.L.,63639,"acoustic blues,blues,country blues,delta blues,garage rock,modern blues,punk blues,traditional blues",13,1990,M,Solo
+997,Robbie Williams,1615714,"dance pop,europop,pop",16,1997,M,Solo
+998,Bon,2443408,"chamber pop,eau claire indie,folk-pop,indie folk,melancholia,slow core,stomp and holler",4,2008,,
+999,Mint Condition,380887,"dance pop,funk,hip pop,minneapolis sound,neo soul,new jack swing,quiet storm,r&b,soul,urban contemporary",12,1991,M,Group
+1000,Amel Larrieux,154624,"neo r&b,neo soul,r&b",5,1999,F,Solo
+1001,Tracie Spencer,60194,"new jack swing,urban contemporary",3,1988,F,Solo
+1002,Rage Against The Machine,3031152,"alternative metal,alternative rock,conscious hip hop,funk metal,hard rock,nu metal,post-grunge,rap metal,rock",5,1992,M,Group
+1003,Ol' Dirty Bastard,454196,"alternative hip hop,east coast hip hop,gangster rap,hardcore hip hop,hip hop,rap,southern hip hop",4,1995,M,Solo
+1004,702,350941,"girl group,hip hop,hip pop,neo soul,new jack swing,quiet storm,r&b,urban contemporary",3,1996,F,Group
+1005,Lou Bega,56076,latin pop,5,1999,M,Solo
+1006,Bush,909746,"alternative metal,alternative rock,grunge,modern rock,nu metal,pop rock,post-grunge,rock",7,1994,M,Group
+1007,Beth Hart,186545,"blues rock,modern blues",16,1996,F,Solo
+1008,Len,8083,pop rock,3,1995,,Group
+1009,Kenny G,531722,"smooth jazz,smooth saxophone",32,1981,M,Solo
+1010,Fatboy Slim,665008,big beat,16,1996,M,Solo
+1011,Chico DeBarge,61572,"neo soul,new jack swing,r&b,urban contemporary",4,1997,M,Solo
+1012,Warren G,1007924,"g funk,gangster rap,hardcore hip hop,hip hop,pop rap,rap,west coast rap",7,1994,M,Solo
+1013,Eric Benet,347513,"neo soul,new jack swing,quiet storm,r&b,urban contemporary",12,1996,M,Solo
+1014,Melissa Etheridge,219743,"folk,folk-pop,heartland rock,lilith,pop rock",21,1988,F,Solo
+1015,Fastball,87150,"pop rock,post-grunge",7,1996,M,Group
+1016,Edwin McCain,163158,"acoustic pop,neo mellow,pop rock",12,1992,M,Solo
+1017,Lil' Troy,33648,"dirty south rap,gangster rap,southern hip hop",4,1998,M,Solo
+1018,Naughty By Nature,485581,"east coast hip hop,gangster rap,hardcore hip hop,hip hop,new jersey rap,pop rap,rap",7,1991,M,Group
+1019,Alabama,565698,"contemporary country,country,country road,country rock,traditional country",36,1979,M,Group
+1020,Sherrie Austin,16979,"contemporary country,country,country dawn",3,1997,F,Solo
+1021,Donna Summer,845380,"dance pop,disco,europop,hi-nrg,motown,new wave pop",30,1974,F,Solo
+1022,Tori Amos,405072,"art pop,chamber pop,ectofolk,folk,folk-pop,lilith,melancholia,new wave pop,permanent wave,piano rock,pop rock,singer-songwriter",20,1992,F,Solo
+1023,The Beatnuts,83673,"alternative hip hop,east coast hip hop,gangster rap,hardcore hip hop,hip hop,rap,turntablism",4,1994,M,Group
+1024,Lit,167113,"alternative rock,pop punk,pop rock,post-grunge,socal pop punk",4,1999,M,Group
+1025,JT Money,40362,"dirty south rap,miami hip hop,southern hip hop",8,1999,M,Solo
+1026,Mary Chapin Carpenter,90637,"contemporary country,country,folk,folk rock,lilith,mellow gold,traditional folk",17,1987,F,Solo
+1027,B*Witched,105645,"bubblegum dance,dance pop,europop,girl group",3,1998,F,Group
+1028,Mercedes Sosa,404861,"argentine rock,cantautor,folklore argentino,nueva cancion,rock en espanol,rock nacional,trova",64,1962,F,Solo
+1029,Terry Dexter,790,,3,1999,F,Solo
+1030,Dwight Yoakam,284597,"country,country rock,nashville sound,outlaw country,texas country,traditional country",25,1985,M,Solo
+1031,Jordan Knight,47229,,4,1999,M,Solo
+1032,Lila McCann,42444,"contemporary country,country,country dawn",4,1997,F,Solo
+1033,Everlast,200550,rap rock,11,1990,M,Solo
+1034,Collective Soul,525701,"alternative metal,alternative rock,pop rock,post-grunge,rock",12,1994,M,Group
