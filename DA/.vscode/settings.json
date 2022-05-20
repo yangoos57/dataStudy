@@ -1,4 +1,9 @@
 {
     "jupyter.jupyterServerType": "local",
-    "editor.hover.enabled": false
+    "editor.hover.enabled": false,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "python.languageServer": "Jedi",
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.python"
+    }
 }
