@@ -20,7 +20,10 @@
 
 <body>
     <div class="wrap">
-        <header class="header"></header>
+        <header class="header align-items-center d-flex justify-content-end">
+            <div style="width: 20%;"></div>
+            <div class="main-title fs-2 fw-bold flex-item">따릉이 대여소 분석</div>
+        </header>
         <div class="content">
             <div class="main">
                 <div class="dash">
@@ -57,59 +60,101 @@
                     </div>
                     <div class="spacing"></div>
                     <div class="box justify-content-evenly flex-item d-flex">
-                        <div class="total-col border border-3"></div>
-                        <div class="total-col border border-3 d-flex flex-column">
-                            <div class="left-col border border-3 flex-item">
-                                <div class='ps-3 pe-5 pt-3 fw-bold'>이용중인 지하철역</div> <div class="pt-3 fw-bold">대여기록 순</div>
+                        <div class="total-col"></div>
+                        <div class="total-col d-flex flex-column">
+                            <div class="left-col border border-3 flex-item flex-column">
+                                <div class="row gx-0 justify-content-start align-items-center p-2 ps-4">
+                                    <div class='col-4 fs-6 fw-bold'>이용중인 지하철역</div>
+                                    <div class="col-3 dropdown">
+                                        <a class="btn dropdown-toggle fs-6 fw-bold p-0" href="#" role="button"
+                                            id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                                            대여 기록 순
+                                        </a>
+
+                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                            <li><a class="dropdown-item" href="#">Action</a></li>
+                                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="recom-table"></div>
                             </div>
-                            <div class="left-col border border-3 flex-item"></div>
+                            <div class="left-col flex-item"></div>
                             <div class="left-col flex-item d-flex">
-                                <div class="left-bottom-col border border-3 d-flex flex-column">
+                                <div class="left-bottom-col gx-0 d-flex flex-column">
                                     <div class="flex-item border border-3 mb-1 d-flex flex-column p-1">
-                                        <div class="pt-2 pb-1 ps-2 fw-bold fs-5">일 평균 이용건수</div> 
-                                        <div class="fw-bold fs-4 text-end pe-3">330건</div> 
+                                        <div class="pt-2 pb-1 ps-2 fw-bold fs-5">일 평균 이용건수</div>
+                                        <div class="fw-bold fs-4 text-end pe-3">330건</div>
                                     </div>
                                     <div class="flex-item border border-3 mb-1 d-flex flex-column p-1">
-                                        <div class="pt-2 pb-1 ps-2 fw-bold fs-5">평균 이동거리</div> 
-                                        <div class="fw-bold fs-4 text-end pe-3 ">1.3km</div> 
+                                        <div class="pt-2 pb-1 ps-2 fw-bold fs-5">평균 이동거리</div>
+                                        <div class="fw-bold fs-4 text-end pe-3 ">1.3km</div>
                                     </div>
                                     <div class="flex-item border border-3 d-flex flex-column p-1">
-                                        <div class="pt-2 pb-1 ps-2 fw-bold fs-5">평균 이용 시간</div> 
-                                        <div class="fw-bold fs-4 text-end pe-3">7.5분</div> 
+                                        <div class="pt-2 pb-1 ps-2 fw-bold fs-5">평균 이용 시간</div>
+                                        <div class="fw-bold fs-4 text-end pe-3">7.5분</div>
                                     </div>
                                 </div>
-                                <div class="left-bottom-col border border-3"></div>
-                                <div class="left-bottom-col border border-3 d-flex flex-column">
-                                    <div class="row justify-content-between flex-item border border-3 mb-1 px-4 py-3 fs-6 fw-bold">
-                                        <div class="col-7">자주이용하는 대여소</div>
-                                        <div class="col-3">대여</div>
-                                        <div>?</div>
+                                <div class="left-bottom-col"></div>
+                                <div class="left-bottom-col d-flex flex-column">
+                                    <div class="flex-item flex-column border border-3 mb-1 fs-6 fw-bold">
+                                        <div class="row gx-0 justify-content-between ps-2 pt-2 pe-2 ">
+                                            <div class="col-8 text-center">자주이용하는 대여소</div>
+                                            <div class="col-3">대여</div>
+                                        </div>
+                                        <div class="img-box">
+                                            <img src="data/barhpng.png" alt="" class="chart-image p-2">
+                                        </div>
                                     </div>
-                                    <div class="row justify-content-between flex-item border border-3 px-4 py-3 fs-6 fw-bold">
-                                        <div class="col-7">자주이용하는 대여소</div>
-                                        <div class="col-3">반납</div>
-                                        <div>?</div>
+                                    <div class=" flex-item flex-column border border-3 fs-6 fw-bold">
+                                        <div class="row gx-0 justify-content-between ps-2 pt-2 pe-2 ">
+                                            <div class="col-8 text-center">자주이용하는 대여소</div>
+                                            <div class="col-3">반납</div>
+                                        </div>
+                                        <div class="img-box">
+                                            <img src="data/barhpng.png" alt="" class="chart-image p-2">
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="total-col border border-3"></div>
-                        <div class="total-col border border-3 d-flex flex-column">
+                        <div class="total-col"></div>
+                        <div class="total-col d-flex flex-column">
                             <div class="right-col justify-content-between flex-item d-flex">
-                                <div class="top-right-col border border-3 flex-item me-2">
-                                    <div class="fs-6 fw-bold p-3">대여소 이용 건수</div>
+                                <div class="top-right-col border border-3 flex-item me-2 flex-column">
+                                    <div class="fs-6 fw-bold p-2 d-flex">대여소 이용 건수</div>
+                                    <div class="img-box">
+                                        <img src="data/piechart.png" alt="" class="chart-image p-3 pe-0">
+                                    </div>
                                 </div>
-                                <div class="top-right-col border border-3 flex-item ms-2">
-                                    <div class="fs-6 fw-bold p-3">시간대별 이용량</div>
-                                    <div class="fs-6 fw-bold p-3">대여</div>
+                                <div class="top-right-col border border-3 flex-item ms-2 flex-column">
+                                    <div class="row gx-0 justify-content-between p-2">
+                                        <div class="col-8 fs-6 fw-bold">시간대별 이용량</div>
+                                        <div class="col-4 fs-6 fw-bold dropdown">
+                                            <a class="btn dropdown-toggle fs-6 fw-bold p-0" href="#" role="button"
+                                                id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                                                대여
+                                            </a>
+    
+                                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                                <li><a class="dropdown-item" href="#">반납</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="img-box">
+                                        <img src="data/bar.png" alt="" class="chart-image p-2">
+                                    </div>
                                 </div>
                             </div>
-                            <div class="right-col border border-3 flex-item"></div>
-                            <div class="right-col map border border-3 flex-item p-2">
-                                
+                            <div class="right-col flex-item"></div>
+                            <div class="right-col border border-3 flex-item p-2">
+                                <div class="img-box">
+                                    <img src="data/map.png" alt="" class="map-image">
+                                </div>
                             </div>
                         </div>
-                        <div class="total-col border border-3"></div>
+                        <div class="total-col"></div>
                     </div>
                     <div class="spacing"></div>
                 </div>

@@ -19,6 +19,9 @@ html,body{
   height: 100px;
   background-color:var(--header-color);
 }
+.main-title{
+    color: var(--select-background-color);
+}
 
 .content {
     display: flex;
@@ -57,7 +60,26 @@ html,body{
     color: var(--select-color);
     font-size: 24px;
 }
+.img-box{
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
 
+}
+.chart-image{
+    object-fit: contain;
+    width: 100%;
+    height: 0; /*뭐지 이렇게하니까 공간에 딱 맞네 */
+    min-height: 100%; /*뭐지 이렇게하니까 공간에 딱 맞네 */
+}
+.map-image{
+    object-fit: cover;
+    width: 100%;
+    height: 0; /*뭐지 이렇게하니까 공간에 딱 맞네 */
+    min-height: 100%; /*뭐지 이렇게하니까 공간에 딱 맞네 */
+
+}
 
 .spacing{
     height: 30px;
