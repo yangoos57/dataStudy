@@ -1,0 +1,50 @@
+:root{
+    --text-color : #1C1C1C ;
+    --bar-color : #354555 ;
+    --gray-color : #CED4DA;
+    --background-color : #f7f7f7;
+    --warning0color : #AE7453;
+}
+
+.main{
+    background-color:#F1F1F1;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+.search{
+    background-color: antiquewhite;
+}
+
+.Select-value-label{
+    font-size: 20px;
+    color: var(--gray-color);
+}
+
+.search.info{
+    color: var(--text-color);
+    text-align: left;
+}
+
+.maps{
+    background-color: aquamarine;
+}
+
+.recom{
+    background-color: bisque;
+}
+
+.side-bar{
+    background-color: var(--bar-color);
+    color: var(--gray-color);
+    display : none;
+}
+
+.main-bar{
+    background-color: cornflowerblue;
+}
+
+.map_and_recom{
+    background-color: darkcyan;
+}

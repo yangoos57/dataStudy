@@ -1,0 +1,26 @@
+input{
+    width: 80% ;
+    /* height : 3% ;
+    position: absolute ;
+    top: 4% ;
+    left: 10% ; */
+    background-color: #2a2a29a5;
+    border-color : transparent;
+    color: #F5F5F5;
+    /* border-width : 0px; */
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #ea0909;
+  }
+
+.test_target{
+    display: none ;
+}
+.test_target.active {
+    display : block;
+}
+
+.test_start{
+    width: 800px;
+}
