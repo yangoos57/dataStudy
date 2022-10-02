@@ -39,5 +39,5 @@ for c in new_c:
         else:
             answer += c
 
-print("change : ", change)
+print(change)
 print(answer + change)
