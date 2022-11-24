@@ -23,5 +23,34 @@ for _ in range(N):
     else:
         st2.append(st1.pop(var))
 
-end = " ".join(st2)
+end = " ".join(map(str, st2))
 print("<" + end + ">")
+
+## 또는
+
+
+input_data = list(map(int, input().split()))
+N = int(input_data[0])
+t = int(input_data[1])
+
+
+a = list(range(1, N + 1))
+answer = []
+idx = 0
+cur = 1
+
+while cur <= N:
+    len_a = len(a)
+    idx += t - 1
+
+    # 원 크기보다 idx가 클 경우 원 크기로 나워 idx를 초기화 해야함
+    if idx >= len_a:
+        idx = idx % len_a
+
+    answer.append(a.pop(idx))
+
+    cur += 1
+
+answer_str = ", ".join(map(str, answer))
+
+print("<" + answer_str + ">")

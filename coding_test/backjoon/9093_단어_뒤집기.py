@@ -1,5 +1,5 @@
 # 배울점
-## pop(index) = 원하는 위치 아이템 띄우기
+## string에서 [::-1]은 역순 배열이다.
 
 import sys
 
