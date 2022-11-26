@@ -6,6 +6,10 @@
 # 앞 < 뒤 발견하면 index 역순으로 계산하며 stack 제거 앞 > 뒤 인 경우 나올때까지 반복
 # stack이 점차 소멸하는 구조로 짜여있기 때문에 시간이 효율적인 것으로 보임
 # for문이 다 돌면 종료
+# stack_list에 idx를 넣어두고
+# answer list의 값만 바꾸는 방법을 썼음
+# 1929 문제에서 idx list를 on/off 기능으로 쓰면 특정 값만을 추출 할 수 있는 것과
+# 원리가 같다고 보면 됨
 
 import sys
 
@@ -14,8 +18,6 @@ input = sys.stdin.readline
 N = int(input().rstrip())
 val_list = list(map(int, input().rstrip().split()))
 
-
-# 그치만... 이걸 생각해낸다는게 불가능하다 싶을정도로 어려움..
 
 n = 4
 val_list = [9, 5, 4, 8]

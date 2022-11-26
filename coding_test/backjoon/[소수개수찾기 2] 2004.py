@@ -1,3 +1,7 @@
+# combination은 factorial로 치환 가능
+# 2배수, 5배수를 찾은 다음
+# 2배수 또는 5배수의 최소 개수로 따라가면 0 개수를 찾을 수 있음
+
 import sys
 
 m, n = list(map(int, sys.stdin.readline().split()))
