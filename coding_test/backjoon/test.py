@@ -1,28 +1,34 @@
-n = 13
+# 탐색 문제는 방문한 경우를 기록해야함.
 
-lst = [0, 0, 1, 1, 2]
+from collections import deque
 
-for i in range(5, n + 1):
-    lst_1 = []
-    for j in range(1, 5):
-        val = j + lst[i - j]
-        lst_1.append(val)
+visit_list = [0] * 100001
+count_list = [0] * 100001
 
-    k = i
-    c = 0
-    while k > 1:
-        c += 1
-        if k % 5 == 0:
-            k //= 5
-        elif k % 3 == 0:
-            k //= 3
-        elif k % 2 == 0:
-            k //= 2
-        else:
-            k -= 1
+s, e = list(map(int, input().split()))
 
-    lst_1.append(c)
-    print(i, "번째", lst_1)
-    lst.append(min(lst_1))
+queue = deque()
 
-print(lst)
+queue.append(s)
+
+while True:
+    if visit_list[e] > 0:
+        print(count_list[e])
+        break
+
+    x = queue.popleft()
+
+    if 0 <= x + 1 <= 100000 and visit_list[x + 1] == 0:
+        visit_list[x + 1] = 1
+        count_list[x + 1] = count_list[x] + 1
+        queue.append(x + 1)
+
+    if 0 <= x - 1 <= 100000 and visit_list[x - 1] == 0:
+        visit_list[x - 1] = 1
+        count_list[x - 1] = count_list[x] + 1
+        queue.append(x - 1)
+
+    if 0 <= 2 * x <= 100000 and visit_list[2 * x] == 0:
+        visit_list[2 * x] = 1
+        count_list[2 * x] = count_list[x] + 1
+        queue.append(2 * x)
