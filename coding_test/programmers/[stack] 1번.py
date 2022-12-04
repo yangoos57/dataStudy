@@ -1,4 +1,8 @@
 ### programmers stack 1
+
+# 연속된 값을 비교할 떈 이전 값과 비교한다.
+
+
 def solution(arr):
     num = len(arr)
     l = [arr[0]]
