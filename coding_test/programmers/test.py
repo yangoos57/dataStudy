@@ -1,32 +1,82 @@
-# programmers DFS BFS 1
+# 16234
+
+import sys
+from collections import deque
+
+input = sys.stdin.readline
+
+N, L, R = map(int, input().split())
+arr = []
+for n in range(N):
+    arr.append(list(map(int, input().split())))
 
 
-# 배울점
-# i == 5가 될때까지 값을 확장해 나간다는 점에서 DFS 임.
-# 지수적으로 늘리고 싶을 떄는 dfs를 여러개로 하면 된다.
-# 더하거나 뺀 값을 계속 가지고와서 i == 5 일때 푼다.
-# dfs 자체에 return을 설정하지 않았기 때문에 함수의 return은 항상 None
-# 굳이 역순으로 갈 필요 없다.
+# N, L, R = 3, 5, 10
+# arr = [[10, 15, 20], [20, 30, 25], [40, 22, 10]]
+
+# N, L, R = 2, 20, 50
+# arr = [[50, 30], [30, 40]]
 
 
-def dfs(i, value, answer, c):
-    if i == len(numbers):
-        answer.append(value)
+def bfs(i, j):
+
+    from collections import deque
+
+    queue = deque()
+    queue.append((i, j))
+
+    dx = [-1, 1, 0, 0]
+    dy = [0, 0, -1, 1]
+
+    an = []
+    while queue:
+        x, y = queue.popleft()
+
+        for i in range(4):
+            nx = x + dx[i]
+            ny = y + dy[i]
+            if nx < 0 or ny < 0 or nx >= N or ny >= N:
+                continue
+            elif L <= abs(arr[x][y] - arr[nx][ny]) <= R and visited[nx][ny] == False:
+                visited[nx][ny] = True
+                an.append(arr[nx][ny])
+                queue.append((nx, ny))
+
+        if len(an) > 1:
+            val = sum(an) // len(an)
+        else:
+            return 0
+
+        for i in range(N):
+            for j in range(N):
+                if visited[i][j] == True:
+                    arr[i][j] = val
+
+    return 1
+
+
+c = 0
+l = []
+day_count = 0
+while True:
+    visited = [[False] * N for _ in range(N)]
+    for i in range(N):
+        for j in range(N):
+            if visited[i][j] == False:
+                l.append(bfs(i, j))
+
+    if sum(l) == 0:
+        break
     else:
-        dfs(i + 1, value + numbers[i], answer, c)
-        dfs(i + 1, value - numbers[i], answer, c)
-        c.append(i + 1)
+        day_count += 1
+        l.clear()
 
-
-def solution(numbers, target):
-    answer = []
-    numbers = numbers
-    c = []
-    dfs(0, 0, answer, c)
-    return answer.count(target)
-
-
-numbers = [1, 1, 1, 1, 1]
-target = 3
-
-print(solution(numbers, target))
+print(day_count)
+# an = [0]
+# c = 0
+# while an:
+#     for i in range(N) :
+#         for j in range(N) :
+#             an = bfs(i, j)
+#             c += 1
+# print(c)
