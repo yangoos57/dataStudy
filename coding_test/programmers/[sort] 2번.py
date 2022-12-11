@@ -31,7 +31,6 @@
 
 #
 def solution(numbers):
-    from itertools import permutations
 
     str_lst = list(map(str, numbers))
     str_lst.sort(key=lambda x: x * 3, reverse=True)

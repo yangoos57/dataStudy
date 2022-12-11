@@ -4,6 +4,10 @@
 # 최대 네트워크 개수는 N 임(모두 연결 되지 않을 경우)
 # 네트워크가 연결되어 있다면
 
+# 배울점
+# 얼음 채우기 문제와 스타일이 다른 유형임
+# Notion 일일로그에 관련 사진 올려놓음
+
 
 # BFS
 def bfs(i, visited, n, computers):
@@ -31,7 +35,6 @@ def solution(n, computers):
 
 # DFS 방법
 def dfs(i, visited, n, computers):
-    visited[i] = 1
     for a in range(n):
         # 다른 노드와 연결 여부를 확인
         # i = 0이라 할 때 1,2,3과 연결됐는지를 확인하는 절차
@@ -40,6 +43,7 @@ def dfs(i, visited, n, computers):
         # 1과 2는 연결 됐고 1과 3은 연결 되지 않을땐 2 방문처리
         # 다시 2와 3의 연결을 확인 연결되면 3 방문처리 안되면 pass
         if computers[i][a] == 1 and visited[a] == 0:
+            visited[i] = 1
             dfs(a, visited, n, computers)
 
 
