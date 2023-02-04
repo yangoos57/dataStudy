@@ -21,61 +21,49 @@
 # 이 방법이 더 깔끔한듯 !
 # https://leffept.tistory.com/398
 
-from collections import deque
-
 
 def solution(begin, target, words):
-    def bfs(b, t):
-        queue = deque()
-        queue.append(b)
+    from collections import deque
 
-        while queue:
-            m_w = queue.popleft()
-
-            # 연산 종료
-            if m_w == t:
-                return level_list[-1]
-
-            # 현재 비교할 m_w(main_word)의 level을 찾는다.
-            if m_w != b:
-                level = level_list[words.index(m_w)]
-            else:
-                level = 0
-
-            # 방문하지 않은 다른단어들과 비교한 뒤
-            # 일치하는 단어들을 queue에 넣고 현재 Level_list에 Level + 1을 한다.
-            for i, w in enumerate(words):
-                if visited[i] == True:
-                    continue
-                else:
-                    c = 0
-                    for j in range(char_len):
-                        if m_w[j] != w[j]:
-                            c += 1
-                    if c == 1:
-                        queue.append(w)
-                        visited[i] = True
-                        level_list[i] = level + 1
-
-            # print(lst)
-
-        return 0
-
-    char_len = len(begin)
-    visited = [False] * len(words)
-    level_list = [0] * len(words)
     if target in words:
-        # target 단어 찾아서 맨 마지막에 넣기
-        words.append(words.pop(words.index(target)))
-        answer = bfs(begin, target)
-        return answer
+        # 방문
+        visited = [False] * len(words)
+        # 단계 표시
+        level = [0] * len(words)
+
+        # 단어 변화
+        change = deque()
+        change.append(begin)
+
+        # words 내 target idx
+        idx = words.index(target)
+
+        while change:
+            x = change.popleft()
+
+            # begin 아닌 경우
+            if x != begin:
+                x_idx = words.index(x)
+            else:
+                x_idx = 1
+
+            for n, word in enumerate(words):
+                if visited[n] == False:
+                    v = 0
+                    # 안좋은 예시 남겨놓기
+                    # x_list = list(x)
+                    # word_list = list(word)
+                    # for _ in range(len(x)):
+                    #     if x_list.pop() != word_list.pop():
+                    #         v += 1
+                    for i in range(len(x)):
+                        if x[i] != word[i]:
+                            v += 1
+                    if v == 1:
+                        visited[n] = True
+                        level[n] = level[x_idx] + 1
+                        change.append(word)
+
+        return level[idx]
     else:
         return 0
-
-
-begin = "hit"
-target = "cog"
-words = ["hot", "dot", "dog", "lot", "log", "cog"]
-
-
-print(solution(begin, target, words))
