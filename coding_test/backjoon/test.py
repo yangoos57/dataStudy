@@ -1,65 +1,93 @@
-# 2644
-import sys
+# 2573
 
-a, b, c = map(int, input().split(" "))  # 전체 사람 수
+# 땅 = 0 빙산 = 정수
+
+# 접한 칸의 개수만큼 빙산의 크기가 줄어듬 / max = 0
+
+# 빙산 한 덩어리가 두 덩어리 이상이 되는 시간을 구하시오
+
+# 다 녹을때까지 두 덩어리 이상으로 분리되지 않으면 0
+
+N, M = map(int, input().split(" "))
 
 graph = []
-for _ in range(c):
-    graph_low = []
-    for _ in range(b):
-        graph_low.append(list(map(int, sys.stdin.readline().split())))
-
-    graph.append(graph_low)
-
-visited = [[[False] * a for _ in range(b)] for _ in range(c)]
-
-level = [[[0] * a for _ in range(b)] for _ in range(c)]
+for _ in range(N):
+    graph.append(list(map(int, input().split(" "))))
 
 
-def bfs(graph, start, visited):
-    from collections import deque
+# 매번 돌 때마다 주변에 0이 있는지를 체크해서 높이에 반영
 
-    queue = deque([])
-    queue.append(start)
-    dx = [-1, 1, 0, 0, 0, 0]
-    dy = [0, 0, -1, 1, 0, 0]
-    dz = [0, 0, 0, 0, -1, 1]
 
-    while queue:
-        x, y, z = queue.popleft()
-
-        for i in range(6):
-            nx = x + dx[i]
-            ny = y + dy[i]
-            nz = z + dz[i]
-            # 범위
-            if nx < 0 or nx >= c or ny < 0 or ny >= b or nz < 0 or nz >= a:
-                continue
-            # 방문
-            elif visited[nx][ny][nz] == True:
-                continue
-            # 없거나 이미 익은 경우
-            elif visited[nx][ny][nz] == False and graph[nx][ny][nz] != 0:
-                visited[nx][ny][nz] = True
-            #
+def melting(N, M):
+    di = [-1, 1, 0, 0]
+    dj = [0, 0, -1, 1]
+    glacier = []
+    for i in range(N):
+        temp = []
+        for j in range(M):
+            if graph[i][j] != 0:
+                temp.append(True)
             else:
-                if visited[nx][ny][nz] == False and graph[nx][ny][nz] == 0:
-                    graph[nx][ny][nz] = graph[x][y][z] + 1
+                temp.append(False)
+        glacier.append(temp)
 
-                visited[nx][ny][nz] = True
-                queue.append([nx, ny, nz])
+    for i in range(N):
+        for j in range(M):
+            if graph[i][j] == 0 and glacier[i][j] == False:
+                for k in range(4):
+                    ni = i + di[k]
+                    nj = j + dj[k]
+                    if ni < 0 or ni >= N or nj < 0 or nj >= M:
+                        continue
+                    elif graph[ni][nj] > 0:
+                        graph[ni][nj] -= 1
 
-    return
 
+def dfs(i, j, visited):
+    di = [-1, 1, 0, 0]
+    dj = [0, 0, -1, 1]
+    stack = [[i, j]]
 
-result = 0  # 며칠 걸리는지
-for i in range(c):
-    for j in range(b):
-        for z in range(a):
-            if graph[i][j][z] == 0:  # 토마토가 모두 익지 못한 상황 발견시
-                print(-1)
-                exit(0)  # 바로 종료
+    while stack:
+        i, j = stack.pop()
+
+        for k in range(4):
+            ni = i + di[k]
+            nj = j + dj[k]
+            if ni < 0 or ni >= N or nj < 0 or nj >= M:
+                continue
+            elif visited[ni][nj] == True:
+                continue
+            elif visited[ni][nj] == False and graph[ni][nj] == 0:
+                visited[ni][nj] = True
             else:
-                result = max(result, gra[i][j][z])  # 며칠 걸리는지 업데이트
+                visited[ni][nj] = True
+                stack.append([ni, nj])
 
-print(result - 1)
+
+def check_melting():
+    for i in range(N):
+        for j in range(M):
+            if graph[i][j] == 0:
+                continue
+            else:
+                return
+    return exit(print(0))
+
+
+year = 0
+for _ in range(11):
+    year += 1
+    # 빙산이 한 번에 사라지는 경우 0 출력
+    check_melting()
+    melting(N, M)
+    warning = 0
+    visited = [[False] * M for _ in range(N)]
+    for i in range(N):
+        for j in range(M):
+            if visited[i][j] == False and graph[i][j] != 0:
+                dfs(i, j, visited)
+                warning += 1
+                if warning >= 2:
+                    print(year)
+                    exit(0)

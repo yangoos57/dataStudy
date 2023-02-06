@@ -1,4 +1,5 @@
-# 2644
+# 7569 토마토
+# https://velog.io/@falling_star3/%EB%B0%B1%EC%A4%80Python-7569%EB%B2%88-%ED%86%A0%EB%A7%88%ED%86%A0
 import sys
 
 a, b, c = map(int, input().split(" "))  # 전체 사람 수
@@ -33,33 +34,38 @@ def bfs(graph, start, visited):
             ny = y + dy[i]
             nz = z + dz[i]
             # 범위
-            if nx < 0 or nx >= c or ny < 0 or ny >= b or nz < 0 or nz >= a:
+            if nx < 0 or nx >= a or ny < 0 or ny >= b or nz < 0 or nz >= c:
                 continue
             # 방문
-            elif visited[nx][ny][nz] == True:
+            elif visited[nz][ny][nx] == True:
                 continue
             # 없거나 이미 익은 경우
-            elif visited[nx][ny][nz] == False and graph[nx][ny][nz] != 0:
-                visited[nx][ny][nz] = True
+            elif visited[nz][ny][nx] == False and graph[nz][ny][nx] != 0:
+                visited[nz][ny][nx] = True
             #
             else:
-                if visited[nx][ny][nz] == False and graph[nx][ny][nz] == 0:
-                    graph[nx][ny][nz] = graph[x][y][z] + 1
+                graph[nz][ny][nx] = graph[z][y][x] + 1
 
-                visited[nx][ny][nz] = True
-                queue.append([nx, ny, nz])
+                visited[nz][ny][nx] = True
+                queue.append([nz, ny, nx])
 
     return
 
 
-result = 0  # 며칠 걸리는지
 for i in range(c):
     for j in range(b):
-        for z in range(a):
-            if graph[i][j][z] == 0:  # 토마토가 모두 익지 못한 상황 발견시
-                print(-1)
-                exit(0)  # 바로 종료
-            else:
-                result = max(result, gra[i][j][z])  # 며칠 걸리는지 업데이트
+        for k in range(a):
+            if graph[i][j][k] == 1 and visited[i][j][k] == False:
+                bfs(graph, [k, j, i], visited)
 
-print(result - 1)
+print(graph)
+answer = 0
+for a in graph:
+    for b in a:
+        for c in b:
+            if c == 0:
+                print(-1)
+                exit(0)
+        answer = max(answer, max(b))
+
+print(answer - 1)
