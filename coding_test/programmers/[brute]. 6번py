@@ -1,0 +1,48 @@
+# 전력망 둘로 나누기
+
+# 기본 dfs를 구현해서 문제해결
+# 전력망을 하나씩 빼는 그래프를 반복문으로 만듬. 내부에서 dfs로 2개의 전력망 개수를 구하고 차이를 구함.
+
+
+from collections import defaultdict
+
+
+def solution(n, wires):
+    def dfs(i):
+        stack = [i]
+        answer = 0
+        while stack:
+            x = stack.pop()
+            if visited[x] == False:
+                stack.extend(graph[x])
+                visited[x] = True
+                answer += 1
+        return answer
+
+    answer = []
+    for i in range(len(wires)):
+        item = wires.copy()
+        item.pop(i)
+        graph = defaultdict(list)
+        for [a, b] in item:
+            graph[a].append(b)
+            graph[b].append(a)
+
+        visited = [False] * (n + 1)
+        x = []
+        for i in range(1, n + 1):
+            if visited[i] == False:
+                x.append(n - dfs(i))
+        answer.append(abs(x[0] - x[1]))
+
+    return min(answer)
+
+
+wires = [[1, 3], [2, 3], [3, 4], [4, 5], [4, 6], [4, 7], [7, 8], [7, 9]]
+n = 9
+wires = [[1, 2], [2, 3], [3, 4]]
+n = 4
+wires = [[1, 2], [2, 7], [3, 7], [3, 4], [4, 5], [6, 7]]
+n = 7
+
+print(solution(n, wires))
