@@ -1,5 +1,5 @@
 # 문제
-
+# https://school.programmers.co.kr/learn/courses/30/lessons/42860
 # 틀린이유
 # 좌우 이동을 오른쪽만, 왼쪽만을 고민했던 것 같다.
 # ABAAAB같은 경우는 오왼왼 이동하도록 해야함.
