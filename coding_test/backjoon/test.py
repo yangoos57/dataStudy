@@ -1,47 +1,34 @@
 # 값
-
-M, N = map(int, input().split(" "))
-board = [input().strip() for _ in range(N)]
+from utils import set_logging
 
 
-# Red, Blue 위치 파악
-B = 0
-R = 0
-for i in range(M):
-    for j in range(N):
-        if board[i][j] == "R":
-            R = (i, j)
-        elif board[i][j] == "B":
-            B = (i, j)
+if __name__ == "__main__":
+    logger = set_logging()
 
-# blue,red에 대한 방문 리스트
-visited_red = [[0] * M for _ in range(N)]
-visited_blue = [[0] * M for _ in range(N)]
+    M, N = map(int, input().split(" "))
+    # logger.info([M, N])
 
-# 상하좌우에 따른 위치 변동 함수
-def moving(i, j, visited):
-    # 상
-    for m in range(i + 1, 0, -1):
-        if board[m][j] == "." and visited[m][j] == 0:
-            visited[m][j] = visited[i][j] + 1
-        elif board[m][j] == "0":
-            visited[m][j] = visited[i][j] + 1
-            print(visited[i][j] + 1)
-            break
-        else:
-            break
-    # 하
-    for m in range(i, N - 1):
-        if board[m][j] == "." and visited[m][j] == 0:
-            visited[m][j] = visited[i][j] + 1
-        elif board[m][j] == "0":
-            visited[m][j] = visited[i][j] + 1
-            print(visited[i][j] + 1)
-            break
-        else:
-            break
-    # 좌
-    # 우
+    # v = [0]
+    # for i in range(1, 46):
+    #     v += [i] * i
 
+    # print(sum(v[M : N + 1]))
 
-# deque으로 bfs 구현해야할듯
+    i = 0
+    sum_m = 0
+    sum_n = 0
+    while M != 0 or N != 0:
+        i += 1
+        v_list = []
+        v_list += [i] * i
+
+        for v in v_list:
+            if M != 0:
+                sum_m += v
+                M -= 1
+
+            if N != 0:
+                sum_n += v
+                N -= 1
+
+    print(sum_n, sum_m)
