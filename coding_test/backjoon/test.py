@@ -1,34 +1,17 @@
-# 값
-from utils import set_logging
+import time
+import asyncio
 
 
-if __name__ == "__main__":
-    logger = set_logging()
+def sleep_two_seconds():
+    print("sleep")
+    time.sleep(1)
+    print("wake up")
 
-    M, N = map(int, input().split(" "))
-    # logger.info([M, N])
 
-    # v = [0]
-    # for i in range(1, 46):
-    #     v += [i] * i
+async def main():
+    print("start")
+    await sleep_two_seconds()
+    print("end")
 
-    # print(sum(v[M : N + 1]))
 
-    i = 0
-    sum_m = 0
-    sum_n = 0
-    while M != 0 or N != 0:
-        i += 1
-        v_list = []
-        v_list += [i] * i
-
-        for v in v_list:
-            if M != 0:
-                sum_m += v
-                M -= 1
-
-            if N != 0:
-                sum_n += v
-                N -= 1
-
-    print(sum_n, sum_m)
+asyncio.run(main())
