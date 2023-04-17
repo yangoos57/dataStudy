@@ -1,46 +1,78 @@
 # AWS Associate 문제풀이
 
-### Q2
-
-A company needs the ability to analyze the log files of its proprietary application. The logs are stored in JSON format in an Amazon S3 bucket. Queries will be simple and will run on-demand. A solutions architect needs to perform the analysis with minimal changes to the existing architecture.What should the solutions architect do to meet these requirements with the LEAST amount of operational overhead?
-
-- A. Use Amazon Redshift to load all the content into one place and run the SQL queries as needed.
-- B. Use Amazon CloudWatch Logs to store the logs. Run SQL queries as needed from the Amazon CloudWatch console.
-- C. Use Amazon Athena directly with Amazon S3 to run the queries as needed. **Most Voted**
-- D. Use AWS Glue to catalog the logs. Use a transient Apache Spark cluster on Amazon EMR to run the SQL queries as needed.
-
-### Q3
-
-A company uses AWS Organizations to manage multiple AWS accounts for different departments. The management account has an Amazon S3 bucket that contains project reports. The company wants to limit access to this S3 bucket to only users of accounts within the organization in AWS Organizations.
-
-Which solution meets these requirements with the LEAST amount of operational overhead?
-
-- A. Add the aws PrincipalOrgID global condition key with a reference to the organization ID to the S3 bucket policy. **Most Voted**
-- B. Create an organizational unit (OU) for each department. Add the aws:PrincipalOrgPaths global condition key to the S3 bucket policy.
-- C. Use AWS CloudTrail to monitor the CreateAccount, InviteAccountToOrganization, LeaveOrganization, and RemoveAccountFromOrganization events. Update the S3 bucket policy accordingly.
-- D. Tag each user that needs access to the S3 bucket. Add the aws:PrincipalTag global condition key to the S3 bucket policy.
-- 
-
+- Q2
+    
+    A company needs the ability to analyze the log files of its proprietary application. The logs are stored in JSON format in an Amazon S3 bucket. Queries will be simple and will run on-demand. A solutions architect needs to perform the analysis with minimal changes to the existing architecture. 
+    
+    What should the solutions architect do to meet these requirements with the LEAST amount of operational overhead?
+    
+    - A. Use Amazon Redshift to load all the content into one place and run the SQL queries as needed.
+    - B. Use Amazon CloudWatch Logs to store the logs. Run SQL queries as needed from the Amazon CloudWatch console.
+    - C. Use Amazon Athena directly with Amazon S3 to run the queries as needed. **Most Voted**
+    - D. Use AWS Glue to catalog the logs. Use a transient Apache Spark cluster on Amazon EMR to run the SQL queries as needed.
+    
+    근거
+    
+    - 문제 : S3에 로그를 저장 ⇒ 해당 로그를 분석
+    - 가장 간단한 방법 : S3에 저장한 log를 Athena를 활용해 SQL query로 Analysis Report를 만드는 것.
+    - Athena : 파일로 저장된 텍스트 데이터에 SQL query를 사용할 수 있는 서비스
+    
+- Q3
+    
+    A company uses AWS Organizations to manage multiple AWS accounts for different departments. The management account has an Amazon S3 bucket that contains project reports. The company wants to limit access to this S3 bucket to only users of accounts within the organization in AWS Organizations.
+    
+    Which solution meets these requirements with the LEAST amount of operational overhead?
+    
+    - A. Add the aws PrincipalOrgID global condition key with a reference to the organization ID to the S3 bucket policy. **Most Voted**
+    - B. Create an organizational unit (OU) for each department. Add the aws:PrincipalOrgPaths global condition key to the S3 bucket policy.
+    - C. Use AWS CloudTrail to monitor the CreateAccount, InviteAccountToOrganization, LeaveOrganization, and RemoveAccountFromOrganization events. Update the S3 bucket policy accordingly.
+    - D. Tag each user that needs access to the S3 bucket. Add the aws:PrincipalTag global condition key to the S3 bucket policy.
+    
+    근거 :
+    
+    - 문제 : Organiztions를 활용해서 S3 bucket 접근 권한을 제어하는 방법은?
+    - aws:PrincipalOrgID라는 새로운 [조건 키](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html)를 권한 정책에 사용하여 조직 내의 계정에 해당하는 IAM 보안 주체(사용자 및 역할)만 리소스에 액세스할 수 있도록 합니다.
+    - [https://aws.amazon.com/ko/about-aws/whats-new/2018/05/principal-org-id/#:~:text=aws%3APrincipalOrgID라는 새로운 조건,액세스할 수 있도록 합니다](https://aws.amazon.com/ko/about-aws/whats-new/2018/05/principal-org-id/#:~:text=aws%3APrincipalOrgID%EB%9D%BC%EB%8A%94%20%EC%83%88%EB%A1%9C%EC%9A%B4%20%EC%A1%B0%EA%B1%B4,%EC%95%A1%EC%84%B8%EC%8A%A4%ED%95%A0%20%EC%88%98%20%EC%9E%88%EB%8F%84%EB%A1%9D%20%ED%95%A9%EB%8B%88%EB%8B%A4).
+    
 - Q4
     
-    An application runs on an Amazon EC2 instance in a VPC. The application processes logs that are stored in an Amazon S3 bucket. The EC2 instance needs to access the S3 bucket without connectivity to the internet.Which solution will provide private network connectivity to Amazon S3?
+    An application runs on an Amazon EC2 instance in a VPC. The application processes logs that are stored in an Amazon S3 bucket. The EC2 instance needs to access the S3 bucket without connectivity to the internet.
+    
+    Which solution will provide private network connectivity to Amazon S3?
     
     - A. Create a gateway VPC endpoint to the S3 bucket. **Most Voted**
     - B. Stream the logs to Amazon CloudWatch Logs. Export the logs to the S3 bucket.
     - C. Create an instance profile on Amazon EC2 to allow S3 access.
     - D. Create an Amazon API Gateway API with a private link to access the S3 endpoint.
+    
+    근거 :
+    
+    - 문제 : EC2와 S3를 직접 연결하는 방법은?
+    - S3는 VPC 밖에, EC2는 VPC 내부에 존재한다. 일반적이라면 S3와 EC2는 인터넷을 거쳐야 하는데, AWS endpoint를 사용하면 인터넷을 거치지 않고 직접 연결이 가능하다.
+    - VPC endpoint allows you to connect to AWS services using a private network instead of using the public Internet
 - Q8
     
-    A company is migrating a distributed application to AWS. The application serves variable workloads. The legacy platform consists of a primary server that coordinates jobs across multiple compute nodes. The company wants to modernize the application with a solution that maximizes resiliency and scalability.How should a solutions architect design the architecture to meet these requirements?
+    A company is migrating a distributed application to AWS. The application serves variable workloads. The legacy platform consists of a primary server that coordinates jobs across multiple compute nodes. The company wants to modernize the application with a solution that maximizes resiliency and scalability.
+    
+    How should a solutions architect design the architecture to meet these requirements?
     
     - A. Configure an Amazon Simple Queue Service (Amazon SQS) queue as a destination for the jobs. Implement the compute nodes with Amazon EC2 instances that are managed in an Auto Scaling group. Configure EC2 Auto Scaling to use scheduled scaling.
     - B. Configure an Amazon Simple Queue Service (Amazon SQS) queue as a destination for the jobs. Implement the compute nodes with Amazon EC2 instances that are managed in an Auto Scaling group. Configure EC2 Auto Scaling based on the size of the queue. **Most Voted**
     - C. Implement the primary server and the compute nodes with Amazon EC2 instances that are managed in an Auto Scaling group. Configure AWS CloudTrail as a destination for the jobs. Configure EC2 Auto Scaling based on the load on the primary server.
     - D. Implement the primary server and the compute nodes with Amazon EC2 instances that are managed in an Auto Scaling group. Configure Amazon EventBridge (Amazon CloudWatch Events) as a destination for the jobs. Configure EC2 Auto Scaling based on the load on the compute nodes.
     
+    근거 : 
+    
+    문제 : 레거시 플랫폼을 aws를 통해 탄력적이고 확장가능하게 향상 시키고 싶다.
+    
+    - A가 틀린 이유는 Scailing이 대응이 아닌 계획으로 수행되기 때문이다. queue가 늘어나면 scailing을 하게하여 즉각적으로 대응할 수 있게 해야함.
+    - resiliency : SQS를 사용한다. **SQS Queue**에 들어온 메세지는 삭제하기 전에는 지워지지 않는다는 장점이 있기에 최소한 한 번은 꼭! 실행이 보장된다.
+    - scalability : Auto Scaling을 사용한다.
 - Q9
     
-    A company is running an SMB file server in its data center. The file server stores large files that are accessed frequently for the first few days after the files are created. After 7 days the files are rarely accessed.The total data size is increasing and is close to the company's total storage capacity. A solutions architect must increase the company's available storage space without losing low-latency access to the most recently accessed files. The solutions architect must also provide file lifecycle management to avoid future storage issues.Which solution will meet these requirements?
+    A company is running an SMB file server in its data center. The file server stores large files that are accessed frequently for the first few days after the files are created. After 7 days the files are rarely accessed.The total data size is increasing and is close to the company's total storage capacity. A solutions architect must increase the company's available storage space without losing low-latency access to the most recently accessed files. The solutions architect must also provide file lifecycle management to avoid future storage issues.
+    
+    Which solution will meet these requirements?
     
     - A. Use AWS DataSync to copy data that is older than 7 days from the SMB file server to AWS.
     - B. Create an Amazon S3 File Gateway to extend the company's storage space. Create an S3 Lifecycle policy to transition the data to S3 Glacier Deep Archive after 7 days. **Most Voted**
@@ -49,22 +81,30 @@ Which solution meets these requirements with the LEAST amount of operational ove
     
     근거
     
-    - File Gateway는 캐싱 기능이 되므로 low latency를 유지할 수 있음.
+    - 문제 : SMB 파일 서버를 자체 운영중인 회사 ⇒ 7일 내 파일은 자주 접근 되지만 그 이후는 접근이 거의 없음 ⇒ 데이터는 계속 쌓이고 있고 레이턴시를 감소시키지 않는 선에서 스토리지를 늘려야함. ⇒ 또한 file lifecycle management를 사용해야함.
+    - SMB : Server Message Block 리눅스에서 윈도우 간 파일 전송을 위해 사용하는 듯
+        - [https://leehands.tistory.com/entry/파일서버-SMB-CIFS-NFS-란](https://leehands.tistory.com/entry/%ED%8C%8C%EC%9D%BC%EC%84%9C%EB%B2%84-SMB-CIFS-NFS-%EB%9E%80)
+    - 온프레미스 환경에 대한 확장을 위해 S3를 사용하는 경우이므로 File gateway를 사용한다. 또한 Lifecycle management를 위해 S3 Lifecycle policy를 사용한다.
 - Q10
     
-    A company has an application that runs on Amazon EC2 instances and uses an Amazon Aurora database. The EC2 instances connect to the database by using user names and passwords that are stored locally in a file. The company wants to minimize the operational overhead of credential management.What should a solutions architect do to accomplish this goal?
+    A company has an application that runs on Amazon EC2 instances and uses an Amazon Aurora database. The EC2 instances connect to the database by using user names and passwords that are stored locally in a file. The company wants to minimize the operational overhead of credential management.
+    
+    What should a solutions architect do to accomplish this goal?
     
     - A. Use AWS Secrets Manager. Turn on automatic rotation. **Most Voted**
     - B. Use AWS Systems Manager Parameter Store. Turn on automatic rotation.
     - C. Create an Amazon S3 bucket to store objects that are encrypted with an AWS Key Management Service (AWS KMS) encryption key. Migrate the credential file to the S3 bucket. Point the application to the S3 bucket.
     - D. Create an encrypted Amazon Elastic Block Store (Amazon EBS) volume for each EC2 instance. Attach the new EBS volume to each EC2 instance. Migrate the credential file to the new EBS volume. Point the application to the new EBS volume.
     
-    근거
+    문제 :  EC2와 Aurora Database를 연결해서 사용 중 ⇒ 연결에 필요한 계정, pwd를 로컬 파일에서 사용 ⇒ 이를 aws에서 적용하기
     
-    - Aws Secret manager가 무엇인지, automatic rotation이 무엇인지 모르겠다.
+    - AWS Secrets Manager를 사용하자.
+    
 - Q12
     
-    A global company hosts its web application on Amazon EC2 instances behind an Application Load Balancer (ALB). The web application has static data and dynamic data. The company stores its static data in an Amazon S3 bucket. The company wants to improve performance and reduce latency for the static data and dynamic data. The company is using its own domain name registered with Amazon Route 53.What should a solutions architect do to meet these requirements?
+    A global company hosts its web application on Amazon EC2 instances behind an Application Load Balancer (ALB). The web application has static data and dynamic data. The company stores its static data in an Amazon S3 bucket. The company wants to improve performance and reduce latency for the static data and dynamic data. The company is using its own domain name registered with Amazon Route 53.
+    
+    What should a solutions architect do to meet these requirements?
     
     - A. Create an Amazon CloudFront distribution that has the S3 bucket and the ALB as origins. Configure Route 53 to route traffic to the CloudFront distribution.
     - B. Create an Amazon CloudFront distribution that has the ALB as an origin. Create an AWS Global Accelerator standard accelerator that has the S3 bucket as an endpoint Configure Route 53 to route traffic to the CloudFront distribution.
@@ -73,13 +113,16 @@ Which solution meets these requirements with the LEAST amount of operational ove
     
     근거 :
     
-    - A와 C중 사람들이 갈림
-    - Cloudfront가 dynamic data에 대한 cache가 가능한지 모르겠음.
+    - 문제 : static data와 dynamic data를 low latency로 배포하고 싶다. ⇒ route53을 사용한다.
+    - A와 C중 사람들이 갈림 Cloudfront가 dynamic data에 대한 cache가 가능한지 모르겠음.
     - 나는 일단 C 같음.. 왠지는 잘;;
+    - [AWS Global Accelerator](https://aws.amazon.com/ko/global-accelerator/?nc2=h_re) 는 AWS 글로벌 네트워크를 활용해 경로를 최적화해서 성능을 높이고, 지속적인 모니터링으로 가용성을 제공합니다. 따라서 재해 복구에 대응하고, 성능 개선과 네트워크 확장 등을 손쉽게 구성할 수 있습니다.
     
 - Q13
     
-    A company performs monthly maintenance on its AWS infrastructure. During these maintenance activities, the company needs to rotate the credentials for its Amazon RDS for MySQL databases across multiple AWS Regions.Which solution will meet these requirements with the LEAST operational overhead?
+    A company performs monthly maintenance on its AWS infrastructure. During these maintenance activities, the company needs to rotate the credentials for its Amazon RDS for MySQL databases across multiple AWS Regions.
+    
+    Which solution will meet these requirements with the LEAST operational overhead?
     
     - A. Store the credentials as secrets in AWS Secrets Manager. Use multi-Region secret replication for the required Regions. Configure Secrets Manager to rotate the secrets on a schedule. **Most Voted**
     - B. Store the credentials as secrets in AWS Systems Manager by creating a secure string parameter. Use multi-Region secret replication for the required Regions. Configure Systems Manager to rotate the secrets on a schedule.
@@ -88,17 +131,29 @@ Which solution meets these requirements with the LEAST amount of operational ove
     
     근거 
     
+    - 문제 : 매월 서버 유지보수를 수행할 때 DB Credential을 업데이트한다. 가장 간단한 방법은
+    - Credential 업데이트를 가장 빠르고 간단하게 하기 위한 방법은 AWS Secret Manager를 사용하는 것.
 - Q14
     
-    A company runs an ecommerce application on Amazon EC2 instances behind an Application Load Balancer. The instances run in an Amazon EC2 Auto Scaling group across multiple Availability Zones. The Auto Scaling group scales based on CPU utilization metrics. The ecommerce application stores the transaction data in a MySQL 8.0 database that is hosted on a large EC2 instance.The database's performance degrades quickly as application load increases. The application handles more read requests than write transactions. The company wants a solution that will automatically scale the database to meet the demand of unpredictable read workloads while maintaining high availability.Which solution will meet these requirements?
+    A company runs an ecommerce application on Amazon EC2 instances behind an Application Load Balancer. The instances run in an Amazon EC2 Auto Scaling group across multiple Availability Zones. The Auto Scaling group scales based on CPU utilization metrics. The ecommerce application stores the transaction data in a MySQL 8.0 database that is hosted on a large EC2 instance.The database's performance degrades quickly as application load increases. The application handles more read requests than write transactions. The company wants a solution that will automatically scale the database to meet the demand of unpredictable read workloads while maintaining high availability.
+    
+    Which solution will meet these requirements?
     
     - A. Use Amazon Redshift with a single node for leader and compute functionality.
     - B. Use Amazon RDS with a Single-AZ deployment Configure Amazon RDS to add reader instances in a different Availability Zone.
     - C. Use Amazon Aurora with a Multi-AZ deployment. Configure Aurora Auto Scaling with Aurora Replicas. **Most Voted**
     - D. Use Amazon ElastiCache for Memcached with EC2 Spot Instances.
+    - 
+    
+    근거 
+    
+    - 문제 : ALB와 EC2를 사용 중 ⇒ EC2는 CPU Auto-scailig + multi-AZ ⇒ 큰 EC2에서 mysql 8.0 사용 중 ⇒ 앱 로드가 오르면 mysql 성능 하락 ⇒ 이 문제 해결할 방법은?
+    - C, AURORA is 5x performance improvement over MySQL on RDS and handles more read requests than write,; maintaining high availability = Multi-AZ deployment
 - Q15
     
-    A company recently migrated to AWS and wants to implement a solution to protect the traffic that flows in and out of the production VPC. The company had an inspection server in its on-premises data center. The inspection server performed specific operations such as traffic flow inspection and traffic filtering. The company wants to have the same functionalities in the AWS Cloud.Which solution will meet these requirements?
+    A company recently migrated to AWS and wants to implement a solution to protect the traffic that flows in and out of the production VPC. The company had an inspection server in its on-premises data center. The inspection server performed specific operations such as traffic flow inspection and traffic filtering. The company wants to have the same functionalities in the AWS Cloud.
+    
+    Which solution will meet these requirements?
     
     - A. Use Amazon GuardDuty for traffic inspection and traffic filtering in the production VPC.
     - B. Use Traffic Mirroring to mirror traffic from the production VPC for traffic inspection and filtering.
@@ -107,10 +162,14 @@ Which solution meets these requirements with the LEAST amount of operational ove
     
     근거 
     
-    - A 고름 AWS firewall 에 대해서 공부
+    - 문제 : VPC 내부에 in and out 되는 traffic 보호 목적으로 AWS로 마이그레이션 ⇒ 온프레미스에는 트래픽을 조사하고 필터하는 역할을 수행하는 서버가 있음 ⇒ AWS에서는 이 기능을 어떤 서비스가 수행하는지?
+    - VPC에서 발생하는 트래픽에 대한 Filtering & inspection을 수행하는 서비스는 Firewall manager라고 기억하자.
+    - GuardDuty는 위협을 감시하고 예측 가능한 위협을 식별하는 서비스
 - Q16
     
-    A company hosts a data lake on AWS. The data lake consists of data in Amazon S3 and Amazon RDS for PostgreSQL. The company needs a reporting solution that provides data visualization and includes all the data sources within the data lake. Only the company's management team should have full access to all the visualizations. The rest of the company should have only limited access.Which solution will meet these requirements?
+    A company hosts a data lake on AWS. The data lake consists of data in Amazon S3 and Amazon RDS for PostgreSQL. The company needs a reporting solution that provides data visualization and includes all the data sources within the data lake. Only the company's management team should have full access to all the visualizations. The rest of the company should have only limited access.
+    
+    Which solution will meet these requirements?
     
     - A. Create an analysis in Amazon QuickSight. Connect all the data sources and create new datasets. Publish dashboards to visualize the data. Share the dashboards with the appropriate IAM roles.
     - B. Create an analysis in Amazon QuickSight. Connect all the data sources and create new datasets. Publish dashboards to visualize the data. Share the dashboards with the appropriate users and groups. **Most Voted**
@@ -119,11 +178,13 @@ Which solution meets these requirements with the LEAST amount of operational ove
     
     근거 
     
-    - B로 했으나 헷갈리는 것 같아서 저장
-    - IAM을 설정하는 방법보다 user와 group으로 매칭을 하는게 더욱 쉬운 방법임.
+    - 문제 : S3와 postrgreSQL로 DataLake를 형성 ⇒ DataLake에 대한 시각화 보고서를 작성하려고 함 ⇒ Management 팀은 Full Access 나머지는 제한된 Access를 가져야함.
+    - QuickSight ⇒ 아마존이 제공하는 서버리스 매니지드 **BI** 상품이다. 특정 데이터에 대한 시각화 대시보드를 생성하고 다른 사용자와 공유할 수 있다.
 - Q17
     
-    A company is implementing a new business application. The application runs on two Amazon EC2 instances and uses an Amazon S3 bucket for document storage. A solutions architect needs to ensure that the EC2 instances can access the S3 bucket.What should the solutions architect do to meet this requirement?
+    A company is implementing a new business application. The application runs on two Amazon EC2 instances and uses an Amazon S3 bucket for document storage. A solutions architect needs to ensure that the EC2 instances can access the S3 bucket.
+    
+    What should the solutions architect do to meet this requirement?
     
     - A. Create an IAM role that grants access to the S3 bucket. Attach the role to the EC2 instances. **Most Voted**
     - B. Create an IAM policy that grants access to the S3 bucket. Attach the policy to the EC2 instances.
@@ -132,10 +193,13 @@ Which solution meets these requirements with the LEAST amount of operational ove
     
     근거
     
-    - role!
+    - 문제 : EC2에 S3를 연결시키고자 할 때 필요한 것은?
+    - IAM role을 만들어야한다. 그리고 그 role을 ec2에게 부여한다.
 - Q18
     
-    An application development team is designing a microservice that will convert large images to smaller, compressed images. When a user uploads an image through the web interface, the microservice should store the image in an Amazon S3 bucket, process and compress the image with an AWS Lambda function, and store the image in its compressed form in a different S3 bucket.A solutions architect needs to design a solution that uses durable, stateless components to process the images automatically.Which combination of actions will meet these requirements? (Choose two.)
+    An application development team is designing a microservice that will convert large images to smaller, compressed images. When a user uploads an image through the web interface, the microservice should store the image in an Amazon S3 bucket, process and compress the image with an AWS Lambda function, and store the image in its compressed form in a different S3 bucket.A solutions architect needs to design a solution that uses durable, stateless components to process the images automatically.
+    
+    Which combination of actions will meet these requirements? (Choose two.)
     
     - A. Create an Amazon Simple Queue Service (Amazon SQS) queue. Configure the S3 bucket to send a notification to the SQS queue when an image is uploaded to the S3 bucket. **Most Voted**
     - B. Configure the Lambda function to use the Amazon Simple Queue Service (Amazon SQS) queue as the invocation source. When the SQS message is successfully processed, delete the message in the queue. **Most Voted**
@@ -145,10 +209,14 @@ Which solution meets these requirements with the LEAST amount of operational ove
     
     근거
     
-    - 맞았으나 헷갈려서 저장
+    - 문제 : 큰 이미지를 작게 압축하는 MicroService를 구축하려 한다. ⇒ 이미지가 업로드 되면 S3에 저장되고 lambda 함수를 사용해 이미지가 작아진 다음 다시 S3에 저장된다. ⇒ 이 절차를 수행하기 위한 방법은?
+    - 이미지가 S3에 저장되면 그 다음으로 이미지가 저장되었다고 SQS에게 알린다.
+    - lambda와 SimpleQueueService를 사용해서 큰 이미지가 작은 이미지로 변경되어야 하는 절차를 수행하게 한다.
 - Q19
     
-    A company has a three-tier web application that is deployed on AWS. The web servers are deployed in a public subnet in a VPC. The application servers and database servers are deployed in private subnets in the same VPC. The company has deployed a third-party virtual firewall appliance from AWS Marketplace in an inspection VPC. The appliance is configured with an IP interface that can accept IP packets.A solutions architect needs to integrate the web application with the appliance to inspect all traffic to the application before the traffic reaches the web server.Which solution will meet these requirements with the LEAST operational overhead?
+    A company has a three-tier web application that is deployed on AWS. The web servers are deployed in a public subnet in a VPC. The application servers and database servers are deployed in private subnets in the same VPC. The company has deployed a third-party virtual firewall appliance from AWS Marketplace in an inspection VPC. The appliance is configured with an IP interface that can accept IP packets. A solutions architect needs to integrate the web application with the appliance to inspect all traffic to the application before the traffic reaches the web server.
+    
+    Which solution will meet these requirements with the LEAST operational overhead?
     
     - A. Create a Network Load Balancer in the public subnet of the application's VPC to route the traffic to the appliance for packet inspection.
     - B. Create an Application Load Balancer in the public subnet of the application's VPC to route the traffic to the appliance for packet inspection.
@@ -157,12 +225,14 @@ Which solution meets these requirements with the LEAST amount of operational ove
     
     근거
     
-    - 헷갈려서 저장
-    - private 트래픽과 public 트래픽을 분리한 뒤 public에만 firewall을 설치하면 오버헤드가 적을듯
-    - Gateway Load Balancer support route traffic to third-party virtual firewall appliance in layer 3 that make it different from ALB and NLB. 라고하는데 잘 몰겠음
+    - 문제 : 3티어 web app을 AWS에서 운영중 ⇒ Server는 Public Subnet에서 운영중 ⇒ 앱 서버와 데이터베이서는 Private Server에서 운영중 ⇒ 타사 firewall을 사용 중 ⇒ Public에서 운영중인 Webserver에 Firewall을 사용하고 싶음. ⇒ 가장 효율적인 방법은?
+    - GWLB는 Firewall을 관리하는 서비스라고 이해하자.
+    - GWLB : Network 단의 로드 밸런싱을 지원한다. 박화벽, 침입 탐지 및 방지 시스템, 심층 패킷 검사 시스템과 같은 가상 Appliance를 관리할 수 있다고 한다. (일반적인 로드밸런서 역할과 다르게 트래픽을 체크하는 용도라고 한다.)
 - Q20
     
-    A company wants to improve its ability to clone large amounts of production data into a test environment in the same AWS Region. The data is stored in Amazon EC2 instances on Amazon Elastic Block Store (Amazon EBS) volumes. Modifications to the cloned data must not affect the production environment. The software that accesses this data requires consistently high I/O performance.A solutions architect needs to minimize the time that is required to clone the production data into the test environment.Which solution will meet these requirements?
+    A company wants to improve its ability to clone large amounts of production data into a test environment in the same AWS Region. The data is stored in Amazon EC2 instances on Amazon Elastic Block Store (Amazon EBS) volumes. Modifications to the cloned data must not affect the production environment. The software that accesses this data requires consistently high I/O performance. A solutions architect needs to minimize the time that is required to clone the production data into the test environment.
+    
+    Which solution will meet these requirements?
     
     - A. Take EBS snapshots of the production EBS volumes. Restore the snapshots onto EC2 instance store volumes in the test environment.
     - B. Configure the production EBS volumes to use the EBS Multi-Attach feature. Take EBS snapshots of the production EBS volumes. Attach the production EBS volumes to the EC2 instances in the test environment.
@@ -171,11 +241,17 @@ Which solution meets these requirements with the LEAST amount of operational ove
     
     근거 
     
+    - 문제 : 테스트 환경에서 production Level의 Data를 사용하고 싶다. ⇒ EC2 EBS에 저장되고 있음 ⇒ production Level에서 Test Level로 데이터를 옮기는 가장 좋은 방법은?
+    - Production Level의 데이터를 Test 환경으로 옮기는 가장 효과적인 방법은 EBS의 fast snapshot을 사용한다.
     - 데이터 복사를 빠르게 하는 방법이 스냅샷을 사용하는 것이군
-    - Fast snapshot
+
+완료
+
 - Q21
     
-    A company observes an increase in Amazon EC2 costs in its most recent bill. The billing team notices unwanted vertical scaling of instance types for a couple of EC2 instances. A solutions architect needs to create a graph comparing the last 2 months of EC2 costs and perform an in-depth analysis to identify the root cause of the vertical scaling.How should the solutions architect generate the information with the LEAST operational overhead?
+    A company observes an increase in Amazon EC2 costs in its most recent bill. The billing team notices unwanted vertical scaling of instance types for a couple of EC2 instances. A solutions architect needs to create a graph comparing the last 2 months of EC2 costs and perform an in-depth analysis to identify the root cause of the vertical scaling.
+    
+    How should the solutions architect generate the information with the LEAST operational overhead?
     
     - A. Use AWS Budgets to create a budget report and compare EC2 costs based on instance types.
     - B. Use Cost Explorer's granular filtering feature to perform an in-depth analysis of EC2 costs based on instance types. **Most Voted**
@@ -184,10 +260,14 @@ Which solution meets these requirements with the LEAST amount of operational ove
     
     근거 
     
-    - 잘 몰겠다. grandular filtering이 무엇일까
+    - 문제 : EC2 비용 상승을 보니 Vertical Scaling이 원인이었음. ⇒ 어떠한 이유로 vertical scaling이 되는지 찾기 위해 지난 2개월의 비용 그래프를 만들고 근본적인 원인을 분석하려고 함 ⇒ 최소의 노력으로 해당 정보를 생성하는 방법은?
+    - Cost Explorer : 비용 최적화를 위한 서비스
+    
 - Q26
     
-    A company needs to review its AWS Cloud deployment to ensure that its Amazon S3 buckets do not have unauthorized configuration changes.What should a solutions architect do to accomplish this goal?
+    A company needs to review its AWS Cloud deployment to ensure that its Amazon S3 buckets do not have unauthorized configuration changes.
+    
+    What should a solutions architect do to accomplish this goal?
     
     - A. Turn on AWS Config with the appropriate rules. **Most Voted**
     - B. Turn on AWS Trusted Advisor with the appropriate checks.
@@ -196,10 +276,13 @@ Which solution meets these requirements with the LEAST amount of operational ove
     
     근거
     
-    - 맞췄는데 모르는 문제
+    - 문제 : S3 버켓 관련해서 무단으로 환경설정 변화가 발생하는지 추적이 필요함.
+    - AWS Config를 켜놓는다.
 - Q27
     
-    A company is launching a new application and will display application metrics on an Amazon CloudWatch dashboard. The company's product manager needs to access this dashboard periodically. The product manager does not have an AWS account. A solutions architect must provide access to the product manager by following the principle of least privilege.Which solution will meet these requirements?
+    A company is launching a new application and will display application metrics on an Amazon CloudWatch dashboard. The company's product manager needs to access this dashboard periodically. The product manager does not have an AWS account. A solutions architect must provide access to the product manager by following the principle of least privilege.
+    
+    Which solution will meet these requirements?
     
     - **A. Share the dashboard from the CloudWatch console. Enter the product manager's email address, and complete the sharing steps. Provide a shareable link for the dashboard to the product manager.**
     - B. Create an IAM user specifically for the product manager. Attach the CloudWatchReadOnlyAccess AWS managed policy to the user. Share the new login credentials with the product manager. Share the browser URL of the correct dashboard with the product manager.
@@ -208,10 +291,13 @@ Which solution meets these requirements with the LEAST amount of operational ove
     
     근거 :
     
-    - Cloudwatch에 이러한 기능이 있다고한다.
+    - 문제 : 새로 출시한 앱에 대한 metric 추적이 필요 ⇒ 대시보드를 PM이 확인해야하는데, AWS 계정이 없다. 이때 권한을 최소화하는 방식으로 대시보드에 접근할 수 있는 방법은?
+    - Cloudwatch에 AWS 아이디가 없더라도  대시보드를 접근할 수 있는 기능이 있다고 한다.
 - Q28
     
-    A company is migrating applications to AWS. The applications are deployed in different accounts. The company manages the accounts centrally by using AWS Organizations. The company's security team needs a **single sign-on (SSO) solution across all the company's accounts.** The company must continue managing the users and groups in its on-premises self-managed Microsoft Active Directory.Which solution will meet these requirements?
+    A company is migrating applications to AWS. The applications are deployed in different accounts. The company manages the accounts centrally by using AWS Organizations. The company's security team needs a **single sign-on (SSO) solution across all the company's accounts.** The company must continue managing the users and groups in its on-premises self-managed Microsoft Active Directory.
+    
+    Which solution will meet these requirements?
     
     - A. Enable AWS Single Sign-On (AWS SSO) from the AWS SSO console. Create a one-way forest trust or a one-way domain trust to connect the company's self-managed Microsoft Active Directory with AWS SSO by using AWS Directory Service for Microsoft Active Directory.
     - B. Enable AWS Single Sign-On (AWS SSO) from the AWS SSO console. Create a two-way forest trust to connect the company's self-managed Microsoft Active Directory with AWS SSO by using AWS Directory Service for Microsoft Active Directory. **Most Voted**
@@ -220,10 +306,14 @@ Which solution meets these requirements with the LEAST amount of operational ove
     
     근거 
     
-    - 외우자
+    - 온프레미스에서 AWS로 마이그레이션을 수행했다. ⇒ 여러 계정에서 서비스를 실행하므로 AWS Organizations를 사용해서 중앙으로 관리하고 있다. ⇒ 보안 팀은 SSO 솔루션이 필요하다. ⇒ 또한 온프레미스에 있는 유저와 그룹도 지속적으로 관리해야한다.
+    - AWS SSO를 사용하자. 마이크로소프트 디렉토리도 접근해야하므로 two-way forest trust를 설정한다.
+    - 외우자…
 - Q29
     
-    A company provides a Voice over Internet Protocol (VoIP) service that uses UDP connections. The service consists of Amazon EC2 instances that run in an Auto Scaling group. The company has deployments across multiple AWS Regions.The company needs to route users to the Region with the lowest latency. The company also needs automated failover between Regions.Which solution will meet these requirements?
+    A company provides a Voice over Internet Protocol (VoIP) service that uses UDP connections. The service consists of Amazon EC2 instances that run in an Auto Scaling group. The company has deployments across multiple AWS Regions.The company needs to route users to the Region with the lowest latency. The company also needs automated failover between Regions.
+    
+    Which solution will meet these requirements?
     
     - A. Deploy a Network Load Balancer (NLB) and an associated target group. Associate the target group with the Auto Scaling group. Use the NLB as an AWS Global Accelerator endpoint in each Region. **Most Voted**
     - B. Deploy an Application Load Balancer (ALB) and an associated target group. Associate the target group with the Auto Scaling group. Use the ALB as an AWS Global Accelerator endpoint in each Region.
@@ -232,10 +322,15 @@ Which solution meets these requirements with the LEAST amount of operational ove
     
     근거
     
-    - A 인이유 NLB를 사용해야하는데, C의 경우 Cloudfront를 쓴다는 말이 틀림. Cloudfront는 CDN인데 VoIP에는 쓸일이 없음
+    - 문제 : VoIP, EC2를 운영중에 있는 회사임 ⇒ 서비스는 전세계 리전에서 운영중에 있음 ⇒ 회사는 lowest latency를 유지하고 싶으며 automated failover를 필요로 함.
+    - Global Accelerator : 글로벌 유저들에게 고객 서비스를 빠르게 제공하는데 도움을 주는 aws 서비스
+    - APP Load Balancer를 운용하고 AWS Global Accelerator에 엔드포인트로 지정한다.
+    - C가 아닌 이유 일단 Cloudfront는 CDN인데 VoIP에는 쓸일이 없음
 - Q30
     
-    A development team runs monthly resource-intensive tests on its general purpose Amazon RDS for MySQL DB instance with Performance Insights enabled. The testing lasts for 48 hours once a month and is the only process that uses the database. The team wants to reduce the cost of running the tests without reducing the compute and memory attributes of the DB instance.Which solution meets these requirements MOST cost-effectively?
+    A development team runs monthly resource-intensive tests on its general purpose Amazon RDS for MySQL DB instance with Performance Insights enabled. The testing lasts for 48 hours once a month and is the only process that uses the database. The team wants to reduce the cost of running the tests without reducing the compute and memory attributes of the DB instance.
+    
+    Which solution meets these requirements MOST cost-effectively?
     
     - A. Stop the DB instance when tests are completed. Restart the DB instance when required.
     - B. Use an Auto Scaling policy with the DB instance to automatically scale when tests are completed.
@@ -244,6 +339,8 @@ Which solution meets these requirements with the LEAST amount of operational ove
     
     근거 
     
+    - 문제 : 매달 리소스 집중적인 RDS 테스트와 Performance Insights를 수행 ⇒ 해당 테스트는 한 달에 한 번 48시간 지속되고 db만을 사용해서 수행된다. ⇒ DB 인스턴스의 cpu, mem 리소스를 유지한 체로 가격을 아끼는 방식으로 테스트 하려한다. ⇒ 가장 저렴한 방법은?
+    - 테스트가 끝나면 snapshot으로 저장하고 DB를 끈다. 필요할 때 스냅샷을 다시 연다.
 - Q31
     
     A company that hosts its web application on AWS wants to ensure all Amazon EC2 instances. Amazon RDS DB instances. and Amazon Redshift clusters are configured with tags. The company wants to minimize the effort of configuring and operating this check.What should a solutions architect do to accomplish this?
