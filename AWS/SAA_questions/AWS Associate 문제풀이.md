@@ -244,9 +244,6 @@
     - 문제 : 테스트 환경에서 production Level의 Data를 사용하고 싶다. ⇒ EC2 EBS에 저장되고 있음 ⇒ production Level에서 Test Level로 데이터를 옮기는 가장 좋은 방법은?
     - Production Level의 데이터를 Test 환경으로 옮기는 가장 효과적인 방법은 EBS의 fast snapshot을 사용한다.
     - 데이터 복사를 빠르게 하는 방법이 스냅샷을 사용하는 것이군
-
-완료
-
 - Q21
     
     A company observes an increase in Amazon EC2 costs in its most recent bill. The billing team notices unwanted vertical scaling of instance types for a couple of EC2 instances. A solutions architect needs to create a graph comparing the last 2 months of EC2 costs and perform an in-depth analysis to identify the root cause of the vertical scaling.
@@ -343,7 +340,9 @@
     - 테스트가 끝나면 snapshot으로 저장하고 DB를 끈다. 필요할 때 스냅샷을 다시 연다.
 - Q31
     
-    A company that hosts its web application on AWS wants to ensure all Amazon EC2 instances. Amazon RDS DB instances. and Amazon Redshift clusters are configured with tags. The company wants to minimize the effort of configuring and operating this check.What should a solutions architect do to accomplish this?
+    A company that hosts its web application on AWS wants to ensure all Amazon EC2 instances, Amazon RDS DB instances, and Amazon Redshift clusters are configured with tags. The company wants to minimize the effort of configuring and operating this check.
+    
+    What should a solutions architect do to accomplish this?
     
     - A. Use AWS Config rules to define and detect resources that are not properly tagged. **Most Voted**
     - B. Use Cost Explorer to display resources that are not properly tagged. Tag those resources manually.
@@ -352,10 +351,14 @@
     
     근거 
     
-    - 잘 몰겠음..
+    - 문제 : 아마존 EC2 instance, RDS redshift가 태그로 관리되고 있는지 확인하고 싶다. ⇒ 검사를 구성하고 운영하는 작업을 최소화 하려한다.
+    - aws 리소스를 조직하기 위한 메타데이터이다. key value로 구성되어 있다.
+    - AWS Config에서 tag와 관련된 설정을 관리 할 수 있군.
 - Q33
     
-    A company runs an online marketplace web application on AWS. The application serves hundreds of thousands of users during peak hours. The company needs a scalable, near-real-time solution to share the details of millions of financial transactions with several other internal applications. Transactions also need to be processed to remove sensitive data before being stored in a document database for low-latency retrieval.What should a solutions architect recommend to meet these requirements?
+    A company runs an online marketplace web application on AWS. The application serves hundreds of thousands of users during peak hours. The company needs a scalable, near-real-time solution to share the details of millions of financial transactions with several other internal applications. Transactions also need to be processed to remove sensitive data before being stored in a document database for low-latency retrieval.
+    
+    What should a solutions architect recommend to meet these requirements?
     
     - A. Store the transactions data into Amazon DynamoDB. Set up a rule in DynamoDB to remove sensitive data from every transaction upon write. Use DynamoDB Streams to share the transactions data with other applications.
     - B. Stream the transactions data into Amazon Kinesis Data Firehose to store data in Amazon DynamoDB and Amazon S3. Use AWS Lambda integration with Kinesis Data Firehose to remove sensitive data. Other applications can consume the data stored in Amazon S3.
@@ -364,10 +367,14 @@
     
     근거
     
-    - 잘 몰겠음..
+    - 문제 : 시간당 수십만명의 유저가 사용하는 앱을 운영 중이다. ⇒ 내부 앱 간 수백만 건의 트랜잭션이 일어나고 거의 실시간으로 처리되어야 한다, 이를 처리할 수 있는 scalable, durable할 수 있게 솔루션을 구축하고 싶다. ⇒ 또한 문서 저장에서 민감 정보를 제거해야한다.
+    - 민감 정보는 lambda 함수를 통해 제거하는게 효율적임
+    - 실시간으로 데이터를 처리하고 분석하는데 Kinesis Data Stream을 사용하면 된다.
 - Q34
     
-    A company hosts its multi-tier applications on AWS. For compliance, governance, auditing, and security, the company must track configuration changes on its AWS resources and record a history of API calls made to these resources.What should a solutions architect do to meet these requirements?
+    A company hosts its multi-tier applications on AWS. For compliance, governance, auditing, and security, the company must track configuration changes on its AWS resources and record a history of API calls made to these resources.
+    
+    What should a solutions architect do to meet these requirements?
     
     - A. Use AWS CloudTrail to track configuration changes and AWS Config to record API calls.
     - B. Use AWS Config to track configuration changes and AWS CloudTrail to record API calls. **Most Voted**
@@ -376,11 +383,14 @@
     
     근거
     
+    - 문제 : 리소스 옵션 변경 사항을 추적하고 리소스의 API 콜을 변경하는 기능을 사용하고 싶다.
     - API Call 추적 = Cloudtrail
-    - 환경서렁 추적 = AWS Configs
+    - 환경설정 추적 = AWS Configs
 - Q35
     
-    A company is preparing to launch a public-facing web application in the AWS Cloud. The architecture consists of Amazon EC2 instances within a VPC behind an Elastic Load Balancer (ELB). A third-party service is used for the DNS. The company's solutions architect must recommend a solution to detect and protect against large-scale DDoS attacks.Which solution meets these requirements?
+    A company is preparing to launch a public-facing web application in the AWS Cloud. The architecture consists of Amazon EC2 instances within a VPC behind an Elastic Load Balancer (ELB). A third-party service is used for the DNS. The company's solutions architect must recommend a solution to detect and protect against large-scale DDoS attacks.
+    
+    Which solution meets these requirements?
     
     - A. Enable Amazon GuardDuty on the account.
     - B. Enable Amazon Inspector on the EC2 instances.
@@ -389,11 +399,13 @@
     
     근거
     
-    - DDOS 공격 = AWS shield
-    - ELB와 AWS shield 연동
+    - 문제 : ELB와 EC2, DNS에 대한 서드파티를 사용한다⇒  DDos  공격을 방어하고자 한다.
+    - DDos 공격 = AWS shield / 서드파티라 했기에 Route53을 사용하지 않으므로 C는 틀림 / ELB에 AWS shield를 넣어야함.
 - Q36
     
-    A company is building an application in the AWS Cloud. The application will store data in Amazon S3 buckets in two AWS Regions. The company must use an AWS Key Management Service (AWS KMS) customer managed key to encrypt all data that is stored in the S3 buckets. The data in both S3 buckets must be encrypted and decrypted with the same KMS key. The data and the key must be stored in each of the two Regions.Which solution will meet these requirements with the LEAST operational overhead?
+    A company is building an application in the AWS Cloud. The application will store data in Amazon S3 buckets in two AWS Regions. The company must use an AWS Key Management Service (AWS KMS) customer managed key to encrypt all data that is stored in the S3 buckets. The data in both S3 buckets must be encrypted and decrypted with the same KMS key. The data and the key must be stored in each of the two Regions.
+    
+    Which solution will meet these requirements with the LEAST operational overhead?
     
     - A. Create an S3 bucket in each Region. Configure the S3 buckets to use server-side encryption with Amazon S3 managed encryption keys (SSE-S3). Configure replication between the S3 buckets.
     - B. Create a customer managed multi-Region KMS key. Create an S3 bucket in each Region. Configure replication between the S3 buckets. Configure the application to use the KMS key with client-side encryption. **Most Voted**
@@ -402,10 +414,14 @@
     
     근거 
     
-    - B가 맞는것 같음.. 잘 모르겠다.
+    - 문제 : 2개 리전에 S3 버켓을 사용하고 있으며 KMS를 통해 S3 버켓에 있는 정보들이 암호화 되어있다. ⇒ 데이터와 키는 모두 리전에 각각 배치되어 있으며 동일한 Encryption key어야 한다. ⇒ 최소한으로 설정하는 방법은?
+    - AWS KMS supports *multi-Region keys*, which are AWS KMS keys in different AWS Regions that can be used interchangeably – as though you had the same key in multiple Regions.(as though = as if)
+    - [https://docs.aws.amazon.com/kms/latest/developerguide/multi-region-keys-overview.html](https://docs.aws.amazon.com/kms/latest/developerguide/multi-region-keys-overview.html)
 - Q37
     
-    A company recently launched a variety of new workloads on Amazon EC2 instances in its AWS account. The company needs to create a strategy to access and administer the instances remotely and securely. The company needs to implement a repeatable process that works with native AWS services and follows the AWS Well-Architected Framework.Which solution will meet these requirements with the LEAST operational overhead?
+    A company recently launched a variety of new workloads on Amazon EC2 instances in its AWS account. The company needs to create a strategy to access and administer the instances remotely and securely. The company needs to implement a repeatable process that works with native AWS services and follows the AWS Well-Architected Framework.
+    
+    Which solution will meet these requirements with the LEAST operational overhead?
     
     - A. Use the EC2 serial console to directly access the terminal interface of each instance for administration.
     - B. Attach the appropriate IAM role to each existing instance and new instance. Use AWS Systems Manager Session Manager to establish a remote SSH session. **Most Voted**
@@ -414,10 +430,15 @@
     
     근거 
     
-    - 몰겠다.
+    - 문제 : 원격으로 관리하는 방법을 고민중에 있음 ⇒ 회사는 AWS well architected framework를 따르는 프로세스가 필요하다. ⇒ 최소 노력으로 이룰 수 있는 방법은?
+    - 세션 매니저를 사용한다.
+    - Session Manager provides secure and auditable node management without the need to open inbound ports, maintain bastion hosts, or manage SSH keys.
+    - https://docs.aws.amazon.com/systems-manager/latest/userguide/session-manager.html
 - Q39
     
-    A company maintains a searchable repository of items on its website. The data is stored in an Amazon RDS for MySQL database table that contains more than 10 million rows. The database has 2 TB of General Purpose SSD storage. There are millions of updates against this data every day through the company's website.The company has noticed that some insert operations are taking 10 seconds or longer. The company has determined that the database storage performance is the problem.Which solution addresses this performance issue?
+    A company maintains a searchable repository of items on its website. The data is stored in an Amazon RDS for MySQL database table that contains more than 10 million rows. The database has 2 TB of General Purpose SSD storage. There are millions of updates against this data every day through the company's website.The company has noticed that some insert operations are taking 10 seconds or longer. The company has determined that the database storage performance is the problem.
+    
+    Which solution addresses this performance issue?
     
     - A. Change the storage type to Provisioned IOPS SSD. **Most Voted**
     - B. Change the DB instance to a memory optimized instance class.
@@ -426,7 +447,8 @@
     
     근거
     
-    - B로 선택했음
+    - 문제 : 검색 가능한 레포를 운영중에 있다. ⇒ 이 데이터들은 RDS에서 관리되며 약 1천만건의 로우가 있다. 2TB 크기의 SSD에 저장되어 있으며 수백만건의 트랜잭션이 발생된다. ⇒ 약 10초 이상 걸리는 트랜잭션 타임을 줄이고 싶다.
+    - AWS에는 IOPS를 설정하는 옵션이 있다고 한다. 데이터를 삽입하거나 수정해야하므로 IOPS를 건드려야 한다. B를 택했는데, 메모리는 이미 저장된 데이터를 로드하는데 유용한 것으로 판단된다.
     - General purpose SSD is not optimal for database that requires high performance. Answer is A
     - input/output operations per second (IOPS)
     - AWS의 옵션 중에 SSD IOPS 성능을 고르는게 있는듯
@@ -446,9 +468,14 @@
     
     - 14일 뒤에 데이터를 사용하지 않음 = Glacier
     - 최신 14일치 데이터를 분석해야함 = Amazon kinesis Data Firehose 사용
+
+종료
+
 - Q41
     
-    A company's application integrates with multiple software-as-a-service (SaaS) sources for data collection. The company runs Amazon EC2 instances to receive the data and to upload the data to an Amazon S3 bucket for analysis. The same EC2 instance that receives and uploads the data also sends a notification to the user when an upload is complete. The company has noticed slow application performance and wants to improve the performance as much as possible.Which solution will meet these requirements with the LEAST operational overhead?
+    A company's application integrates with multiple software-as-a-service (SaaS) sources for data collection. The company runs Amazon EC2 instances to receive the data and to upload the data to an Amazon S3 bucket for analysis. The same EC2 instance that receives and uploads the data also sends a notification to the user when an upload is complete. The company has noticed slow application performance and wants to improve the performance as much as possible.
+    
+    Which solution will meet these requirements with the LEAST operational overhead?
     
     - A. Create an Auto Scaling group so that EC2 instances can scale out. Configure an S3 event notification to send events to an Amazon Simple Notification Service (Amazon SNS) topic when the upload to the S3 bucket is complete.
     - B. Create an Amazon AppFlow flow to transfer data between each SaaS source and the S3 bucket. Configure an S3 event notification to send events to an Amazon Simple Notification Service (Amazon SNS) topic when the upload to the S3 bucket is complete. **Most Voted**
@@ -457,11 +484,13 @@
     
     근거 
     
-    APPFLOW = SaaS integration Service 
-    
+    - 문제 : 데이터 수집을 위한 도구로 여러 Saas를 사용함.⇒ EC2에서 데이터를 받아 분석을 위해 S3 버켓에 저장 ⇒ 노티피케이션 기능도 추가함 ⇒ 성능이 느린 것을 확인해서 이를 개선하고자 함.
+    - APPFLow를 사용한다. 그리고 S3와 SNS를 구성한다.
 - Q42
     
-    A company runs a highly available image-processing application on Amazon EC2 instances in a single VPC. The EC2 instances run inside several subnets across multiple Availability Zones. The EC2 instances do not communicate with each other. However, the EC2 instances download images from Amazon S3 and upload images to Amazon S3 through a single NAT gateway. The company is concerned about data transfer charges.What is the MOST cost-effective way for the company to avoid Regional data transfer charges?
+    A company runs a highly available image-processing application on Amazon EC2 instances in a single VPC. The EC2 instances run inside several subnets across multiple Availability Zones. The EC2 instances do not communicate with each other. However, the EC2 instances download images from Amazon S3 and upload images to Amazon S3 through a single NAT gateway. The company is concerned about data transfer charges.
+    
+    What is the MOST cost-effective way for the company to avoid Regional data transfer charges?
     
     - A. Launch the NAT gateway in each Availability Zone.
     - B. Replace the NAT gateway with a NAT instance.
@@ -470,10 +499,14 @@
     
     근거
     
-    - 몰것다.
+    - 문제 : 이미지 처리 앱을 운영 ⇒   물리적으로 여러 AZ를 사용하고 여러 subnet을 활용한다.  ⇒ 개별 Ec2는 소통하지 않으며, 개별 ec2는 S3와 상호작용한다. ⇒ S3와 Ec2 간 통신 비용이 걱정된다. ⇒ 가격을 효과적으로 줄일 수 있는 방법은?
+    - **NAT gateway보다 gateway VPC endpoint가 가장 저렴하다.**
+    - Deploying a gateway VPC endpoint for Amazon S3 is the most cost-effective way for the company to avoid Regional data transfer charges. Data transfer between the VPC and the service through a gateway VPC endpoint is free of charge, while data transfer between the VPC and the Internet through an Internet gateway or NAT device is subject to data transfer charges.
 - Q43
     
-    A company has an on-premises application that generates a large amount of time-sensitive data that is backed up to Amazon S3. The application has grown and there are user complaints about internet bandwidth limitations. A solutions architect needs to design a long-term solution that allows for both timely backups to Amazon S3 and with minimal impact on internet connectivity for internal users.Which solution meets these requirements?
+    A company has an on-premises application that generates a large amount of time-sensitive data that is backed up to Amazon S3. The application has grown and there are user complaints about internet bandwidth limitations. A solutions architect needs to design a long-term solution that allows for both timely backups to Amazon S3 and with minimal impact on internet connectivity for internal users.
+    
+    Which solution meets these requirements?
     
     - A. Establish AWS VPN connections and proxy all traffic through a VPC gateway endpoint.
     - B. Establish a new AWS Direct Connect connection and direct backup traffic through this new connection. **Most Voted**
@@ -482,10 +515,14 @@
     
     근거
     
-    - 애매하긴한데, AWS Direct Connect를 쓰면 대역폭을 독점하고 장기적으로 도움 될 수 있다고 생각
+    - TSD 생성하는 앱이 있다. ⇒ 이 TSD는 S3에 저장된다. ⇒ 앱이 빠르게 성장하고 있고 사용자들은 대역폭에 대한 불만이 있음. ⇒ 백업에 인터넷 속도에 영향을 주는 것에 대해서 최소화하고 싶다.
+    - A가 안되는 이유 : VPN also goes through the internet and uses the bandwidth.
+    - AWS Direct Connect를 써서 인터넷 대역폭을 사용하지 않는 방법을 쓴다.
 - Q44
     
-    A company has an Amazon S3 bucket that contains critical data. The company must protect the data from accidental deletion.Which combination of steps should a solutions architect take to meet these requirements? (Choose two.)
+    A company has an Amazon S3 bucket that contains critical data. The company must protect the data from accidental deletion.
+    
+    Which combination of steps should a solutions architect take to meet these requirements? (Choose two.)
     
     - A. Enable versioning on the S3 bucket. **Most Voted**
     - B. Enable MFA Delete on the S3 bucket. **Most Voted**
@@ -495,10 +532,20 @@
     
     근거
     
-    - 몰겠음
+    - 문제 : 중요 데이터를 포함한 S3 버켓을 사용중이다. ⇒ 실수에 의해서 제거되는 것에 의해서 방지되어야 함. 가장 필요한 조합은?
+    - S3를 백업한다. =  Versioning한다.
+    - MFA Delete 기능을 사용한다. Multi-Factor-Authentification 기능
 - Q45
     
-    A company has a data ingestion workflow that consists of the following:• An Amazon Simple Notification Service (Amazon SNS) topic for notifications about new data deliveries• An AWS Lambda function to process the data and record metadataThe company observes that the ingestion workflow fails occasionally because of network connectivity issues. When such a failure occurs, the Lambda function does not ingest the corresponding data unless the company manually reruns the job.Which combination of actions should a solutions architect take to ensure that the Lambda function ingests all data in the future? (Choose two.)
+    A company has a data ingestion workflow that consists of the following:
+    
+    • An Amazon Simple Notification Service (Amazon SNS) topic for notifications about new data deliveries
+    
+    • An AWS Lambda function to process the data and record metadata. 
+    
+    The company observes that the ingestion workflow fails occasionally because of network connectivity issues. When such a failure occurs, the Lambda function does not ingest the corresponding data unless the company manually reruns the job.
+    
+    Which combination of actions should a solutions architect take to ensure that the Lambda function ingests all data in the future? (Choose two.)
     
     - A. Deploy the Lambda function in multiple Availability Zones.
     - B. Create an Amazon Simple Queue Service (Amazon SQS) queue, and subscribe it to the SNS topic. **Most Voted**
@@ -508,11 +555,15 @@
     
     근거 
     
+    - 문제 : SNS와 Lambda function을 이용중인데, 인터넷 연결 문제가 발생하는 경우 때로는 lambda function이 실행되지 않는 경우가 있다. lambda function이 제대로 실행되려면 어떻게 해결해야할까?
+    - 탄력성(resiliency)을 보장하기 위해서 SQS를 사용한다. SNS와 연동시킨다. Lambda function을 sqs에 연결 시킨다.
     - E의 경우 작업이 완료되지 않으면 queue에서 제거되지 않으므로 작업을 보장함.
     - B의 경우 문제에서 SNS를 사용한다고 했음.(이걸 기억하지 못해서 A로 택함)
 - Q46
     
-    A company has an application that provides marketing services to stores. The services are based on previous purchases by store customers. The stores upload transaction data to the company through SFTP, and the data is processed and analyzed to generate new marketing offers. Some of the files can exceed 200 GB in size.Recently, the company discovered that some of the stores have uploaded files that contain personally identifiable information (PII) that should not have been included. The company wants administrators to be alerted if PII is shared again. The company also wants to automate remediation.What should a solutions architect do to meet these requirements with the LEAST development effort?
+    A company has an application that provides marketing services to stores. The services are based on previous purchases by store customers. The stores upload transaction data to the company through SFTP, and the data is processed and analyzed to generate new marketing offers. Some of the files can exceed 200 GB in size. Recently, the company discovered that some of the stores have uploaded files that contain personally identifiable information (PII) that should not have been included. The company wants administrators to be alerted if PII is shared again. The company also wants to automate remediation.
+    
+    What should a solutions architect do to meet these requirements with the LEAST development effort?
     
     - A. Use an Amazon S3 bucket as a secure transfer point. Use Amazon Inspector to scan the objects in the bucket. If objects contain PII, trigger an S3 Lifecycle policy to remove the objects that contain PII.
     - B. Use an Amazon S3 bucket as a secure transfer point. Use Amazon Macie to scan the objects in the bucket. If objects contain PII, use Amazon Simple Notification Service (Amazon SNS) to trigger a notification to the administrators to remove the objects that contain PII. **Most Voted**
@@ -521,11 +572,14 @@
     
     근거 
     
-    - C라고 생각했음.
-    - B or D라는 의견이 분분하네….
+    - 문제 : 소규모 가게에 마케팅 서비스를 제공한다. ⇒ 과거 구매 이력을 기반으로 수행하며 소규모 가게들은 정보를 회사에 SFTP 방식으로 업데이트 한다. ⇒ 200GB 넘는 데이터를 전송하며 때로는 개인정보가 포함된 내용을 업로드한다. ⇒ 개인정보 포함이 있을 시 알람이 필요하며, 이를 다시 업로드하도록 지원하고자 한다. ⇒ 가장 필요한 것은?
+    - AWS Macie는 AWS에 저장되는 민감 정보를 찾고, 분류하고, 보호하는 보안 서비스이다. 머신러닝을 기반으로 S3에서 민감 정보를 찾아낸다. 예를들면 Personally identifiable information(PII)이 있다.
+    - B or D라는 의견이 분분하지만 서비스를 이해하는게 자격증의 핵심이라 생각하기에 AWS MAcie를 사용한 B가 맞다고 본다.
 - Q47
     
-    A company needs guaranteed Amazon EC2 capacity in three specific Availability Zones in a specific AWS Region for an upcoming event that will last 1 week.What should the company do to guarantee the EC2 capacity?
+    A company needs guaranteed Amazon EC2 capacity in three specific Availability Zones in a specific AWS Region for an upcoming event that will last 1 week.
+    
+    What should the company do to guarantee the EC2 capacity?
     
     - A. Purchase Reserved Instances that specify the Region needed.
     - B. Create an On-Demand Capacity Reservation that specifies the Region needed.
@@ -534,11 +588,15 @@
     
     근거
     
+    - 문제 : 1개 리전에서 3개의 AZ에 존재하는 EC2를 1주일간 사용하고 싶다.
+    - 
     - Reserved Instances는 존재하지 않는듯?
-    - On-Demand Capacity Reservation을 사용해야하는듯
+    - On-Demand Capacity Reservation을 사용해서 특정 AZ 내 서비스를 보존해보자.
 - Q48
     
-    A company's website uses an Amazon EC2 instance store for its catalog of items. The company wants to make sure that the catalog is highly available and that the catalog is stored in a durable location.What should a solutions architect do to meet these requirements?
+    A company's website uses an Amazon EC2 instance store for its catalog of items. The company wants to make sure that the catalog is highly available and that the catalog is stored in a durable location.
+    
+    What should a solutions architect do to meet these requirements?
     
     - A. Move the catalog to Amazon ElastiCache for Redis.
     - B. Deploy a larger EC2 instance with a larger instance store.
@@ -547,11 +605,16 @@
     
     근거 
     
-    durable이라서 그 중 가장 적합한게 EFS 인듯
-    
+    - 문제 : EC2에 카탈로그를 저장하려고한다. 또한 지속 가능하도록 저장해야한다.
+    - durable이고 S3를 사용하지 않으니 EFS를 사용한다.
+
+종료
+
 - Q49
     
-    A company stores call transcript files on a monthly basis. Users access the files randomly within 1 year of the call, but users access the files infrequently after 1 year. The company wants to optimize its solution by giving users the ability to query and retrieve files that are less than 1-year-old as quickly as possible. A delay in retrieving older files is acceptable.Which solution will meet these requirements MOST cost-effectively?
+    A company stores call transcript files on a monthly basis. Users access the files randomly within 1 year of the call, but users access the files infrequently after 1 year. The company wants to optimize its solution by giving users the ability to query and retrieve files that are less than 1-year-old as quickly as possible. A delay in retrieving older files is acceptable.
+    
+    Which solution will meet these requirements MOST cost-effectively?
     
     - A. Store individual files with tags in Amazon S3 Glacier Instant Retrieval. Query the tags to retrieve the files from S3 Glacier Instant Retrieval.
     - B. Store individual files in Amazon S3 Intelligent-Tiering. Use S3 Lifecycle policies to move the files to S3 Glacier Flexible Retrieval after 1 year. Query and retrieve the files that are in Amazon S3 by using Amazon Athena. Query and retrieve the files that are in S3 Glacier by using S3 Glacier Select. **Most Voted**
@@ -560,10 +623,13 @@
     
     근거
     
-    - 몰겠다.
+    - 문제 : 매달 전화 내용을 저장하고 있으며 1년내 자료는 종종 열람하나 그 이후로는 거의 열람하지 않는다. ⇒ 1년 내 자료를 빠르게 검색할 수 있는 솔루션이 필요하다. ⇒ 그 이후 자료는 검색이 느려도 괜찮다. ⇒ 가장 효과적인 방법은?
+    - Intelligent-Tiering을 사용해 비용을 절감한다. S3 Lifecycle policies를 사용해서 1년 지난 자료를 S3 Glacier에 저장한다.
 - Q50
     
-    A company has a production workload that runs on 1,000 Amazon EC2 Linux instances. The workload is powered by third-party software. The company needs to patch the third-party software on all EC2 instances as quickly as possible to remediate a critical security vulnerability.What should a solutions architect do to meet these requirements?
+    A company has a production workload that runs on 1,000 Amazon EC2 Linux instances. The workload is powered by third-party software. The company needs to patch the third-party software on all EC2 instances as quickly as possible to remediate a critical security vulnerability.
+    
+    What should a solutions architect do to meet these requirements?
     
     - A. Create an AWS Lambda function to apply the patch to all EC2 instances.
     - B. Configure AWS Systems Manager Patch Manager to apply the patch to all EC2 instances.
@@ -572,10 +638,21 @@
     
     근거 
     
-    - 몰겠다
+    - 1000개의 인스턴스를 운영중이며 서드파티앱을 사용한다. 보안 취약점에 대해 모든 인스턴스에 업데이트를 시키고자 한다.
+    - AWS Systems manager를 사용한다.
+    - 서드파티 앱을 사용하므로 AWS Systems Manager Run Command를 사용해서 custom command를 사용한다.
+    - 운영 측면에서 Systems Manager는 수작업 및 스크립트 작성 등이 필요한 유지보수 작업을 돕는 도구로서 다음과 같은 업무를 수행합니다.
+        - 온프레미스와 EC2 인스턴스의 패키지 업그레이드
+        - 설치 소프트웨어 목록 생성
+        - 새 애플리케이션 설치
+        - EBS 스냅샷을 이용한 AMI 이미지 생성
+        - IAM 인스턴스 프로파일 부착
+        - S3 버킷에 대한 퍼블릭 접근 차단
 - Q51
     
-    A company is developing an application that provides order shipping statistics for retrieval by a REST API. The company wants to extract the shipping statistics, organize the data into an easy-to-read HTML format, and send the report to several email addresses at the same time every morning.Which combination of steps should a solutions architect take to meet these requirements? (Choose two.)
+    A company is developing an application that provides order shipping statistics for retrieval by a REST API. The company wants to extract the shipping statistics, organize the data into an easy-to-read HTML format, and send the report to several email addresses at the same time every morning.
+    
+    Which combination of steps should a solutions architect take to meet these requirements? (Choose two.)
     
     - A. Configure the application to send the data to Amazon Kinesis Data Firehose.
     - B. Use Amazon Simple Email Service (Amazon SES) to format the data and to send the report by email. **Most Voted**
@@ -585,23 +662,33 @@
     
     근거 
     
-    - B ⇒ AMAZON SES에 대한 이해 필요
-    - D ⇒ EventBridge에 대한 이해 필요
+    문제 : rest api 기반 주문 통계 관련 앱을 개발중이다. HTML 포멧으로 조직하고 그 결과를 매일 아침 이메일로 보내는 기능을 만드려고 한다. 
+    
+    - Simple Email Service 사용 / eventbridge를 사용해서 Lambda function을 스케줄링한다.
+    - Event-bridge는 event-driven architecture를 구성하는데 사용하는 서비스이며, 서버리스로 구현된다. 이벤트 브릿지는 scalable, reliable, secure 한 인프라를 제공한다.
 - Q54
     
-    A company runs multiple Windows workloads on AWS. The company's employees use Windows file shares that are hosted on two Amazon EC2 instances. The file shares synchronize data between themselves and maintain duplicate copies. The company wants a highly available and durable storage solution that preserves how users currently access the files.What should a solutions architect do to meet these requirements?
+    A company runs multiple Windows workloads on AWS. The company's employees use Windows file shares that are hosted on two Amazon EC2 instances. The file shares synchronize data between themselves and maintain duplicate copies. The company wants a highly available and durable storage solution that preserves how users currently access the files.
+    
+    What should a solutions architect do to meet these requirements?
     
     - A. Migrate all the data to Amazon S3. Set up IAM authentication for users to access files.
     - B. Set up an Amazon S3 File Gateway. Mount the S3 File Gateway on the existing EC2 instances.
-    - C. Extend the file share environment to Amazon FSx for Windows File Server with a Multi-AZ configuration. Migrate all the data to FSx for Windows File Server.
+    - C. Extend the file share environment to Amazon FSx for Windows File Server with a Multi-AZ configuration. Migrate all the data to FSx for Windows File Server. **Most Voted**
     - D. Extend the file share environment to Amazon Elastic File System (Amazon EFS) with a Multi-AZ configuration. Migrate all the data to Amazon EFS.
     
     근거 
     
+    문제 : 윈도우 워크로드를 사용하고 있으며 2개의 ec2에 파일 쉐어들을 사용하고 있다. 개별 파일쉐어는 데이터를 동기화하고 복제본을 만들어놓는다. ⇒ 접근이 쉽고 오래 지속가능한 파일 쉐어를 만들기 위해 필요한 것은? 
+    
+    - FSx for windows file server와 for Lustre만 존재함.
+    
     - AMAZON FSx가 뭔지 모르겠다.
 - Q55
     
-    A solutions architect is developing a VPC architecture that includes multiple subnets. The architecture will host applications that use Amazon EC2 instances and Amazon RDS DB instances. The architecture consists of six subnets in two Availability Zones. Each Availability Zone includes a public subnet, a private subnet, and a dedicated subnet for databases. Only EC2 instances that run in the private subnets can have access to the RDS databases.Which solution will meet these requirements?
+    A solutions architect is developing a VPC architecture that includes multiple subnets. The architecture will host applications that use Amazon EC2 instances and Amazon RDS DB instances. The architecture consists of six subnets in two Availability Zones. Each Availability Zone includes a public subnet, a private subnet, and a dedicated subnet for databases. Only EC2 instances that run in the private subnets can have access to the RDS databases.
+    
+    Which solution will meet these requirements?
     
     - A. Create a new route table that excludes the route to the public subnets' CIDR blocks. Associate the route table with the database subnets.
     - B. Create a security group that denies inbound traffic from the security group that is assigned to instances in the public subnets. Attach the security group to the DB instances.
@@ -610,10 +697,13 @@
     
     근거 
     
-    - 맞추긴 했는디 몰겠다.
+    - 문제 : 여러 subnet을 구성하고자 함. ⇒ EC2와 RDS를 사용 중임. 2개의 AZ에서 6개의 서브넷을 구성하고 있음. ⇒ public, private, db용 subnet 세가지를 운영 중이며, priviate subnet만이 rbs에 접근 가능하다.
+    - db와 private 간 트래픽이 연동될 수 있는 보안 그룹을 만들고 DB에 포함한다.
 - Q56
     
-    A company has registered its domain name with Amazon Route 53. The company uses Amazon API Gateway in the ca-central-1 Region as a public interface for its backend microservice APIs. Third-party services consume the APIs securely. The company wants to design its API Gateway URL with the company's domain name and corresponding certificate so that the third-party services can use HTTPS.Which solution will meet these requirements?
+    A company has registered its domain name with Amazon Route 53. The company uses Amazon API Gateway in the ca-central-1 Region as a public interface for its backend microservice APIs. Third-party services consume the APIs securely. The company wants to design its API Gateway URL with the company's domain name and corresponding certificate so that the third-party services can use HTTPS.
+    
+    Which solution will meet these requirements?
     
     - A. Create stage variables in API Gateway with Name="Endpoint-URL" and Value="Company Domain Name" to overwrite the default URL. Import the public certificate associated with the company's domain name into AWS Certificate Manager (ACM).
     - B. Create Route 53 DNS records with the company's domain name. Point the alias record to the Regional API Gateway stage endpoint. Import the public certificate associated with the company's domain name into AWS Certificate Manager (ACM) in the us-east-1 Region.
@@ -622,10 +712,14 @@
     
     근거 
     
-    - 몰겠다.
+    - 문제 : Route 53에 도메인을 등록해서 사용중이다. ⇒ MSA API의 API gateway를 사용중이다. 그리고 서드파티 앱이 API를 사용중이다. 이 과정을 HTTPS로 보안을 업데이트 하고 싶다.
+    - route 53 ⇒ API Gateway endpoint & Attach the certificate to API gateway
+    - 외우자…
 - Q57
     
-    A company is running a popular social media website. The website gives users the ability to upload images to share with other users. The company wants to make sure that the images do not contain inappropriate content. The company needs a solution that minimizes development effort.What should a solutions architect do to meet these requirements?
+    A company is running a popular social media website. The website gives users the ability to upload images to share with other users. The company wants to make sure that the images do not contain inappropriate content. The company needs a solution that minimizes development effort.
+    
+    What should a solutions architect do to meet these requirements?
     
     - A. Use Amazon Comprehend to detect inappropriate content. Use human review for low-confidence predictions.
     - B. Use Amazon Rekognition to detect inappropriate content. Use human review for low-confidence predictions. **Most Voted**
@@ -634,10 +728,14 @@
     
     근거 
     
-    - Amazon Reokognition 서비스에 대해서 공부해야할 듯
+    문제 : 소셜 웹 운영 중이다. ⇒ 이미지 업로드가 가능하다. ⇒ 부적절한 콘텐츠 필터링이 필요하다.  ⇒ 최소한의 노력으로 만들 수 있는 방법은?
+    
+    - AWS rekognition은 머신러닝 기반으로 이미지 또는 영상을 분석하는 서비스를 말함. 물체, 사람, 텍스트, 배경, 부적절한 콘텐츠 등을 구분하는데 사용함.
 - Q58
     
-    A company wants to run its critical applications in containers to meet requirements for scalability and availability. The company prefers to focus on maintenance of the critical applications. The company does not want to be responsible for provisioning and managing the underlying infrastructure that runs the containerized workload.What should a solutions architect do to meet these requirements?
+    A company wants to run its critical applications in containers to meet requirements for scalability and availability. The company prefers to focus on maintenance of the critical applications. The company does not want to be responsible for provisioning and managing the underlying infrastructure that runs the containerized workload.
+    
+    What should a solutions architect do to meet these requirements?
     
     - A. Use Amazon EC2 instances, and install Docker on the instances.
     - B. Use Amazon Elastic Container Service (Amazon ECS) on Amazon EC2 worker nodes.
@@ -646,10 +744,14 @@
     
     근거 
     
+    - 문제 : scalability and availability를 충족하는 컨테이너 기반 앱을 운영하고자 한다. ⇒ 인프라 관리를 원치 않는다.
+    - 컨테이너 = ECS,
     - FarGate : 컨테이너용 서버리스 컴퓨팅 엔진으로, Amazon ECS와 Amazon EKS에서 작동합니다.
 - Q59
     
-    A company hosts more than 300 global websites and applications. The company requires a platform to analyze more than 30 TB of clickstream data each day.What should a solutions architect do to transmit and process the clickstream data?
+    A company hosts more than 300 global websites and applications. The company requires a platform to analyze more than 30 TB of clickstream data each day.
+    
+    What should a solutions architect do to transmit and process the clickstream data?
     
     - A. Design an AWS Data Pipeline to archive the data to an Amazon S3 bucket and run an Amazon EMR cluster with the data to generate analytics.
     - B. Create an Auto Scaling group of Amazon EC2 instances to process the data and send it to an Amazon S3 data lake for Amazon Redshift to use for analysis.
@@ -658,8 +760,12 @@
     
     근거 
     
-    - clickstream ⇒ Kinesis Data Streams, Data Firehose
-    - Redshift = BigData Tool
+    - 문제 : 300개 넘는 웹 사이트와 앱을 운영중임. ⇒ 30 테라 크기의 클릭 스트림을 분석해야하는 플랫폼 필요
+    - clicks tream ⇒ Kinesis Data Streams, Data Firehose
+    - Redshift = warehouse
+
+종료
+
 - Q61
     
     A company is developing a two-tier web application on AWS. The company's developers have deployed the application on an Amazon EC2 instance that connects directly to a backend Amazon RDS database. The company must not hardcode database credentials in the application. The company must also implement a solution to automatically rotate the database credentials on a regular basis.Which solution will meet these requirements with the LEAST operational overhead?
@@ -772,6 +878,9 @@
     근거 
     
     - 잘 모르겠다.
+
+종료
+
 - Q
 - Q
 - Q
