@@ -468,9 +468,6 @@
     
     - 14일 뒤에 데이터를 사용하지 않음 = Glacier
     - 최신 14일치 데이터를 분석해야함 = Amazon kinesis Data Firehose 사용
-
-종료
-
 - Q41
     
     A company's application integrates with multiple software-as-a-service (SaaS) sources for data collection. The company runs Amazon EC2 instances to receive the data and to upload the data to an Amazon S3 bucket for analysis. The same EC2 instance that receives and uploads the data also sends a notification to the user when an upload is complete. The company has noticed slow application performance and wants to improve the performance as much as possible.
@@ -607,9 +604,6 @@
     
     - 문제 : EC2에 카탈로그를 저장하려고한다. 또한 지속 가능하도록 저장해야한다.
     - durable이고 S3를 사용하지 않으니 EFS를 사용한다.
-
-종료
-
 - Q49
     
     A company stores call transcript files on a monthly basis. Users access the files randomly within 1 year of the call, but users access the files infrequently after 1 year. The company wants to optimize its solution by giving users the ability to query and retrieve files that are less than 1-year-old as quickly as possible. A delay in retrieving older files is acceptable.
@@ -768,7 +762,9 @@
 
 - Q61
     
-    A company is developing a two-tier web application on AWS. The company's developers have deployed the application on an Amazon EC2 instance that connects directly to a backend Amazon RDS database. The company must not hardcode database credentials in the application. The company must also implement a solution to automatically rotate the database credentials on a regular basis.Which solution will meet these requirements with the LEAST operational overhead?
+    A company is developing a two-tier web application on AWS. The company's developers have deployed the application on an Amazon EC2 instance that connects directly to a backend Amazon RDS database. The company must not hardcode database credentials in the application. The company must also implement a solution to automatically rotate the database credentials on a regular basis.
+    
+    Which solution will meet these requirements with the LEAST operational overhead?
     
     - A. Store the database credentials in the instance metadata. Use Amazon EventBridge (Amazon CloudWatch Events) rules to run a scheduled AWS Lambda function that updates the RDS credentials and instance metadata at the same time.
     - B. Store the database credentials in a configuration file in an encrypted Amazon S3 bucket. Use Amazon EventBridge (Amazon CloudWatch Events) rules to run a scheduled AWS Lambda function that updates the RDS credentials and the credentials in the configuration file at the same time. Use S3 Versioning to ensure the ability to fall back to previous values.
@@ -777,10 +773,13 @@
     
     근거 
     
-    - C인 것 같다 생각은 했지만 왜 C인지 생각해봐야할듯
+    - 문제 : RDS와 EC2가 연동된 앱을 배포중임. db 크리덴셜을 하드코드가 아닌 자동으로 변경시키고 싶음
+    - AWS Secrets Manager 사용. 이때 Secret을 업데이트 하도록 해야해서 C임. D는 Encrypted parameters를 업데이트 해야한다고 해서 틀림
 - Q62
     
-    A company is deploying a new public web application to AWS. The application will run behind an Application Load Balancer (ALB). The application needs to be encrypted at the edge with an SSL/TLS certificate that is issued by an external certificate authority (CA). The certificate must be rotated each year before the certificate expires.What should a solutions architect do to meet these requirements?
+    A company is deploying a new public web application to AWS. The application will run behind an Application Load Balancer (ALB). The application needs to be encrypted at the edge with an SSL/TLS certificate that is issued by an external certificate authority (CA). The certificate must be rotated each year before the certificate expires.
+    
+    What should a solutions architect do to meet these requirements?
     
     - A. Use AWS Certificate Manager (ACM) to issue an SSL/TLS certificate. Apply the certificate to the ALB. Use the managed renewal feature to automatically rotate the certificate.
     - B. Use AWS Certificate Manager (ACM) to issue an SSL/TLS certificate. Import the key material from the certificate. Apply the certificate to the ALUse the managed renewal feature to automatically rotate the certificate.
@@ -789,23 +788,30 @@
     
     근거 
     
-    - 외부에서 발급 받아야하는 조건이 있기 때문에 D 같다.
+    - 문제 : ALB 뒤에서 EC2가 작동중임. TLS 통신이 필요함. ⇒ Certificate를 매년 교체해야함.
+    - 외부에서 발급받는 Cert이기 때문에 업데이트를 수동으로 해야한다.
     - It's a third-party certificate, hence AWS cannot manage renewal automatically. The closest thing you can do is to send a notification to renew the 3rd party certificate.
 - Q63
     
-    A company runs its infrastructure on AWS and has a registered base of 700,000 users for its document management application. The company intends to create a product that converts large .pdf files to .jpg image files. The .pdf files average 5 MB in size. The company needs to store the original files and the converted files. A solutions architect must design a scalable solution to accommodate demand that will grow rapidly over time.Which solution meets these requirements MOST cost-effectively?
+    A company runs its infrastructure on AWS and has a registered base of 700,000 users for its document management application. The company intends to create a product that converts large .pdf files to .jpg image files. The .pdf files average 5 MB in size. The company needs to store the original files and the converted files. A solutions architect must design a scalable solution to accommodate demand that will grow rapidly over time.
+    
+    Which solution meets these requirements MOST cost-effectively?
     
     - A. Save the .pdf files to Amazon S3. Configure an S3 PUT event to invoke an AWS Lambda function to convert the files to .jpg format and store them back in Amazon S3. **Most Voted**
-    - B. Save the .pdf files to Amazon DynamoDUse the DynamoDB Streams feature to invoke an AWS Lambda function to convert the files to .jpg format and store them back in DynamoDB.
+    - B. Save the .pdf files to Amazon DynamoD. Use the DynamoDB Streams feature to invoke an AWS Lambda function to convert the files to .jpg format and store them back in DynamoDB.
     - C. Upload the .pdf files to an AWS Elastic Beanstalk application that includes Amazon EC2 instances, Amazon Elastic Block Store (Amazon EBS) storage, and an Auto Scaling group. Use a program in the EC2 instances to convert the files to .jpg format. Save the .pdf files and the .jpg files in the EBS store.
     - D. Upload the .pdf files to an AWS Elastic Beanstalk application that includes Amazon EC2 instances, Amazon Elastic File System (Amazon EFS) storage, and an Auto Scaling group. Use a program in the EC2 instances to convert the file to .jpg format. Save the .pdf files and the .jpg files in the EBS store.
     
     근거 
     
+    - 70만 사용자가 있으며, pdf → jpg 파일로 변환하는 앱임. ⇒ 평균 5메가 pdf 파일이며 변환 전 파일과 후 파일 모두를 보관함. ⇒ 확장 가능해야하며 가장 가격이 효과적인 방법은?
+    - S3 버켓을 사용하는 것이 가장 효과적인 방법이므로 A이다.
     - B가 안되는 이유는 DynamoDB의 최대 용량은 400kb임.
 - Q64
     
-    A company has more than 5 TB of file data on Windows file servers that run on premises. Users and applications interact with the data each day.The company is moving its Windows workloads to AWS. As the company continues this process, the company requires access to AWS and on-premises file storage with minimum latency. The company needs a solution that minimizes operational overhead and requires no significant changes to the existing file access patterns. The company uses an AWS Site-to-Site VPN connection for connectivity to AWS.What should a solutions architect do to meet these requirements?
+    A company has more than 5 TB of file data on Windows file servers that run on premises. Users and applications interact with the data each day.The company is moving its Windows workloads to AWS. As the company continues this process, the company requires access to AWS and on-premises file storage with minimum latency. The company needs a solution that minimizes operational overhead and requires no significant changes to the existing file access patterns. The company uses an AWS Site-to-Site VPN connection for connectivity to AWS.
+    
+    What should a solutions architect do to meet these requirements?
     
     - A. Deploy and configure Amazon FSx for Windows File Server on AWS. Move the on-premises file data to FSx for Windows File Server. Reconfigure the workloads to use FSx for Windows File Server on AWS.
     - B. Deploy and configure an Amazon S3 File Gateway on premises. Move the on-premises file data to the S3 File Gateway. Reconfigure the on-premises workloads and the cloud workloads to use the S3 File Gateway.
@@ -814,10 +820,14 @@
     
     근거 
     
-    - 몰겠음
+    - 문제 : 5tb 크기의 Windows file server를 온프레미스로 운영 중이다. ⇒ windows workload를 AWS로 옮기려고 한다. ⇒ 자료를 옮기는 동안 파일 저장소에 low-latency로 접근이 가능해야한다. ⇒ 오버헤드를 최소화하고, 접근 패턴의 차이도 큰 변화가 없어야한다. ⇒ VPN을 활용해 AWS와 연동중이다.
+    - windows file server이기 때문에 FSx를 쓰는게 좋은 방법이다. ⇒ FSx 파일 게이트웨이를 만든다. ⇒ 파일 게이트웨이와 온프레미스 워크로드를 합친다.
+    - Amazon FSx File Gateway (FSx File Gateway) is a new File Gateway type that provides low latency and efficient access to in-cloud FSx for Windows File Server file shares from your on-premises facility.
 - Q65
     
-    A hospital recently deployed a RESTful API with Amazon API Gateway and AWS Lambda. The hospital uses API Gateway and Lambda to upload reports that are in PDF format and JPEG format. The hospital needs to modify the Lambda code to identify protected health information (PHI) in the reports.Which solution will meet these requirements with the LEAST operational overhead?
+    A hospital recently deployed a RESTful API with Amazon API Gateway and AWS Lambda. The hospital uses API Gateway and Lambda to upload reports that are in PDF format and JPEG format. The hospital needs to modify the Lambda code to identify protected health information (PHI) in the reports.
+    
+    Which solution will meet these requirements with the LEAST operational overhead?
     
     - A. Use existing Python libraries to extract the text from the reports and to identify the PHI from the extracted text.
     - B. Use Amazon Textract to extract the text from the reports. Use Amazon SageMaker to identify the PHI from the extracted text.
@@ -826,11 +836,14 @@
     
     근거 :
     
-    - Amazon Textract가 무엇인지,
-    - Amazon Comprehend가 무엇인지
+    - 문제 : pdf, jpg 양식의 보고서를 업데이트 하기위해 API Gateway와 Lambda를 사용한다. 리프토에 PHI를 보호해야한다. ⇒ 최소한의 방법은?
+    - Amazon Textract : text 추출 OCR
+    - Amazon Comprehend : text에서 insight를 추출함. 문제에서는 phi를 위한 용도
 - Q66
     
-    A company has an application that generates a large number of files, each approximately 5 MB in size. The files are stored in Amazon S3. Company policy requires the files to be stored for 4 years before they can be deleted. Immediate accessibility is always required as the files contain critical business data that is not easy to reproduce. The files are frequently accessed in the first 30 days of the object creation but are rarely accessed after the first 30 days.Which storage solution is MOST cost-effective?
+    A company has an application that generates a large number of files, each approximately 5 MB in size. The files are stored in Amazon S3. Company policy requires the files to be stored for 4 years before they can be deleted. Immediate accessibility is always required as the files contain critical business data that is not easy to reproduce. The files are frequently accessed in the first 30 days of the object creation but are rarely accessed after the first 30 days.
+    
+    Which storage solution is MOST cost-effective?
     
     - A. Create an S3 bucket lifecycle policy to move files from S3 Standard to S3 Glacier 30 days from object creation. Delete the files 4 years after object creation. **Most Voted**
     - B. Create an S3 bucket lifecycle policy to move files from S3 Standard to S3 One Zone-Infrequent Access (S3 One Zone-IA) 30 days from object creation. Delete the files 4 years after object creation.
@@ -839,11 +852,14 @@
     
     근거 
     
-    - Cost effective임을 고려해야함.
-    - D를 택했는데, 제거 가능하다고 언급되었으니 4년 뒤에 제거하는게 가장 효과적인 방법임.
+    - 문제 : 5mb 이상의 큰 파일을 생성하는 앱을 운영 중 ⇒ S3에 저장되어 있으며, 4년이 지나야 제거할 수 있음. ⇒ 즉각 접근 가능해야한다. ⇒ 처음 30일은 빈번하게 사용되지만, 그 이후로는 거의 쓰이지 않는다. ⇒ 가장 비용 절감할 수 있는 방법은?
+    - S3 standard ⇒ S3 Glaicer로 이동하고 4년 뒤 제거
+    - D를 택했는데, 틀린 이유는 1. Standard-IA 비용이 Glacier보다 비쌈. 물론 Glacier에서도 검색이 가능하다. 2. 4년이 지나면 지우는게 비용 절감면에 있어서 좋음
 - Q67
     
-    A company hosts an application on multiple Amazon EC2 instances. The application processes messages from an Amazon SQS queue, writes to an Amazon RDS table, and deletes the message from the queue. Occasional duplicate records are found in the RDS table. The SQS queue does not contain any duplicate messages.What should a solutions architect do to ensure messages are being processed once only?
+    A company hosts an application on multiple Amazon EC2 instances. The application processes messages from an Amazon SQS queue, writes to an Amazon RDS table, and deletes the message from the queue. Occasional duplicate records are found in the RDS table. The SQS queue does not contain any duplicate messages.
+    
+    What should a solutions architect do to ensure messages are being processed once only?
     
     - A. Use the CreateQueue API call to create a new queue.
     - B. Use the AddPermission API call to add appropriate permissions.
@@ -852,11 +868,13 @@
     
     근거 
     
-    ChangeMessageVisibility API가 무엇인지
-    
+    - 문제 : SQS를 사용하고, RDS 테이블에 쓴 다음, SQS에서 메세지를 제거하는 식으로 돌아가는 앱이 있음 ⇒ 때로는 RDS에서 복제된 row가 있는데, SQS에서 복제된 메세지가 있는건 아님 ⇒ 중복을 방지하기 위해서는?
+    - ChangeMessageVisibility API를 사용한다. To prevent other consumers from processing the message again, Amazon SQS sets a *visibility timeout*, a period of time during which Amazon SQS prevents all consumers from receiving and processing the message.
 - Q69
     
-    A company is running a business-critical web application on Amazon EC2 instances behind an Application Load Balancer. The EC2 instances are in an Auto Scaling group. The application uses an Amazon Aurora PostgreSQL database that is deployed in a single Availability Zone. The company wants the application to be highly available with minimum downtime and minimum loss of data.Which solution will meet these requirements with the LEAST operational effort?
+    A company is running a business-critical web application on Amazon EC2 instances behind an Application Load Balancer. The EC2 instances are in an Auto Scaling group. The application uses an Amazon Aurora PostgreSQL database that is deployed in a single Availability Zone. The company wants the application to be highly available with minimum downtime and minimum loss of data.
+    
+    Which solution will meet these requirements with the LEAST operational effort?
     
     - A. Place the EC2 instances in different AWS Regions. Use Amazon Route 53 health checks to redirect traffic. Use Aurora PostgreSQL Cross-Region Replication.
     - B. Configure the Auto Scaling group to use multiple Availability Zones. Configure the database as Multi-AZ. Configure an Amazon RDS Proxy instance for the database. **Most Voted**
@@ -865,10 +883,13 @@
     
     근거 
     
-    - 몰겠다.
+    - 문제 : ALB 뒤에 ec2 사용 중 ⇒ EC2는 Autoscaling이 되어 있음. ⇒ Single AZ 기반의 Postgre Aurora를 사용 중 ⇒ 최소 손실, 최소 downtime(작동하지 않는 시간)이 필요함. ⇒ 가장 효과적인 방법은?
+    - EC2와 DB를 여러 AZ로 두어서 안정성을 확보해야함.
 - Q70
     
-    A company's HTTP application is behind a Network Load Balancer (NLB). The NLB's target group is configured to use an Amazon EC2 Auto Scaling group with multiple EC2 instances that run the web service.The company notices that the NLB is not detecting HTTP errors for the application. These errors require a manual restart of the EC2 instances that run the web service. The company needs to improve the application's availability without writing custom scripts or code.What should a solutions architect do to meet these requirements?
+    A company's HTTP application is behind a Network Load Balancer (NLB). The NLB's target group is configured to use an Amazon EC2 Auto Scaling group with multiple EC2 instances that run the web service. The company notices that the NLB is not detecting HTTP errors for the application. These errors require a manual restart of the EC2 instances that run the web service. The company needs to improve the application's availability without writing custom scripts or code.
+    
+    What should a solutions architect do to meet these requirements?
     
     - A. Enable HTTP health checks on the NLB, supplying the URL of the company's application.
     - B. Add a cron job to the EC2 instances to check the local application's logs once each minute. If HTTP errors are detected. the application will restart.
@@ -877,32 +898,294 @@
     
     근거 
     
-    - 잘 모르겠다.
-
-종료
-
-- Q
-- Q
-- Q
-- Q
-- Q
-- Q
-- Q
-- Q
-- Q
-- Q
-- Q
-- Q
-- Q
-- Q
-- Q
-- Q
-- Q
-- Q
-- Q
-- Q
-- Q
-- Q
+    - 문제 : NLB를 운영중이며 개별 그룹은  EC2 auto scaling 그룹으로도 설정되어 있음 ⇒ NLB가 HTTP Errors를 탐지하지 못하고 있는 문제를 발견했다. ⇒ 이러한 에러를 처리하기 위해선 EC2를 재시작 해야한다. ⇒ 코드 작성 없이 이 문제를 해결하는 방법은?
+    - NLB를 ALB로 교체한다. ALB의 HTTP health check을 사용한다. Auto scaling을 통해 unhealthy instance를 교체한다.
+- Q71
+    
+    A company runs a shopping application that uses Amazon DynamoDB to store customer information. In case of data corruption, a solutions architect needs to design a solution that meets a recovery point objective (RPO) of 15 minutes and a recovery time objective (RTO) of 1 hour.What should the solutions architect recommend to meet these requirements?
+    
+    - A. Configure DynamoDB global tables. For RPO recovery, point the application to a different AWS Region.
+    - B. Configure DynamoDB point-in-time recovery. For RPO recovery, restore to the desired point in time. **Most Voted**
+    - C. Export the DynamoDB data to Amazon S3 Glacier on a daily basis. For RPO recovery, import the data from S3 Glacier to DynamoDB.
+    - D. Schedule Amazon Elastic Block Store (Amazon EBS) snapshots for the DynamoDB table every 15 minutes. For RPO recovery, restore the DynamoDB table by using the EBS snapshot.
+    
+    근거 
+    
+    - 문제 : Dynamo DB를 운영중임. ⇒ a recovery point objective(RPO)를 15분, a recovery time objective(RTO)를 1시간으로 설정해야함.
+    - DynamoDB의 point-in-time recovery를 사용하면 해결 가능
+- Q72
+    
+    A company runs a photo processing application that needs to frequently upload and download pictures from Amazon S3 buckets that are located in the same AWS Region. A solutions architect has noticed an increased cost in data transfer fees and needs to implement a solution to reduce these costs.How can the solutions architect meet this requirement?
+    
+    - A. Deploy Amazon API Gateway into a public subnet and adjust the route table to route S3 calls through it.
+    - B. Deploy a NAT gateway into a public subnet and attach an endpoint policy that allows access to the S3 buckets.
+    - C. Deploy the application into a public subnet and allow it to route through an internet gateway to access the S3 buckets.
+    - D. Deploy an S3 VPC gateway endpoint into the VPC and attach an endpoint policy that allows access to the S3 buckets.
+    
+    근거 :
+    
+    - 문제 : S3 버켓에 파일 업로드, 다운로드가 빈번함 ⇒ 데이터 전송 비용이 증가함에 따라 해결책이 필요함.
+    - VPC endpoints는 외부 인터넷 전송 서비스를 타지 않고 백본 네트워크를 통해 접근할 수 있도록 지원한다. 인터넷을 타지 않기 때문에 가장 저렴한 방법이라 한다.
+    - VPC Endpoint는 유료이며 약 $10/월 정도 고정 비용과 $3.5/1TB의 트래픽 비용이 발생합니다
+- Q73
+    
+    A company recently launched Linux-based application instances on Amazon EC2 in a private subnet and launched a Linux-based bastion host on an Amazon EC2 instance in a public subnet of a VPC. A solutions architect needs to connect from the on-premises network, through the company's internet connection, to the bastion host, and to the application servers. The solutions architect must make sure that the security groups of all the EC2 instances will allow that access.Which combination of steps should the solutions architect take to meet these requirements? (Choose two.)
+    
+    - A. Replace the current security group of the bastion host with one that only allows inbound access from the application instances.
+    - B. Replace the current security group of the bastion host with one that only allows inbound access from the internal IP range for the company.
+    - C. Replace the current security group of the bastion host with one that only allows inbound access from the external IP range for the company. **Most Voted**
+    - D. Replace the current security group of the application instances with one that allows inbound SSH access from only the private IP address of the bastion host. **Most Voted**
+    - E. Replace the current security group of the application instances with one that allows inbound SSH access from only the public IP address of the bastion host.
+    
+    근거
+    
+    - 문제 : private subnet에 EC2와 Public subnet에 EC2를 운영 중. public subnet은 bastion host 용도로 사용. ⇒ 온프레미스 네트워크를 바스티온 호스트와 앱 서버에 연결하려고함 ⇒ 모든 연결이 확실히 하려면?
+    - bastion과 외부 연결 : 현재 security group을 회사의 외부 IP에 엑세스하도록 설정
+    - app서버와 bastion 연결 :  SSH로 private IP address를 연결
+    - 
+- Q74
+    
+    A solutions architect is designing a two-tier web application. The application consists of a public-facing web tier hosted on Amazon EC2 in public subnets. The database tier consists of Microsoft SQL Server running on Amazon EC2 in a private subnet. Security is a high priority for the company.How should security groups be configured in this situation? (Choose two.)
+    
+    - A. Configure the security group for the web tier to allow inbound traffic on port 443 from 0.0.0.0/0. **Most Voted**
+    - B. Configure the security group for the web tier to allow outbound traffic on port 443 from 0.0.0.0/0.
+    - C. Configure the security group for the database tier to allow inbound traffic on port 1433 from the security group for the web tier. **Most Voted**
+    - D. Configure the security group for the database tier to allow outbound traffic on ports 443 and 1433 to the security group for the web tier.
+    - E. Configure the security group for the database tier to allow inbound traffic on ports 443 and 1433 from the security group for the web tier.
+    
+    근거 :
+    
+    - 문제 : public으로 web을 운영중 ⇒  private로 microsoft SQL을 운영 중 ⇒ 보안이 최우선일 때 설정해야하는 것은?
+    - 1. inbound를 443으로 설정해서 https를 사용
+    - 2. web에서 오는 1433을 허용한다. (MS SQL Default port)
+- Q75
+    
+    A company wants to move a multi-tiered application from on premises to the AWS Cloud to improve the application's performance. The application consists of application tiers that communicate with each other by way of RESTful services. Transactions are dropped when one tier becomes overloaded. A solutions architect must design a solution that resolves these issues and modernizes the application.Which solution meets these requirements and is the MOST operationally efficient?
+    
+    - A. Use Amazon API Gateway and direct transactions to the AWS Lambda functions as the application layer. Use Amazon Simple Queue Service (Amazon SQS) as the communication layer between application services. **Most Voted**
+    - B. Use Amazon CloudWatch metrics to analyze the application performance history to determine the servers' peak utilization during the performance failures. Increase the size of the application server's Amazon EC2 instances to meet the peak requirements.
+    - C. Use Amazon Simple Notification Service (Amazon SNS) to handle the messaging between application servers running on Amazon EC2 in an Auto Scaling group. Use Amazon CloudWatch to monitor the SNS queue length and scale up and down as required.
+    - D. Use Amazon Simple Queue Service (Amazon SQS) to handle the messaging between application servers running on Amazon EC2 in an Auto Scaling group. Use Amazon CloudWatch to monitor the SQS queue length and scale up when communication failures are detected.
+    
+    근거
+    
+    - 문제: 온프레미스에서 AWS로 옮기려고 함 ⇒ 과부화 되면 트랜잭션이 느려짐 ⇒ 가장 운영 효과적으로 해결하기 위한 방법은?
+    - Lambda = Serverless & Autoscaling 가능
+    - SQS = scalability에 최적
+- Q76
+    
+    A company receives 10 TB of instrumentation data each day from several machines located at a single factory. The data consists of JSON files stored on a storage area network (SAN) in an on-premises data center located within the factory. The company wants to send this data to Amazon S3 where it can be accessed by several additional systems that provide critical near-real-time analytics. A secure transfer is important because the data is considered sensitive.Which solution offers the MOST reliable data transfer?
+    
+    - A. AWS DataSync over public internet
+    - B. AWS DataSync over AWS Direct Connect **Most Voted**
+    - C. AWS Database Migration Service (AWS DMS) over public internet
+    - D. AWS Database Migration Service (AWS DMS) over AWS Direct Connect
+    
+    근거 
+    
+    - 문제 : 10TB 데이터가 쏟아져 나옴. ⇒ 온프레미스에 해당 데이터가 저장되고 이를 S3로 보내려 함. ⇒ 보안이 중요한데, 가장 효과적인 방법은?
+    - DMS is for databases and here refers to “JSON files”. Public internet is not reliable. So best option is B.
+- Q77
+    
+    A company needs to configure a real-time data ingestion architecture for its application. The company needs an API, a process that transforms data as the data is streamed, and a storage solution for the data.Which solution will meet these requirements with the LEAST operational overhead?
+    
+    - A. Deploy an Amazon EC2 instance to host an API that sends data to an Amazon Kinesis data stream. Create an Amazon Kinesis Data Firehose delivery stream that uses the Kinesis data stream as a data source. Use AWS Lambda functions to transform the data. Use the Kinesis Data Firehose delivery stream to send the data to Amazon S3.
+    - B. Deploy an Amazon EC2 instance to host an API that sends data to AWS Glue. Stop source/destination checking on the EC2 instance. Use AWS Glue to transform the data and to send the data to Amazon S3.
+    - C. Configure an Amazon API Gateway API to send data to an Amazon Kinesis data stream. Create an Amazon Kinesis Data Firehose delivery stream that uses the Kinesis data stream as a data source. Use AWS Lambda functions to transform the data. Use the Kinesis Data Firehose delivery stream to send the data to Amazon S3. **Most Voted**
+    - D. Configure an Amazon API Gateway API to send data to AWS Glue. Use AWS Lambda functions to transform the data. Use AWS Glue to send the data to Amazon S3.
+    
+    근거 :
+    
+    - 문제 : 실시간 데이터 처리 필요 ⇒ 데이터 스트림과 저장에 API를 사용함
+    - D가 틀린이유 : AWS Glue gets data from S3, not from API GW
+    - Kinesis Data Firehose를 사용하면 굳이 EC2를 사용할 필요 없으므로 A,B가 틀림.
+    - 
+- Q78
+    
+    A company needs to keep user transaction data in an Amazon DynamoDB table. The company must retain the data for 7 years.What is the MOST operationally efficient solution that meets these requirements?
+    
+    - A. Use DynamoDB point-in-time recovery to back up the table continuously.
+    - B. Use AWS Backup to create backup schedules and retention policies for the table. **Most Voted**
+    - C. Create an on-demand backup of the table by using the DynamoDB console. Store the backup in an Amazon S3 bucket. Set an S3 Lifecycle configuration for the S3 bucket.
+    - D. Create an Amazon EventBridge (Amazon CloudWatch Events) rule to invoke an AWS Lambda function. Configure the Lambda function to back up the table and to store the backup in an Amazon S3 bucket. Set an S3 Lifecycle configuration for the S3 bucket.
+    
+    근거 : 
+    
+    - 문제 : Dynamo DB에 user transaction을 7년간 저장해야한다. ⇒ 가장 운영적으로 효과적인 방법은?
+    - AWS Backup을 사용한다.
+    - point-in-time recovery (PITR) : PITR is used to recover your table to any point in time in a rolling 35 day window, which is used to help customers mitigate accidental deletes or writes to their tables from bad code, malicious access, or user error. (==> A isn't the answer)
+- Q79
+    
+    A company is planning to use an Amazon DynamoDB table for data storage. The company is concerned about cost optimization. The table will not be used on most mornings. In the evenings, the read and write traffic will often be unpredictable. When traffic spikes occur, they will happen very quickly.What should a solutions architect recommend?
+    
+    - A. Create a DynamoDB table in on-demand capacity mode. **Most Voted**
+    - B. Create a DynamoDB table with a global secondary index.
+    - C. Create a DynamoDB table with provisioned capacity and auto scaling.
+    - D. Create a DynamoDB table in provisioned capacity mode, and configure it as a global table.
+    
+    근거 
+    
+    - 문제 : Dynamo DB를 사용하고 싶음 ⇒ 비용 절감이 필요하고, 아침에는 거의 사용되지 않으며, 저녁에는 사용량 변동량이 큼 ⇒ 가장 비용 절감적인 방법은?
+    - on-demand capacity mode를 사용
+    - C가 틀린 이유는 저녁에 unpredictable 하므로 provisioned capacity이 부적절하기 때문임
+- Q80
+    
+    A company recently signed a contract with an AWS Managed Service Provider (MSP) Partner for help with an application migration initiative. A solutions architect needs ta share an Amazon Machine Image (AMI) from an existing AWS account with the MSP Partner's AWS account. The AMI is backed by Amazon Elastic Block Store (Amazon EBS) and uses an AWS Key Management Service (AWS KMS) customer managed key to encrypt EBS volume snapshots.What is the MOST secure way for the solutions architect to share the AMI with the MSP Partner's AWS account?
+    
+    - A. Make the encrypted AMI and snapshots publicly available. Modify the key policy to allow the MSP Partner's AWS account to use the key.
+    - B. Modify the launchPermission property of the AMI. Share the AMI with the MSP Partner's AWS account only. Modify the key policy to allow the MSP Partner's AWS account to use the key. **Most Voted**
+    - C. Modify the launchPermission property of the AMI. Share the AMI with the MSP Partner's AWS account only. Modify the key policy to trust a new KMS key that is owned by the MSP Partner for encryption.
+    - D. Export the AMI from the source account to an Amazon S3 bucket in the MSP Partner's AWS account, Encrypt the S3 bucket with a new KMS key that is owned by the MSP Partner. Copy and launch the AMI in the MSP Partner's AWS account.
+    
+    근거 :
+    
+    - 문제 : MSP를 통해 application migration을 수행하려 함. ⇒ AMI를 사용하려 하는데, MSP 계정과 연동이 필요함 ⇒ AMI는 KMS를 사용해 EBS 보안을 유지중임 ⇒ 가장 보안적으로 안정적인 방법은?
+    - Share the existing KMS key with the MSP external account because it has already been used to encrypt the AMI snapshot.
+- Q82
+    
+    A company hosts its web applications in the AWS Cloud. The company configures Elastic Load Balancers to use certificates that are imported into AWS Certificate Manager (ACM). The company's security team must be notified 30 days before the expiration of each certificate.What should a solutions architect recommend to meet this requirement?
+    
+    - A. Add a rule in ACM to publish a custom message to an Amazon Simple Notification Service (Amazon SNS) topic every day, beginning 30 days before any certificate will expire.
+    - B. Create an AWS Config rule that checks for certificates that will expire within 30 days. Configure Amazon EventBridge (Amazon CloudWatch Events) to invoke a custom alert by way of Amazon Simple Notification Service (Amazon SNS) when AWS Config reports a noncompliant resource. **Most Voted**
+    - C. Use AWS Trusted Advisor to check for certificates that will expire within 30 days. Create an Amazon CloudWatch alarm that is based on Trusted Advisor metrics for check status changes. Configure the alarm to send a custom alert by way of Amazon Simple Notification Service (Amazon SNS).
+    - D. Create an Amazon EventBridge (Amazon CloudWatch Events) rule to detect any certificates that will expire within 30 days. Configure the rule to invoke an AWS Lambda function. Configure the Lambda function to send a custom alert by way of Amazon Simple Notification Service (Amazon SNS).
+    
+    근거 :
+    
+    - 문제 : Certificate를 ELB에 사용 ⇒ 만료 30일 전에 회사에서 알아야함.
+    - B와 D 사이에 의견이 갈림. B가 효과적인 방법이라 생각
+- Q84
+    
+    A company wants to reduce the cost of its existing three-tier web architecture. The web, application, and database servers are running on Amazon EC2 instances for the development, test, and production environments. The EC2 instances average 30% CPU utilization during peak hours and 10% CPU utilization during non-peak hours.The production EC2 instances run 24 hours a day. The development and test EC2 instances run for at least 8 hours each day. The company plans to implement automation to stop the development and test EC2 instances when they are not in use.Which EC2 instance purchasing solution will meet the company's requirements MOST cost-effectively?
+    
+    - A. Use Spot Instances for the production EC2 instances. Use Reserved Instances for the development and test EC2 instances.
+    - B. Use Reserved Instances for the production EC2 instances. Use On-Demand Instances for the development and test EC2 instances. **Most Voted**
+    - C. Use Spot blocks for the production EC2 instances. Use Reserved Instances for the development and test EC2 instances.
+    - D. Use On-Demand Instances for the production EC2 instances. Use Spot blocks for the development and test EC2 instances.
+    
+    근거
+    
+    - 문제 : 가장 비용 절감적인 방법은?
+    - Spot blocks are not longer available, and you can't use spot instances on Prod machines 24x7, so option B should be valid.
+- Q85
+    
+    A company has a production web application in which users upload documents through a web interface or a mobile app. According to a new regulatory requirement. new documents cannot be modified or deleted after they are stored.What should a solutions architect do to meet this requirement?
+    
+    - A. Store the uploaded documents in an Amazon S3 bucket with S3 Versioning and S3 Object Lock enabled. **Most Voted**
+    - B. Store the uploaded documents in an Amazon S3 bucket. Configure an S3 Lifecycle policy to archive the documents periodically.
+    - C. Store the uploaded documents in an Amazon S3 bucket with S3 Versioning enabled. Configure an ACL to restrict all access to read-only.
+    - D. Store the uploaded documents on an Amazon Elastic File System (Amazon EFS) volume. Access the data by mounting the volume in read-only mode.
+    
+    근거 :
+    
+    - 문제 : 문서를 저장 하는 앱이 있음⇒  read only만 가능함
+    - S3 Object Lock : Read only
+- Q86
+    
+    A company hosts an application on AWS Lambda functions that are invoked by an Amazon API Gateway API. The Lambda functions save customer data to an Amazon Aurora MySQL database. Whenever the company upgrades the database, the Lambda functions fail to establish database connections until the upgrade is complete. The result is that customer data is not recorded for some of the event.A solutions architect needs to design a solution that stores customer data that is created during database upgrades.Which solution will meet these requirements?
+    
+    - A. Provision an Amazon RDS proxy to sit between the Lambda functions and the database. Configure the Lambda functions to connect to the RDS proxy.
+    - B. Increase the run time of the Lambda functions to the maximum. Create a retry mechanism in the code that stores the customer data in the database.
+    - C. Persist the customer data to Lambda local storage. Configure new Lambda functions to scan the local storage to save the customer data to the database.
+    - D. Store the customer data in an Amazon Simple Queue Service (Amazon SQS) FIFO queue. Create a new Lambda function that polls the queue and stores the customer data in the database.
+    
+    근거 
+    
+    - 문제 : API와 lambda를 연결해서 사용 중 ⇒ DB upgrade 수행 시 DB에 database가 저장되지 않는 문제 발생 ⇒ 이 문제를 해결하기 위해선?
+    - SQS를 사용한다.
+    
+- Q88
+    
+    A survey company has gathered data for several years from areas in the United States. The company hosts the data in an Amazon S3 bucket that is 3 TB in size and growing. The company has started to share the data with a European marketing firm that has S3 buckets. The company wants to ensure that its data transfer costs remain as low as possible.Which solution will meet these requirements?
+    
+    - A. Configure the Requester Pays feature on the company's S3 bucket. **Most Voted**
+    - B. Configure S3 Cross-Region Replication from the company's S3 bucket to one of the marketing firm's S3 buckets. **Most Voted**
+    - C. Configure cross-account access for the marketing firm so that the marketing firm has access to the company's S3 bucket.
+    - D. Configure the company's S3 bucket to use S3 Intelligent-Tiering. Sync the S3 bucket to one of the marketing firm's S3 buckets.
+    
+    근거 
+    
+    - 논쟁이 많은 문제임. A로 외우자.
+    - Configure the requester Pays feature on the company’s S3 bucket.
+- Q90
+    
+    A company is using a SQL database to store movie data that is publicly accessible. The database runs on an Amazon RDS Single-AZ DB instance. A script runs queries at random intervals each day to record the number of new movies that have been added to the database. The script must report a final total during business hours.The company's development team notices that the database performance is inadequate for development tasks when the script is running. A solutions architect must recommend a solution to resolve this issue.Which solution will meet this requirement with the LEAST operational overhead?
+    
+    - A. Modify the DB instance to be a Multi-AZ deployment.
+    - B. Create a read replica of the database. Configure the script to query only the read replica. **Most Voted**
+    - C. Instruct the development team to manually export the entries in the database at the end of each day.
+    - D. Use Amazon ElastiCache to cache the common queries that the script runs against the database.
+    
+    근거 
+    
+    - 문제 :
+        
+        한 회사에서 공개적으로 액세스할 수 있는 동영상 데이터를 저장하기 위해 SQL 데이터베이스를 사용하고 있습니다. 데이터베이스는 Amazon RDS Single-AZ DB 인스턴스에서 실행됩니다. 스크립트는 데이터베이스에 추가된 새 동영상 수를 기록하기 위해 매일 임의의 간격으로 쿼리를 실행합니다. 스크립트는 업무 시간 동안 최종 합계를 보고해야 합니다.
+        
+        회사의 개발 팀은 스크립트가 실행 중일 때 데이터베이스 성능이 개발 작업에 적합하지 않다는 것을 알게 됩니다. 솔루션 설계자는 이 문제를 해결하기 위한 솔루션을 제안해야 합니다.
+        
+        운영 오버헤드를 최소화하면서 이 요구사항을 충족할 수 있는 솔루션은 무엇입니까?
+        
+    - 정답 : access 용 db를 새로 만들어서 개발과 사용을 이원화한다.
+- Q93
+    
+    A company runs an on-premises application that is powered by a MySQL database. The company is migrating the application to AWS to increase the application's elasticity and availability.The current architecture shows heavy read activity on the database during times of normal operation. Every 4 hours, the company's development team pulls a full export of the production database to populate a database in the staging environment. During this period, users experience unacceptable application latency. The development team is unable to use the staging environment until the procedure completes.A solutions architect must recommend replacement architecture that alleviates the application latency issue. The replacement architecture also must give the development team the ability to continue using the staging environment without delay.Which solution meets these requirements?
+    
+    - A. Use Amazon Aurora MySQL with Multi-AZ Aurora Replicas for production. Populate the staging database by implementing a backup and restore process that uses the mysqldump utility.
+    - B. Use Amazon Aurora MySQL with Multi-AZ Aurora Replicas for production. Use database cloning to create the staging database on-demand. **Most Voted**
+    - C. Use Amazon RDS for MySQL with a Multi-AZ deployment and read replicas for production. Use the standby instance for the staging database.
+    - D. Use Amazon RDS for MySQL with a Multi-AZ deployment and read replicas for production. Populate the staging database by implementing a backup and restore process that uses the mysqldump utility.
+    
+    근거 : 
+    
+    The recommended solution is Option B: Use Amazon Aurora MySQL with Multi-AZ Aurora Replicas for production. Use database cloning to create the staging database on-demand.
+    
+    To alleviate the application latency issue, the recommended solution is to use Amazon Aurora MySQL with Multi-AZ Aurora Replicas for production, and use database cloning to create the staging database on-demand. This allows the development team to continue using the staging environment without delay, while also providing elasticity and availability for the production application.
+    
+- Q96
+    
+    사진이 있어서 정답만 작성
+    
+    - C. Users can terminate an EC2 instance in the us-east-1 Region when the user's source IP is 10.100.100.254. **Most Voted**
+    - 10.100.100.0 ⇒ 10.100.100.1 ~ 10.100.100 ~ 254 접근 가능
+- Q97
+    
+    A company has a large Microsoft SharePoint deployment running on-premises that requires Microsoft Windows shared file storage. The company wants to migrate this workload to the AWS Cloud and is considering various storage options. The storage solution must be highly available and integrated with Active Directory for access control.Which solution will satisfy these requirements?
+    
+    - A. Configure Amazon EFS storage and set the Active Directory domain for authentication.
+    - B. Create an SMB file share on an AWS Storage Gateway file gateway in two Availability Zones.
+    - C. Create an Amazon S3 bucket and configure Microsoft Windows Server to mount it as a volume.
+    - **D. Create an Amazon FSx for Windows File Server file system on AWS and set the Active Directory domain for authentication.**
+    
+    근거 :
+    
+    - 그냥 외우자. D
+- Q98
+    
+    An image-processing company has a web application that users use to upload images. The application uploads the images into an Amazon S3 bucket. The company has set up S3 event notifications to publish the object creation events to an Amazon Simple Queue Service (Amazon SQS) standard queue. The SQS queue serves as the event source for an AWS Lambda function that processes the images and sends the results to users through email.Users report that they are receiving multiple email messages for every uploaded image. A solutions architect determines that SQS messages are invoking the Lambda function more than once, resulting in multiple email messages.What should the solutions architect do to resolve this issue with the LEAST operational overhead?
+    
+    - A. Set up long polling in the SQS queue by increasing the ReceiveMessage wait time to 30 seconds.
+    - B. Change the SQS standard queue to an SQS FIFO queue. Use the message deduplication ID to discard duplicate messages.
+    - C. Increase the visibility timeout in the SQS queue to a value that is greater than the total of the function timeout and the batch window timeout. **Most Voted**
+    - D. Modify the Lambda function to delete each message from the SQS queue immediately after the message is read before processing.
+    
+    근거 
+    
+    - SQS를 사용하는데, 중복되서 작업이 진행 되는 경우 visibilityy timeout을 조정한다.
+- Q99
+- Q100
+    
+    A company's containerized application runs on an Amazon EC2 instance. The application needs to download security certificates before it can communicate with other business applications. The company wants a highly secure solution to encrypt and decrypt the certificates in near real time. The solution also needs to store data in highly available storage after the data is encrypted.Which solution will meet these requirements with the LEAST operational overhead?
+    
+    - A. Create AWS Secrets Manager secrets for encrypted certificates. Manually update the certificates as needed. Control access to the data by using fine-grained IAM access.
+    - B. Create an AWS Lambda function that uses the Python cryptography library to receive and perform encryption operations. Store the function in an Amazon S3 bucket.
+    - C. Create an AWS Key Management Service (AWS KMS) customer managed key. Allow the EC2 role to use the KMS key for encryption operations. Store the encrypted data on Amazon S3. **Most Voted**
+    - D. Create an AWS Key Management Service (AWS KMS) customer managed key. Allow the EC2 role to use the KMS key for encryption operations. Store the encrypted data on Amazon Elastic Block Store (Amazon EBS) volumes.
+    
+    근거
+    
+    - AWS KMS 사용해서 Certificates 운영
+    - highly available 해야하므로 S3 사용
 - Q
 - Q
 - Q
