@@ -1186,6 +1186,345 @@
     
     - AWS KMS 사용해서 Certificates 운영
     - highly available 해야하므로 S3 사용
+- Q101
+    
+    A solutions architect is designing a VPC with public and private subnets. The VPC and subnets use IPv4 CIDR blocks. There is one public subnet and one private subnet in each of three Availability Zones (AZs) for high availability. An internet gateway is used to provide internet access for the public subnets. The private subnets require access to the internet to allow Amazon EC2 instances to download software updates.What should the solutions architect do to enable Internet access for the private subnets?
+    
+    - A. Create three NAT gateways, one for each public subnet in each AZ. Create a private route table for each AZ that forwards non-VPC traffic to the NAT gateway in its AZ. **Most Voted**
+    - B. Create three NAT instances, one for each private subnet in each AZ. Create a private route table for each AZ that forwards non-VPC traffic to the NAT instance in its AZ.
+    - C. Create a second internet gateway on one of the private subnets. Update the route table for the private subnets that forward non-VPC traffic to the private internet gateway.
+    - D. Create an egress-only internet gateway on one of the public subnets. Update the route table for the private subnets that forward non-VPC traffic to the egress-only Internet gateway.
+    
+    근거 :
+    
+    - 외우자
+    - B가 틀린 이유 : Now NAT Instances is avoided by AWS. Then choose the NAT Gateway
+- Q102
+    
+    A company wants to migrate an on-premises data center to AWS. The data center hosts an SFTP server that stores its data on an NFS-based file system. The server holds 200 GB of data that needs to be transferred. The server must be hosted on an Amazon EC2 instance that uses an Amazon Elastic File System (Amazon EFS) file system.Which combination of steps should a solutions architect take to automate this task? (Choose two.)
+    
+    - A. Launch the EC2 instance into the same Availability Zone as the EFS file system. **Most Voted**
+    - B. Install an AWS DataSync agent in the on-premises data center. **Most VotedMost Voted**
+    - C. Create a secondary Amazon Elastic Block Store (Amazon EBS) volume on the EC2 instance for the data.
+    - D. Manually use an operating system copy command to push the data to the EC2 instance.
+    - E. Use AWS DataSync to create a suitable location configuration for the on-premises SFTP server. **Most Voted**
+    
+    근거 
+    
+    - A와 B가 정답인 것 같다.
+- Q103
+    
+    A company has an AWS Glue extract, transform, and load (ETL) job that runs every day at the same time. The job processes XML data that is in an Amazon S3 bucket. New data is added to the S3 bucket every day. A solutions architect notices that AWS Glue is processing all the data during each run.What should the solutions architect do to prevent AWS Glue from reprocessing old data?
+    
+    - A. Edit the job to use job bookmarks. **Most Voted**
+    - B. Edit the job to delete data after the data is processed.
+    - C. Edit the job by setting the NumberOfWorkers field to 1.
+    - D. Use a FindMatches machine learning (ML) transform.
+    
+    근거 :
+    
+    - 외우자. job bookmarks!!!
+- Q104
+    
+    A solutions architect must design a highly available infrastructure for a website. The website is powered by Windows web servers that run on Amazon EC2 instances. The solutions architect must implement a solution that can mitigate a large-scale DDoS attack that originates from thousands of IP addresses. Downtime is not acceptable for the website.Which actions should the solutions architect take to protect the website from such an attack? (Choose two.)
+    
+    - A. Use AWS Shield Advanced to stop the DDoS attack. **Most Voted**
+    - B. Configure Amazon GuardDuty to automatically block the attackers.
+    - C. Configure the website to use Amazon CloudFront for both static and dynamic content. **Most Voted**
+    - D. Use an AWS Lambda function to automatically add attacker IP addresses to VPC network ACLs.
+    - E. Use EC2 Spot Instances in an Auto Scaling group with a target tracking scaling policy that is set to 80% CPU utilization.
+    
+    문제 : DDos Attack 방지 & 서버 downtime이 없어야함
+    
+    정답 : DDos에 대해 AWS Shield & WAF를 위해 Cloud Front 사용
+    
+- Q105
+    
+    A company is preparing to deploy a new serverless workload. A solutions architect must use the principle of least privilege to configure permissions that will be used to run an AWS Lambda function. An Amazon EventBridge (Amazon CloudWatch Events) rule will invoke the function.Which solution meets these requirements?
+    
+    - A. Add an execution role to the function with lambda:InvokeFunction as the action and * as the principal.
+    - B. Add an execution role to the function with lambda:InvokeFunction as the action and Service: lambda.amazonaws.com as the principal.
+    - C. Add a resource-based policy to the function with lambda:* as the action and Service: events.amazonaws.com as the principal.
+    - D. Add a resource-based policy to the function with lambda:InvokeFunction as the action and Service: events.amazonaws.com as the principal. **Most Voted**
+    
+    문제
+    
+    근거 : D invokefunction!
+    
+- Q106
+    
+    A company is preparing to store confidential data in Amazon S3. For compliance reasons, the data must be encrypted at rest. Encryption key usage must be logged for auditing purposes. Keys must be rotated every year.Which solution meets these requirements and is the MOST operationally efficient?
+    
+    - A. Server-side encryption with customer-provided keys (SSE-C)
+    - B. Server-side encryption with Amazon S3 managed keys (SSE-S3)
+    - C. Server-side encryption with AWS KMS keys (SSE-KMS) with manual rotation
+    - D. Server-side encryption with AWS KMS keys (SSE-KMS) with automatic rotation **Most Voted**
+    
+    문제 : key 사용 ⇒ kms
+    
+- Q107
+    
+    A bicycle sharing company is developing a multi-tier architecture to track the location of its bicycles during peak operating hours. The company wants to use these data points in its existing analytics platform. A solutions architect must determine the most viable multi-tier option to support this architecture. The data points must be accessible from the REST API.Which action meets these requirements for storing and retrieving location data?
+    
+    - A. Use Amazon Athena with Amazon S3.
+    - B. Use Amazon API Gateway with AWS Lambda. **Most Voted**
+    - C. Use Amazon QuickSight with Amazon Redshift.
+    - D. Use Amazon API Gateway with Amazon Kinesis Data Analytics.
+    
+    문제
+    
+    - 이미 존재중인 analytics platform을 사용한다고 했으니 API Gateway & Lambda를 사용한다.
+    - Quicksight와 Kinesis사용할 필요 없음
+- Q108
+    
+    A company has an automobile sales website that stores its listings in a database on Amazon RDS. When an automobile is sold, the listing needs to be removed from the website and the data must be sent to multiple target systems.Which design should a solutions architect recommend?
+    
+    - A. Create an AWS Lambda function triggered when the database on Amazon RDS is updated to send the information to an Amazon Simple Queue Service (Amazon SQS) queue for the targets to consume. **Most Voted**
+    - B. Create an AWS Lambda function triggered when the database on Amazon RDS is updated to send the information to an Amazon Simple Queue Service (Amazon SQS) FIFO queue for the targets to consume.
+    - C. Subscribe to an RDS event notification and send an Amazon Simple Queue Service (Amazon SQS) queue fanned out to multiple Amazon Simple Notification Service (Amazon SNS) topics. Use AWS Lambda functions to update the targets.
+    - D. Subscribe to an RDS event notification and send an Amazon Simple Notification Service (Amazon SNS) topic fanned out to multiple Amazon Simple Queue Service (Amazon SQS) queues. Use AWS Lambda functions to update the targets. **Most Voted**
+    
+    근거 
+    
+    - D는 SNS를 쓰기 떄문에 틀리므로 A 인 것 같다.
+- Q111
+    
+    A company recently migrated a message processing system to AWS. The system receives messages into an ActiveMQ queue running on an Amazon EC2 instance. Messages are processed by a consumer application running on Amazon EC2. The consumer application processes the messages and writes results to a MySQL database running on Amazon EC2. The company wants this application to be highly available with low operational complexity.Which architecture offers the HIGHEST availability?
+    
+    - A. Add a second ActiveMQ server to another Availability Zone. Add an additional consumer EC2 instance in another Availability Zone. Replicate the MySQL database to another Availability Zone.
+    - B. Use Amazon MQ with active/standby brokers configured across two Availability Zones. Add an additional consumer EC2 instance in another Availability Zone. Replicate the MySQL database to another Availability Zone.
+    - C. Use Amazon MQ with active/standby brokers configured across two Availability Zones. Add an additional consumer EC2 instance in another Availability Zone. Use Amazon RDS for MySQL with Multi-AZ enabled.
+    - D. Use Amazon MQ with active/standby brokers configured across two Availability Zones. Add an Auto Scaling group for the consumer EC2 instances across two Availability Zones. Use Amazon RDS for MySQL with Multi-AZ enabled. **Most Voted**
+    
+    근거 
+    
+    - 문제 : availability를 달성하는 방법
+    - AZ를 늘리고 Autoscaling을 한다.
+- Q112
+    
+    A company hosts a containerized web application on a fleet of on-premises servers that process incoming requests. The number of requests is growing quickly. The on-premises servers cannot handle the increased number of requests. The company wants to move the application to AWS with minimum code changes and minimum development effort.Which solution will meet these requirements with the LEAST operational overhead?
+    
+    - A. Use AWS Fargate on Amazon Elastic Container Service (Amazon ECS) to run the containerized web application with Service Auto Scaling. Use an Application Load Balancer to distribute the incoming requests. **Most Voted**
+    - B. Use two Amazon EC2 instances to host the containerized web application. Use an Application Load Balancer to distribute the incoming requests.
+    - C. Use AWS Lambda with a new code that uses one of the supported languages. Create multiple Lambda functions to support the load. Use Amazon API Gateway as an entry point to the Lambda functions.
+    - D. Use a high performance computing (HPC) solution such as AWS ParallelCluster to establish an HPC cluster that can process the incoming requests at the appropriate scale.
+    
+    근거
+    
+    - 문제 : a fleet of on-premises라고 하는거 보니 MSA라 생각하면 될듯
+    - 따라서 정답은 ECS를 사용하는 것
+- Q113
+    
+    A company uses 50 TB of data for reporting. The company wants to move this data from on premises to AWS. A custom application in the company’s data center runs a weekly data transformation job. The company plans to pause the application until the data transfer is complete and needs to begin the transfer process as soon as possible.The data center does not have any available network bandwidth for additional workloads. A solutions architect must transfer the data and must configure the transformation job to continue to run in the AWS Cloud.Which solution will meet these requirements with the LEAST operational overhead?
+    
+    - A. Use AWS DataSync to move the data. Create a custom transformation job by using AWS Glue.
+    - B. Order an AWS Snowcone device to move the data. Deploy the transformation application to the device.
+    - C. Order an AWS Snowball Edge Storage Optimized device. Copy the data to the device. Create a custom transformation job by using AWS Glue. **Most Voted**
+    - D. Order an AWS Snowball Edge Storage Optimized device that includes Amazon EC2 compute. Copy the data to the device. Create a new EC2 instance on AWS to run the transformation application.
+    - 50TB 사이즈이므로 snowball을 사용하면 좋음. AWS Glue는 ETL 서비스이므로 전송에 좋다는 생각..
+- Q115
+    
+    A medical records company is hosting an application on Amazon EC2 instances. The application processes customer data files that are stored on Amazon S3. The EC2 instances are hosted in public subnets. The EC2 instances access Amazon S3 over the internet, but they do not require any other network access.A new requirement mandates that the network traffic for file transfers take a private route and not be sent over the internet.Which change to the network architecture should a solutions architect recommend to meet this requirement?
+    
+    - A. Create a NAT gateway. Configure the route table for the public subnets to send traffic to Amazon S3 through the NAT gateway.
+    - B. Configure the security group for the EC2 instances to restrict outbound traffic so that only traffic to the S3 prefix list is permitted.
+    - C. Move the EC2 instances to private subnets. Create a VPC endpoint for Amazon S3, and link the endpoint to the route table for the private subnets. **Most Voted**
+    - D. Remove the internet gateway from the VPC. Set up an AWS Direct Connect connection, and route traffic to Amazon S3 over the Direct Connect connection.
+    
+    근거 : 
+    
+    - 문제 : 새로운 요구사항이 네트워크 트래픽은 private routr를 거쳐야함.
+    - AWS Direct Connect를 고민해서 D를 택함. AWS Direct Connect는 onpremise와 Cloud를 연결하는 용도임
+    - VPC Endpoint가 내가 생각했던 기능임
+- Q116
+    
+    A company uses a popular content management system (CMS) for its corporate website. However, the required patching and maintenance are burdensome. The company is redesigning its website and wants anew solution. The website will be updated four times a year and does not need to have any dynamic content available. The solution must provide high scalability and enhanced security.Which combination of changes will meet these requirements with the LEAST operational overhead? (Choose two.)
+    
+    - A. Configure Amazon CloudFront in front of the website to use HTTPS functionality. **Most Voted**
+    - B. Deploy an AWS WAF web ACL in front of the website to provide HTTPS functionality.
+    - C. Create and deploy an AWS Lambda function to manage and serve the website content.
+    - D. Create the new website and an Amazon S3 bucket. Deploy the website on the S3 bucket with static website hosting enabled. **Most Voted**
+    - E. Create the new website. Deploy the website by using an Auto Scaling group of Amazon EC2 instances behind an Application Load Balancer.
+    
+    문제 :  not need to have any dynamic content available을 봤을 때 static으로 구성하면 간단함을 알 수 있음 ⇒ 확장성과 보안을 강조하는 것인 만큼 HTTPS를 사용하면 됨
+    
+    - C를 택했는데, 생각해보니 lambda로 웹 사이트를 운영한다는게 말이 안됨
+- Q117
+    
+    A company stores its application logs in an Amazon CloudWatch Logs log group. A new policy requires the company to store all application logs in Amazon OpenSearch Service (Amazon Elasticsearch Service) in near-real time.Which solution will meet this requirement with the LEAST operational overhead?
+    
+    - A. Configure a CloudWatch Logs subscription to stream the logs to Amazon OpenSearch Service (Amazon Elasticsearch Service). **Most Voted**
+    - B. Create an AWS Lambda function. Use the log group to invoke the function to write the logs to Amazon OpenSearch Service (Amazon Elasticsearch Service).
+    - C. Create an Amazon Kinesis Data Firehose delivery stream. Configure the log group as the delivery streams sources. Configure Amazon OpenSearch Service (Amazon Elasticsearch Service) as the delivery stream's destination.
+    - D. Install and configure Amazon Kinesis Agent on each application server to deliver the logs to Amazon Kinesis Data Streams. Configure Kinesis Data Streams to deliver the logs to Amazon OpenSearch Service (Amazon Elasticsearch Service).
+    
+    문제 CloudWatch Logs를 OpenSearch Service와 근 실시간으로 연결시키고 싶음. 
+    
+    외우기 : cloudwatch logs와 opensearch service를 직접 연동시킬 수 있다. 
+    
+    - You can configure a CloudWatch Logs log group to stream data it receives to your Amazon OpenSearch Service cluster in near real-time through a CloudWatch Logs subscription.
+    - [https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/CWL_OpenSearch_Stream.html](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/CWL_OpenSearch_Stream.html)
+    - 외워야 하는 문제
+- Q119
+    
+    A global company is using Amazon API Gateway to design REST APIs for its loyalty club users in the us-east-1 Region and the ap-southeast-2 Region. A solutions architect must design a solution to protect these API Gateway managed REST APIs across multiple accounts from SQL injection and cross-site scripting attacks.Which solution will meet these requirements with the LEAST amount of administrative effort?
+    
+    - A. Set up AWS WAF in both Regions. Associate Regional web ACLs with an API stage.
+    - B. Set up AWS Firewall Manager in both Regions. Centrally configure AWS WAF rules. **Most Voted**
+    - C. Set up AWS Shield in bath Regions. Associate Regional web ACLs with an API stage.
+    - D. Set up AWS Shield in one of the Regions. Associate Regional web ACLs with an API stage.
+    
+    근거 
+    
+    - 문제 : SQL injection and cross-site scripting attacks에 대한 해결책은?
+    - AWS WAF를 사용하자.
+- Q120
+    
+    A company has implemented a self-managed DNS solution on three Amazon EC2 instances behind a Network Load Balancer (NLB) in the us-west-2 Region. Most of the company's users are located in the United States and Europe. The company wants to improve the performance and availability of the solution. The company launches and configures three EC2 instances in the eu-west-1 Region and adds the EC2 instances as targets for a new NLB.Which solution can the company use to route traffic to all the EC2 instances?
+    
+    - A. Create an Amazon Route 53 geolocation routing policy to route requests to one of the two NLBs. Create an Amazon CloudFront distribution. Use the Route 53 record as the distribution’s origin.
+    - B. Create a standard accelerator in AWS Global Accelerator. Create endpoint groups in us-west-2 and eu-west-1. Add the two NLBs as endpoints for the endpoint groups. **Most Voted**
+    - C. Attach Elastic IP addresses to the six EC2 instances. Create an Amazon Route 53 geolocation routing policy to route requests to one of the six EC2 instances. Create an Amazon CloudFront distribution. Use the Route 53 record as the distribution's origin.
+    - D. Replace the two NLBs with two Application Load Balancers (ALBs). Create an Amazon Route 53 latency routing policy to route requests to one of the two ALBs. Create an Amazon CloudFront distribution. Use the Route 53 record as the distribution’s origin.
+    - 문제 : 글로벌 배포에 대해서는 무조건 Global Accelerator를 사용하는 것으로 나오네
+- Q121
+    
+    *Topic 1*
+    
+    A company is running an online transaction processing (OLTP) workload on AWS. This workload uses an unencrypted Amazon RDS DB instance in a Multi-AZ deployment. Daily database snapshots are taken from this instance.What should a solutions architect do to ensure the database and snapshots are always encrypted moving forward?
+    
+    - A. Encrypt a copy of the latest DB snapshot. Replace existing DB instance by restoring the encrypted snapshot. **Most Voted**
+    - B. Create a new encrypted Amazon Elastic Block Store (Amazon EBS) volume and copy the snapshots to it. Enable encryption on the DB instance.
+    - C. Copy the snapshots and enable encryption using AWS Key Management Service (AWS KMS) Restore encrypted snapshot to an existing DB instance.
+    - D. Copy the snapshots to an Amazon S3 bucket that is encrypted using server-side encryption with AWS Key Management Service (AWS KMS) managed keys (SSE-KMS).
+    
+    문제 : DB Encryption 수행 방법
+    
+    "You can enable encryption for an Amazon RDS DB instance when you create it, but not after it's created. However, you can add encryption to an unencrypted DB instance by creating a snapshot of your DB instance, and then creating an encrypted copy of that snapshot. You can then restore a DB instance from the encrypted snapshot to get an encrypted copy of your original DB instance."
+    [https://docs.aws.amazon.com/prescriptive-guidance/latest/patterns/encrypt-an-existing-amazon-rds-for-postgresql-db-instance.html](https://docs.aws.amazon.com/prescriptive-guidance/latest/patterns/encrypt-an-existing-amazon-rds-for-postgresql-db-instance.html)
+    
+- Q125
+    
+    문제가 이상한듯..
+    
+- Q127
+    
+    A media company is evaluating the possibility of moving its systems to the AWS Cloud. The company needs at least 10 TB of storage with the maximum possible I/O performance for video processing, 300 TB of very durable storage for storing media content, and 900 TB of storage to meet requirements for archival media that is not in use anymore.Which set of services should a solutions architect recommend to meet these requirements?
+    
+    - A. Amazon EBS for maximum performance, Amazon S3 for durable data storage, and Amazon S3 Glacier for archival storage
+    - B. Amazon EBS for maximum performance, Amazon EFS for durable data storage, and Amazon S3 Glacier for archival storage
+    - C. Amazon EC2 instance store for maximum performance, Amazon EFS for durable data storage, and Amazon S3 for archival storage
+    - D. Amazon EC2 instance store for maximum performance, Amazon S3 for durable data storage, and Amazon S3 Glacier for archival storage **Most Vot**
+    
+    근거 : 
+    
+    - EC2 Storage가 EBS보다 빠르다.
+        
+        The keyword here is "maximum possible I/O performance".
+        EBS and Ec2 instance store are good options, but EC2 is higher than EBS in terms of I/O performance. Maximum possible is clearly Ec2 instance storage.
+        There are some concerns about the 10TB needed, however, storage optimized Ec2 instance stores can take up to 24 x 13980 GB (ie 312 TB)
+        So option D is the winner here
+        
+- Q130
+    
+    An application runs on Amazon EC2 instances across multiple Availability Zonas. The instances run in an Amazon EC2 Auto Scaling group behind an Application Load Balancer. The application performs best when the CPU utilization of the EC2 instances is at or near 40%.What should a solutions architect do to maintain the desired performance across all instances in the group?
+    
+    - A. Use a simple scaling policy to dynamically scale the Auto Scaling group.
+    - B. Use a target tracking policy to dynamically scale the Auto Scaling group. **Most Voted**
+    - C. Use an AWS Lambda function ta update the desired Auto Scaling group capacity.
+    - D. Use scheduled scaling actions to scale up and scale down the Auto Scaling group.
+    
+    근거 : 
+    
+    - AutoScaling이 최적화 되어있지 않다고 판단. target tracking을 통해 특정 metric을 기준으로 확장 가능하게 만든다.
+    - With a target tracking scaling policy, you can increase or decrease the current capacity of the group based on a target value for a specific metric.
+- Q131
+    
+    A company is developing a file-sharing application that will use an Amazon S3 bucket for storage. The company wants to serve all the files through an Amazon CloudFront distribution. The company does not want the files to be accessible through direct navigation to the S3 URL.What should a solutions architect do to meet these requirements?
+    
+    - A. Write individual policies for each S3 bucket to grant read permission for only CloudFront access.
+    - B. Create an IAM user. Grant the user read permission to objects in the S3 bucket. Assign the user to CloudFront.
+    - C. Write an S3 bucket policy that assigns the CloudFront distribution ID as the Principal and assigns the target S3 bucket as the Amazon Resource Name (ARN).
+    - D. Create an origin access identity (OAI). Assign the OAI to the CloudFront distribution. Configure the S3 bucket permissions so that only the OAI has read permission. **Most Voted**
+    
+    근거 
+    
+    - 문제 : S3에서 파일 공유를 하는 앱이 있는데, S3주소로 다이렉트로 다운 받는것을 제한하고 싶어함.
+    - 이때는 OAI를 써라
+- Q132
+    
+    A company’s website provides users with downloadable historical performance reports. The website needs a solution that will scale to meet the company’s website demands globally. The solution should be cost-effective, limit the provisioning of infrastructure resources, and provide the fastest possible response time.Which combination should a solutions architect recommend to meet these requirements?
+    
+    - A. Amazon CloudFront and Amazon S3 **Most Voted**
+    - B. AWS Lambda and Amazon DynamoDB
+    - C. Application Load Balancer with Amazon EC2 Auto Scaling
+    - D. Amazon Route 53 with internal Application Load Balancers
+    
+    문제 : 글로벌하게 웹을 배포할 예정 ⇒ Cloudfront
+    
+- Q133
+    
+    A company runs an Oracle database on premises. As part of the company’s migration to AWS, the company wants to upgrade the database to the most recent available version. The company also wants to set up disaster recovery (DR) for the database. The company needs to minimize the operational overhead for normal operations and DR setup. The company also needs to maintain access to the database's underlying operating system.Which solution will meet these requirements?
+    
+    - A. Migrate the Oracle database to an Amazon EC2 instance. Set up database replication to a different AWS Region.
+    - B. Migrate the Oracle database to Amazon RDS for Oracle. Activate Cross-Region automated backups to replicate the snapshots to another AWS Region.
+    - C. Migrate the Oracle database to Amazon RDS Custom for Oracle. Create a read replica for the database in another AWS Region. **Most Voted**
+    - D. Migrate the Oracle database to Amazon RDS for Oracle. Create a standby database in another Availability Zone.
+    
+    근거 : Option C since **RDS Custom has access to the underlying OS and it provides less operational overhead.** Also, a read replica in another Region can be used for DR activities.
+    
+    [https://aws.amazon.com/blogs/database/implementing-a-disaster-recovery-strategy-with-amazon-rds/](https://aws.amazon.com/blogs/database/implementing-a-disaster-recovery-strategy-with-amazon-rds/)
+    
+- Q134
+    
+    A company wants to move its application to a serverless solution. The serverless solution needs to analyze existing and new data by using SL. The company stores the data in an Amazon S3 bucket. The data requires encryption and must be replicated to a different AWS Region.Which solution will meet these requirements with the LEAST operational overhead?
+    
+    - A. Create a new S3 bucket. Load the data into the new S3 bucket. Use S3 Cross-Region Replication (CRR) to replicate encrypted objects to an S3 bucket in another Region. Use server-side encryption with AWS KMS multi-Region kays (SSE-KMS). Use Amazon Athena to query the data. **Most Voted**
+    - B. Create a new S3 bucket. Load the data into the new S3 bucket. Use S3 Cross-Region Replication (CRR) to replicate encrypted objects to an S3 bucket in another Region. Use server-side encryption with AWS KMS multi-Region keys (SSE-KMS). Use Amazon RDS to query the data.
+    - C. Load the data into the existing S3 bucket. Use S3 Cross-Region Replication (CRR) to replicate encrypted objects to an S3 bucket in another Region. Use server-side encryption with Amazon S3 managed encryption keys (SSE-S3). Use Amazon Athena to query the data. **Most Voted**
+    - D. Load the data into the existing S3 bucket. Use S3 Cross-Region Replication (CRR) to replicate encrypted objects to an S3 bucket in another Region. Use server-side encryption with Amazon S3 managed encryption keys (SSE-S3). Use Amazon RDS to query the data.
+    
+    문제
+    
+    - A와 C 모두 합리적인 방법임. 지금까지 KMS가 정답인 경우가 많았기 때문에, A로 생각하겠음.
+- Q135
+    
+    A company runs workloads on AWS. The company needs to connect to a service from an external provider. The service is hosted in the provider's VPC. According to the company’s security team, the connectivity must be private and must be restricted to the target service. The connection must be initiated only from the company’s VPC.Which solution will mast these requirements?
+    
+    - A. Create a VPC peering connection between the company's VPC and the provider's VPC. Update the route table to connect to the target service.
+    - B. Ask the provider to create a virtual private gateway in its VPC. Use AWS PrivateLink to connect to the target service.
+    - C. Create a NAT gateway in a public subnet of the company’s VPUpdate the route table to connect to the target service.
+    - D. Ask the provider to create a VPC endpoint for the target service. Use AWS PrivateLink to connect to the target service. **Most Voted**
+    
+    VPC endpoint : 인터넷 거치지 않고 VPC 간 direct로 연결
+    
+- Q136
+    
+    A company is migrating its on-premises PostgreSQL database to Amazon Aurora PostgreSQL. The on-premises database must remain online and accessible during the migration. The Aurora database must remain synchronized with the on-premises database.Which combination of actions must a solutions architect take to meet these requirements? (Choose two.)
+    
+    - A. Create an ongoing replication task. **Most Voted**
+    - B. Create a database backup of the on-premises database.
+    - C. Create an AWS Database Migration Service (AWS DMS) replication server. **Most Voted**
+    - D. Convert the database schema by using the AWS Schema Conversion Tool (AWS SCT).
+    - E. Create an Amazon EventBridge (Amazon CloudWatch Events) rule to monitor the database synchronization.
+    
+    근거 : 
+    
+    - AWS DMS를 사용하면 쉽게 데이터를 옮길 수 있다.
+    - ongoing replication task
+    - After you complete the full load, make sure that you perform ongoing replication using AWS DMS to keep the source and target databases in sync. To configure the ongoing replication task, sign in to the AWS Management Console and follow these steps.
+- Q137
+    
+    
+- Q
+- Q
+- Q
+- Q
+- Q
+- Q
+- Q
+- Q
+- Q
 - Q
 - Q
 - Q
