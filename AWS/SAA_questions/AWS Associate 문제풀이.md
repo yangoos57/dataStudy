@@ -1515,7 +1515,171 @@
     - After you complete the full load, make sure that you perform ongoing replication using AWS DMS to keep the source and target databases in sync. To configure the ongoing replication task, sign in to the AWS Management Console and follow these steps.
 - Q137
     
+    A company uses AWS Organizations to create dedicated AWS accounts for each business unit to manage each business unit's account independently upon request. The root email recipient missed a notification that was sent to the root user email address of one account. The company wants to ensure that all future notifications are not missed. Future notifications must be limited to account administrators.Which solution will meet these requirements?
     
+    - A. Configure the company’s email server to forward notification email messages that are sent to the AWS account root user email address to all users in the organization.
+    - B. Configure all AWS account root user email addresses as distribution lists that go to a few administrators who can respond to alerts. Configure AWS account alternate contacts in the AWS Organizations console or programmatically. **Most Voted**
+    - C. Configure all AWS account root user email messages to be sent to one administrator who is responsible for monitoring alerts and forwarding those alerts to the appropriate groups.
+    - D. Configure all existing AWS accounts and all newly created accounts to use the same root user email address. Configure AWS account alternate contacts in the AWS Organizations console or programmatically.
+    
+    근거 
+    
+    - 문제 : 계정 관리 관련해서 notification
+    - 답이 없다 외우자.
+- Q138
+    
+    A company runs its ecommerce application on AWS. Every new order is published as a massage in a RabbitMQ queue that runs on an Amazon EC2 instance in a single Availability Zone. These messages are processed by a different application that runs on a separate EC2 instance. This application stores the details in a PostgreSQL database on another EC2 instance. All the EC2 instances are in the same Availability Zone.The company needs to redesign its architecture to provide the highest availability with the least operational overhead.What should a solutions architect do to meet these requirements?
+    
+    - A. Migrate the queue to a redundant pair (active/standby) of RabbitMQ instances on Amazon MQ. Create a Multi-AZ Auto Scaling group for EC2 instances that host the application. Create another Multi-AZ Auto Scaling group for EC2 instances that host the PostgreSQL database.
+    - B. Migrate the queue to a redundant pair (active/standby) of RabbitMQ instances on Amazon MQ. Create a Multi-AZ Auto Scaling group for EC2 instances that host the application. Migrate the database to run on a Multi-AZ deployment of Amazon RDS for PostgreSQL. **Most Voted**
+    - C. Create a Multi-AZ Auto Scaling group for EC2 instances that host the RabbitMQ queue. Create another Multi-AZ Auto Scaling group for EC2 instances that host the application. Migrate the database to run on a Multi-AZ deployment of Amazon RDS for PostgreSQL.
+    - D. Create a Multi-AZ Auto Scaling group for EC2 instances that host the RabbitMQ queue. Create another Multi-AZ Auto Scaling group for EC2 instances that host the application. Create a third Multi-AZ Auto Scaling group for EC2 instances that host the PostgreSQL database
+    
+    문제 : availability 해결 ⇒ Multi-AZ  / EC2를 사용하는 것 보다 AWS에 대체제가 있다면 대체제를 사용하자. (Amz MQ, RDS와 같은 서비스)
+    
+- Q139
+    
+    외우자
+    
+- Q140
+    
+    A solutions architect needs to help a company optimize the cost of running an application on AWS. The application will use Amazon EC2 instances, AWS Fargate, and AWS Lambda for compute within the architecture.The EC2 instances will run the data ingestion layer of the application. EC2 usage will be sporadic and unpredictable. Workloads that run on EC2 instances can be interrupted at any time. The application front end will run on Fargate, and Lambda will serve the API layer. The front-end utilization and API layer utilization will be predictable over the course of the next year.Which combination of purchasing options will provide the MOST cost-effective solution for hosting this application? (Choose two.)
+    
+    - A. Use Spot Instances for the data ingestion layer **Most Voted**
+    - B. Use On-Demand Instances for the data ingestion layer
+    - C. Purchase a 1-year Compute Savings Plan for the front end and API layer. **Most Voted**
+    - D. Purchase 1-year All Upfront Reserved instances for the data ingestion layer.
+    - E. Purchase a 1-year EC2 instance Savings Plan for the front end and API layer.
+    
+    문제
+    
+    - 언제든지 중단 될 수 있다고 하는 걸 보니 spot instance가 맞다.
+    
+    EC2 인스턴스는 애플리케이션의 데이터 수집 계층을 실행합니다. EC2 사용은 산발적이고 예측할 수 없습니다. EC2 인스턴스에서 실행되는 워크로드는 언제든지 중단될 수 있습니다.
+    
+- Q142
+    
+    A gaming company is designing a highly available architecture. The application runs on a modified Linux kernel and supports only UDP-based traffic. The company needs the front-end tier to provide the best possible user experience. That tier must have low latency, route traffic to the nearest edge location, and provide static IP addresses for entry into the application endpoints.What should a solutions architect do to meet these requirements?
+    
+    - A. Configure Amazon Route 53 to forward requests to an Application Load Balancer. Use AWS Lambda for the application in AWS Application Auto Scaling.
+    - B. Configure Amazon CloudFront to forward requests to a Network Load Balancer. Use AWS Lambda for the application in an AWS Application Auto Scaling group.
+    - C. Configure AWS Global Accelerator to forward requests to a Network Load Balancer. Use Amazon EC2 instances for the application in an EC2 Auto Scaling group. **Most Voted**
+    - D. Configure Amazon API Gateway to forward requests to an Application Load Balancer. Use Amazon EC2 instances for the application in an EC2 Auto Scaling group.
+    
+    문제 
+    
+    - Static Ip : Global Accelerator
+- Q144
+    
+    A company recently started using Amazon Aurora as the data store for its global ecommerce application. When large reports are run, developers report that the ecommerce application is performing poorly. After reviewing metrics in Amazon CloudWatch, a solutions architect finds that the ReadIOPS and CPUUtilizalion metrics are spiking when monthly reports run.What is the MOST cost-effective solution?
+    
+    - A. Migrate the monthly reporting to Amazon Redshift.
+    - B. Migrate the monthly reporting to an Aurora Replica. **Most Voted**
+    - C. Migrate the Aurora database to a larger instance class.
+    - D. Increase the Provisioned IOPS on the Aurora instance.
+    
+    의견
+    
+    - 가장 싼 방법은 Aurora Replica를 쓰는 것인듯
+- Q146
+    
+    A company runs a stateless web application in production on a group of Amazon EC2 On-Demand Instances behind an Application Load Balancer. The application experiences heavy usage during an 8-hour period each business day. Application usage is moderate and steady overnight. Application usage is low during weekends.The company wants to minimize its EC2 costs without affecting the availability of the application.Which solution will meet these requirements?
+    
+    - A. Use Spot Instances for the entire workload.
+    - B. Use Reserved Instances for the baseline level of usage. Use Spot instances for any additional capacity that the application needs. Most Voted
+    - C. Use On-Demand Instances for the baseline level of usage. Use Spot Instances for any additional capacity that the application needs.
+    - D. Use Dedicated Instances for the baseline level of usage. Use On-Demand Instances for any additional capacity that the application needs.
+    
+    정답
+    
+    - Dedicated Instance
+- Q149
+    
+    A company has a service that produces event data. The company wants to use AWS to process the event data as it is received. The data is written in a specific order that must be maintained throughout processing. The company wants to implement a solution that minimizes operational overhead.How should a solutions architect accomplish this?
+    
+    - A. Create an Amazon Simple Queue Service (Amazon SQS) FIFO queue to hold messages. Set up an AWS Lambda function to process messages from the queue. **Most Voted**
+    - B. Create an Amazon Simple Notification Service (Amazon SNS) topic to deliver notifications containing payloads to process. Configure an AWS Lambda function as a subscriber.
+    - C. Create an Amazon Simple Queue Service (Amazon SQS) standard queue to hold messages. Set up an AWS Lambda function to process messages from the queue independently.
+    - D. Create an Amazon Simple Notification Service (Amazon SNS) topic to deliver notifications containing payloads to process. Configure an Amazon Simple Queue Service (Amazon SQS) queue as a subscriber.
+    
+    정답 
+    
+    - A라고 생각했는데, 왠지 모르게 아닌 것 같음. 외우자…..
+- Q150
+    
+    A company is migrating an application from on-premises servers to Amazon EC2 instances. As part of the migration design requirements, a solutions architect must implement infrastructure metric alarms. The company does not need to take action if CPU utilization increases to more than 50% for a short burst of time. However, if the CPU utilization increases to more than 50% and read IOPS on the disk are high at the same time, the company needs to act as soon as possible. The solutions architect also must reduce false alarms.What should the solutions architect do to meet these requirements?
+    
+    - A. Create Amazon CloudWatch composite alarms where possible. **Most Voted**
+    - B. Create Amazon CloudWatch dashboards to visualize the metrics and react to issues quickly.
+    - C. Create Amazon CloudWatch Synthetics canaries to monitor the application and raise an alarm.
+    - D. Create single Amazon CloudWatch metric alarms with multiple metric thresholds where possible
+- Q151
+    
+    외우자.. 
+    
+    - AWS control tower
+    - SCPS
+- Q154
+    
+    A company needs to save the results from a medical trial to an Amazon S3 repository. The repository must allow a few scientists to add new files and must restrict all other users to read-only access. No users can have the ability to modify or delete any files in the repository. The company must keep every file in the repository for a minimum of 1 year after its creation date.Which solution will meet these requirements?
+    
+    - A. Use S3 Object Lock in governance mode with a legal hold of 1 year.
+    - B. Use S3 Object Lock in compliance mode with a retention period of 365 days. **Most Voted**
+    - C. Use an IAM role to restrict all users from deleting or changing objects in the S3 bucket. Use an S3 bucket policy to only allow the IAM role.
+    - D. Configure the S3 bucket to invoke an AWS Lambda function every time an object is added. Configure the function to track the hash of the saved object so that modified objects can be marked accordingly.
+    
+    정답
+    
+    - Compliance 모드를 1년동안 켜놓자.
+- Q155
+    
+    A large media company hosts a web application on AWS. The company wants to start caching confidential media files so that users around the world will have reliable access to the files. The content is stored in Amazon S3 buckets. The company must deliver the content quickly, regardless of where the requests originate geographically.Which solution will meet these requirements?
+    
+    - A. Use AWS DataSync to connect the S3 buckets to the web application.
+    - B. Deploy AWS Global Accelerator to connect the S3 buckets to the web application.
+    - C. Deploy Amazon CloudFront to connect the S3 buckets to CloudFront edge servers. **Most Voted**
+    - D. Use Amazon Simple Queue Service (Amazon SQS) to connect the S3 buckets to the web application.
+    
+    근거 : 
+    
+    - 
+- Q157
+    
+    D - Only option that deals with logs, so makes sense
+    E - Partially manual but only option that achieves the 5 year goal
+    
+- Q165
+    
+    A solutions architect must design a solution that uses Amazon CloudFront with an Amazon S3 origin to store a static website. The company’s security policy requires that all website traffic be inspected by AWS WAF.How should the solutions architect comply with these requirements?
+    
+    - A. Configure an S3 bucket policy to accept requests coming from the AWS WAF Amazon Resource Name (ARN) only.
+    - B. Configure Amazon CloudFront to forward all incoming requests to AWS WAF before requesting content from the S3 origin.
+    - C. Configure a security group that allows Amazon CloudFront IP addresses to access Amazon S3 only. Associate AWS WAF to CloudFront.
+    - D. Configure Amazon CloudFront and Amazon S3 to use an origin access identity (OAI) to restrict access to the S3 bucket. Enable AWS WAF on the distribution.
+    
+    정답
+    
+    - B라고 생각했다. OAI는 S3에 직접 접근하는 것을 막는 용도임.
+    - 그런데 애초에 Cloud Front가 WAF를 지원하고 있다. 하지만 ACL을 설정해야만 WAF를 사용할 수 있다.
+    - chatgpt
+        
+        while AWS CloudFront does not include a WAF by default, it can be integrated with AWS WAF to provide additional security protections for your web applications running on CloudFront.
+        
+- Q
+- Q
+- Q
+- Q
+- Q
+- Q
+- Q
+- Q
+- Q
+- Q
+- Q
+- Q
+- Q
+- Q
+- Q
 - Q
 - Q
 - Q
