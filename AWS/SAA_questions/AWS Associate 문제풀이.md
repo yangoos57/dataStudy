@@ -757,9 +757,6 @@
     - 문제 : 300개 넘는 웹 사이트와 앱을 운영중임. ⇒ 30 테라 크기의 클릭 스트림을 분석해야하는 플랫폼 필요
     - clicks tream ⇒ Kinesis Data Streams, Data Firehose
     - Redshift = warehouse
-
-종료
-
 - Q61
     
     A company is developing a two-tier web application on AWS. The company's developers have deployed the application on an Amazon EC2 instance that connects directly to a backend Amazon RDS database. The company must not hardcode database credentials in the application. The company must also implement a solution to automatically rotate the database credentials on a regular basis.
@@ -1665,15 +1662,125 @@
         
         while AWS CloudFront does not include a WAF by default, it can be integrated with AWS WAF to provide additional security protections for your web applications running on CloudFront.
         
-- Q
-- Q
-- Q
-- Q
-- Q
-- Q
-- Q
-- Q
-- Q
+- Q168
+    
+    A security team wants to limit access to specific services or actions in all of the team’s AWS accounts. All accounts belong to a large organization in AWS Organizations. The solution must be scalable and there must be a single point where permissions can be maintained.What should a solutions architect do to accomplish this?
+    
+    - A. Create an ACL to provide access to the services or actions.
+    - B. Create a security group to allow accounts and attach it to user groups.
+    - C. Create cross-account roles in each account to deny access to the services or actions.
+    - D. Create a service control policy in the root organizational unit to deny access to the services or actions. **Most Voted**
+    
+    정답
+    
+    - **외우자 Service Control Policy**
+- Q172
+    
+    A solutions architect is creating a new Amazon CloudFront distribution for an application. Some of the information submitted by users is sensitive. The application uses HTTPS but needs another layer of security. The sensitive information should.be protected throughout the entire application stack, and access to the information should be restricted to certain applications.Which action should the solutions architect take?
+    
+    - A. Configure a CloudFront signed URL.
+    - B. Configure a CloudFront signed cookie.
+    - C. Configure a CloudFront field-level encryption profile. **Most Voted**
+    - D. Configure CloudFront and set the Origin Protocol Policy setting to HTTPS Only for the Viewer Protocol Policy.
+- Q175
+    
+    An ecommerce company has an order-processing application that uses Amazon API Gateway and an AWS Lambda function. The application stores data in an Amazon Aurora PostgreSQL database. During a recent sales event, a sudden surge in customer orders occurred. Some customers experienced timeouts, and the application did not process the orders of those customers.A solutions architect determined that the CPU utilization and memory utilization were high on the database because of a large number of open connections. The solutions architect needs to prevent the timeout errors while making the least possible changes to the application.Which solution will meet these requirements?
+    
+    - A. Configure provisioned concurrency for the Lambda function. Modify the database to be a global database in multiple AWS Regions.
+    - B. Use Amazon RDS Proxy to create a proxy for the database. Modify the Lambda function to use the RDS Proxy endpoint instead of the database endpoint. **Most Voted**
+    - C. Create a read replica for the database in a different AWS Region. Use query string parameters in API Gateway to route traffic to the read replica.
+    - D. Migrate the data from Aurora PostgreSQL to Amazon DynamoDB by using AWS Database Migration Service (AWS DMS). Modify the Lambda function to use the DynamoDB table.
+    
+    문제 
+    
+    - API Gateway, Lambda funciton, Aurora PostrgreSQL 사용 중
+    - DB 과부화, 순차적으로 저장되지 않는 문제에 대한 해결 방법은?
+    - 해당 문제의 원인이 Connection이 다양하기 때문임.
+    - 따라서 Connection을 통일 시키는 proxy를 생성한다.
+- Q179
+    
+    A solutions architect needs to securely store a database user name and password that an application uses to access an Amazon RDS DB instance. The application that accesses the database runs on an Amazon EC2 instance. The solutions architect wants to create a secure parameter in AWS Systems Manager Parameter Store.What should the solutions architect do to meet this requirement?
+    
+    - A. Create an IAM role that has read access to the Parameter Store parameter. Allow Decrypt access to an AWS Key Management Service (AWS KMS) key that is used to encrypt the parameter. Assign this IAM role to the EC2 instance. **Most Voted**
+    - B. Create an IAM policy that allows read access to the Parameter Store parameter. Allow Decrypt access to an AWS Key Management Service (AWS KMS) key that is used to encrypt the parameter. Assign this IAM policy to the EC2 instance.
+    - C. Create an IAM trust relationship between the Parameter Store parameter and the EC2 instance. Specify Amazon RDS as a principal in the trust policy.
+    - D. Create an IAM trust relationship between the DB instance and the EC2 instance. Specify Systems Manager as a principal in the trust policy.
+    
+    문제 
+    
+    - 보기를 잘 읽어야 했다. A는 엑세스 권한을 부여하는 IAM role을 생성한다면 B는 엑세스 권한을 (다른 instance에게) 허용하는 IAM role을 생성한다.
+    - 따라서 권한만 부여받은 A가 정답이다.
+- Q182
+    
+    A company wants to migrate its MySQL database from on premises to AWS. The company recently experienced a database outage that significantly impacted the business. To ensure this does not happen again, the company wants a reliable database solution on AWS that minimizes data loss and stores every transaction on at least two nodes.
+    
+    Which solution meets these requirements?
+    
+    - A. Create an Amazon RDS DB instance with synchronous replication to three nodes in three Availability Zones.
+    - B. Create an Amazon RDS MySQL DB instance with Multi-AZ functionality enabled to synchronously replicate the data. **Most Voted**
+    - C. Create an Amazon RDS MySQL DB instance and then create a read replica in a separate AWS Region that synchronously replicates the data.
+    - D. Create an Amazon EC2 instance with a MySQL engine installed that triggers an AWS Lambda function to synchronously replicate the data to an Amazon RDS MySQL DB instance.
+    
+    정답
+    
+    - A를 택했는데 지문 마지막에 최소 2개 노드에 DB를 저장하고 싶어하는 것을 이해하지 못했음.
+    - 따라서 정답 B
+- Q183
+    
+    A company is building a new dynamic ordering website. The company wants to minimize server maintenance and patching. The website must be highly available and must scale read and write capacity as quickly as possible to meet changes in user demand.Which solution will meet these requirements?
+    
+    - A. Host static content in Amazon S3. Host dynamic content by using Amazon API Gateway and AWS Lambda. Use Amazon DynamoDB with on-demand capacity for the database. Configure Amazon CloudFront to deliver the website content. **Most Voted**
+    - B. Host static content in Amazon S3. Host dynamic content by using Amazon API Gateway and AWS Lambda. Use Amazon Aurora with Aurora Auto Scaling for the database. Configure Amazon CloudFront to deliver the website content.
+    - C. Host all the website content on Amazon EC2 instances. Create an Auto Scaling group to scale the EC2 instances. Use an Application Load Balancer to distribute traffic. Use Amazon DynamoDB with provisioned write capacity for the database.
+    - D. Host all the website content on Amazon EC2 instances. Create an Auto Scaling group to scale the EC2 instances. Use an Application Load Balancer to distribute traffic. Use Amazon Aurora with Aurora Auto Scaling for the database.
+    
+    문제
+    
+    - 문제에서 Read & Write capacity를 요구하고 있다.
+    - B의 경우 Aurora Auto-scaling을 통해 생성된 replica가 read-only 만을 지원하므로 오답이다.
+    - Dynamo DB의 경우 read & write capacity를 지원하고 있으니 A가 정답이라 한다.
+- Q185
+    
+    To ensure that an Amazon Elastic Container Service (ECS) application has permission to access Amazon Simple Storage Service (S3), the correct solution is to create an AWS Identity and Access Management (IAM) role with the necessary S3 permissions and specify that role as the taskRoleArn in the task definition for the ECS application.
+    
+- Q189
+    
+    A company needs to store contract documents. A contract lasts for 5 years. During the 5-year period, the company must ensure that the documents cannot be overwritten or deleted. The company needs to encrypt the documents at rest and rotate the encryption keys automatically every year.Which combination of steps should a solutions architect take to meet these requirements with the LEAST operational overhead? (Choose two.)
+    
+    - A. Store the documents in Amazon S3. Use S3 Object Lock in governance mode.
+    - B. Store the documents in Amazon S3. Use S3 Object Lock in compliance mode.
+    - C. Use server-side encryption with Amazon S3 managed encryption keys (SSE-S3). Configure key rotation.
+    - D. Use server-side encryption with AWS Key Management Service (AWS KMS) customer managed keys. Configure key rotation.
+    - E. Use server-side encryption with AWS Key Management Service (AWS KMS) customer provided (imported) keys. Configure key rotation.
+    
+    정답
+    
+    - read & write 제한은 compliance mode에서 가능하다.
+    - 문제에서는 AWS KMS 내부에서 관리되는 키를 사용한다.
+- Q190
+    
+    A company has a web application that is based on Java and PHP. The company plans to move the application from on premises to AWS. The company needs the ability to test new site features frequently. The company also needs a highly available and managed solution that requires minimum operational overhead.Which solution will meet these requirements?
+    
+    - A. Create an Amazon S3 bucket. Enable static web hosting on the S3 bucket. Upload the static content to the S3 bucket. Use AWS Lambda to process all dynamic content.
+    - B. Deploy the web application to an AWS Elastic Beanstalk environment. Use URL swapping to switch between multiple Elastic Beanstalk environments for feature testing.
+    - C. Deploy the web application to Amazon EC2 instances that are configured with Java and PHP. Use Auto Scaling groups and an Application Load Balancer to manage the website’s availability.
+    - D. Containerize the web application. Deploy the web application to Amazon EC2 instances. Use the AWS Load Balancer Controller to dynamically route traffic between containers that contain the new site features for testing.
+    
+    문제
+    
+    - 앱을 test하고 싶어하는게 핵심. & highly available and managed solution이 필요함.
+    - test를 위해 실제와 같은 환경을 만들 수 있도록 beanstalk을 사용한다.
+    - Elastic Beanstalk is a fully managed service that makes it easy to deploy and run applications in the AWS; To enable frequent testing of new site features, you can use URL swapping to switch between multiple Elastic Beanstalk environments.
+- Q196
+    
+    A company runs an application on a large fleet of Amazon EC2 instances. The application reads and writes entries into an Amazon DynamoDB table. The size of the DynamoDB table continuously grows, but the application needs only data from the last 30 days. The company needs a solution that minimizes cost and development effort.Which solution meets these requirements?
+    
+    - A. Use an AWS CloudFormation template to deploy the complete solution. Redeploy the CloudFormation stack every 30 days, and delete the original stack.
+    - B. Use an EC2 instance that runs a monitoring application from AWS Marketplace. Configure the monitoring application to use Amazon DynamoDB Streams to store the timestamp when a new item is created in the table. Use a script that runs on the EC2 instance to delete items that have a timestamp that is older than 30 days.
+    - C. Configure Amazon DynamoDB Streams to invoke an AWS Lambda function when a new item is created in the table. Configure the Lambda function to delete items in the table that are older than 30 days.
+    - D. Extend the application to add an attribute that has a value of the current timestamp plus 30 days to each new item that is created in the table. Configure DynamoDB to use the attribute as the TTL attribute. **Most Voted**
+    - 문제
+        - DynamoDB 데이터 자동 제거 기능 : dynamoDB TTL
 - Q
 - Q
 - Q
